@@ -12,4 +12,4 @@ elif x == 'Defend':
 elif x == 'Run':
     print("WRONG CHOICE, you're not allowed to run")
     print('You lost 5 health points')
-    print()
+    print('')
