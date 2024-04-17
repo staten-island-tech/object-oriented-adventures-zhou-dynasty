@@ -7,7 +7,7 @@ class Skeleton:
     def __str__(self):
         return f"{self.health}, {self.damage}, {self.weapon}, {self.drops}"
 
-class WitherSkeleton:
+class WitherSkeleton(Skeleton):
     def __init__(self, health, damage, weapon, drops):
         self.health = health
         self.health = health
@@ -17,7 +17,7 @@ class WitherSkeleton:
     def __str__(self):
         return f"{self.health}, {self.damage}, {self.weapon}, {self.drops}"
 
-class SpiderJockey:
+class SpiderJockey(Skeleton):
     def __init__(self, health, damage, weapon, drops):
         self.health = health
         self.health = health
@@ -27,7 +27,7 @@ class SpiderJockey:
     def __str__(self):
         return f"{self.health}, {self.damage}, {self.weapon}, {self.drops}"
     
-class SkeletonHorse: 
+class SkeletonHorse(Skeleton): 
     def __init__(self, health, damage, weapon, drops):
         self.health = health
         self.health = health
@@ -37,7 +37,7 @@ class SkeletonHorse:
     def __str__(self):
         return f"{self.health}, {self.damage}, {self.weapon}, {self.drops}"
     
-class Stray:
+class Stray(Skeleton):
     def __init__(self, health, damage, weapon, drops):
         self.health = health
         self.health = health
@@ -47,3 +47,12 @@ class Stray:
     def __str__(self):
         return f"{self.health}, {self.damage}, {self.weapon}, {self.drops}"
     
+class User:
+    def __init__(self, username, health, damage, Class, weapon):
+        self.username = username
+        self.health = health
+        self.damage = damage
+        self.Class = Class
+        self.weapon = weapon
+    def __str__(self):
+        return f"{self.username}, {self. health}, {self.damage}, {self.Class}, {self.weapon}"

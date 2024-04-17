@@ -11,6 +11,8 @@ S - Down
 
 D - Right
 
+M - Menu
+
 H - Help
 
 P - End Game
@@ -61,5 +63,12 @@ Scylla
 Astraea
 
 ## Experience
+
+Skeleton - 2 Levels
+
+Wither Skeleton - 4 Levels
+
+Stray - 5 Levels
+
 
 ## Levels
