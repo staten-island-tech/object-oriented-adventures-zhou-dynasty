@@ -47,12 +47,3 @@ class Stray(Skeleton):
     def __str__(self):
         return f"{self.health}, {self.damage}, {self.weapon}, {self.drops}"
     
-class User:
-    def __init__(self, username, health, damage, Class, weapon):
-        self.username = username
-        self.health = health
-        self.damage = damage
-        self.Class = Class
-        self.weapon = weapon
-    def __str__(self):
-        return f"{self.username}, {self. health}, {self.damage}, {self.Class}, {self.weapon}"
