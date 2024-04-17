@@ -22,4 +22,4 @@ if Class == "Archer":
 
 print('Your adventure begins now {username}.')
 time.sleep(1)
-print('You encounter a skeleton, ')
+print('You encounter a skeleton, a fierce battle begins.')
