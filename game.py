@@ -1,6 +1,7 @@
 import time
 import random
 
+
 class User:
     def __init__(self, username, health, damage, Class, weapon):
         self.username = username
