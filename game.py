@@ -1,6 +1,7 @@
 import time
 import random
-
+from storyline import storyline
+player = []
 
 class User:
     def __init__(self, username, health, damage, Class, weapon):
@@ -11,42 +12,58 @@ class User:
         self.weapon = weapon
     def __str__(self):
         return f"{self.username}, {self. health}, {self.damage}, {self.Class}, {self.weapon}"
-    
 
-
-class Class:
-    def __init__(self):
-        self.Class = True
-
-    def classselction():
+def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
         if Class == "Archer": 
             s = User(username, 20, 20, Class, "Short Bow")
+            player.append(s.__dict__)
         elif Class == "Mage":
             s = User(username, 15, 30, Class, "Magic Wand")
+            player.append(s.__dict__)
         elif Class == "Swordsman":
             s = User(username, 30, 10, Class, "Wooden Sword")
-    
-    def classconfirmation():
-        p = Class
-        while True:
-            confirmation = input("Are you sure you want to select this class? Y/N: ")
-            if confirmation.upper() != "Y":
-                p.classselction()
-            else: 
-                break
-def identifying_class():
-    d = Class
-    d.classselction()
-    d.classconfirmation() 
-    
+            player.append(s.__dict__)
+            
+def classconfirmation():
+    while True:
+        confirmation = input("Are you sure you want to select this class? Y/N: ")
+        if confirmation.upper() != "Y":
+            classselction()
+        else: 
+            break
+
+def identifyingclass():
+    classselction()
+    classconfirmation()
+
+def storylinetime():
+    p = storyline
+    if player["Class"] == "Archer":
+        p.archer()
+    elif player["Class"] == "Mage": 
+        p.mage()
+    elif player["Class"] == "Swordsman":
+        p.swordsman()
 
 print("Hello player, welcome!")
 time.sleep(1)
 username = input("What will your username be? ")
 print(f"Hello {username}, welcome to Zhou Dynasty!")
 time.sleep(1)
-identifying_class()
+identifyingclass()
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
