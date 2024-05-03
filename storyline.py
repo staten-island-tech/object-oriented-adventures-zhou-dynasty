@@ -64,6 +64,11 @@ class storyline():
             print('Skeleton attacks, dealing 2 damage.')
             time.sleep(2)
             print('Player: 17/20 hp, Skeleton: 10 hp')
+    def defendshootcontinuance():
+           "defend, shoot, shoot"
+           "only option to shoot"
+           "else, pick the option given"
+           time.sleep(2)
     def defend3():
             "defend, defend"
             time.sleep(2)
@@ -74,6 +79,14 @@ class storyline():
             print('Skeleton attacks, dealing 1 damage.')
             time.sleep(2)
             print('Player: 18/20 hp, Skeleton: 10 hp')
+    def defendcontinuance():
+            'defend, defend, defend'
+            time.sleep(2)
+            print('Defending again???')
+            time.sleep(2)
+            print('You have dealt no damage but taken 1 again.')
+            time.sleep(2)
+            print('Player: 16/20 hp, Skeleton: 10 hp')
     def defend4():
             "defend,run"
             time.sleep(2)
@@ -134,4 +147,4 @@ class storyline():
             print('This is the end of your miserable life.')
             time.sleep(2)
             print('If you wish to restart your run and be smarter this time.')
-            input('')
+            input('Enter the Letter Y, if not press the letter N').upper()
