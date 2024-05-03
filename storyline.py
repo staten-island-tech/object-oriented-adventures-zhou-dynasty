@@ -69,6 +69,10 @@ class storyline():
            "only option to shoot"
            "else, pick the option given"
            time.sleep(2)
+           print('You killed the skeleton.')
+           time.sleep(2)
+           print('Player: 17/20, Skeleton: 0 hp')
+           print('It dropped an Artisanal Shortbow (25 damage')
     def defend3():
             "defend, defend"
             time.sleep(2)
@@ -114,20 +118,31 @@ class storyline():
             time.sleep(2)
             print('Skeleton attacks, dealing 2 damage.')
             time.sleep(2)
-            print('Player: 18/20 hp , Skeleton: 10/30 hp')
+            print('Player: 15/20 hp , Skeleton: 10/30 hp')
     def run3():
             "run, defend"
-            time.sleep(2)
             print('You have chosen to Defend for some reason.')
             time.sleep(2)
             print('You have dealt 0 damage.')
             time.sleep(2)
             print('Skeleton attacks, dealing 1 damage.')
             time.sleep(2)
-            print('Player: 18/20 hp, Skeleton: 10/30 hp')
+            print('Player: 15/20 hp, Skeleton: 30/30 hp')
+    def rundefendcontinuance():
+           "run, defend, shoot"
+           "force them to shoot"
+           print('You have done damage.')
+           time.sleep(2)
+           print('Skeleton has also done damage')
+           time.sleep(2)
+           print('Player: 13 hp, Skeleton 10 hp')
+    def rundefendcontinuance2():
+           'force them to shoot again'
+           print('Player has shot again, killing the skeleton')
+           time.sleep(1)
+           print('')
     def run4():
             "run, run"
-            time.sleep(2)
             print('You have chosen to Run.')
             time.sleep(2)
             print("Someone didn't learn their lesson")
