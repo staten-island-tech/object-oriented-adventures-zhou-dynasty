@@ -52,6 +52,10 @@ username = input("What will your username be? ")
 print(f"Hello {username}, welcome to Zhou Dynasty!")
 time.sleep(1)
 identifyingclass()
+start = input("Are you ready to begin your adventure? Y/N: ")
+print("It didn't matter what you pick.")
+time.sleep(1)
+storylinetime()
 
 
 
