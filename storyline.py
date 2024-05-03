@@ -1,4 +1,6 @@
 import time
+a = open("classes.py")
+
 
 class storyline():
     def __init__(self):
