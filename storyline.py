@@ -196,3 +196,5 @@ class storyline:
                         time.sleep(2)
                         print('If you wish to restart your run and be smarter this time.')
                         input('Enter the Letter Y, if not press the letter N').upper()
+
+def selector():
