@@ -93,6 +93,13 @@ class storyline():
             print('You have dealt no damage but taken 1 again.')
             time.sleep(2)
             print('Player: 16/20 hp, Skeleton: 10 hp')
+    def defendcontinuance2():
+           'defend, defend, defend, defend'
+           time.sleep(2)
+           print('Defending 4 times in a row is insane.')
+           time.sleep(1)
+           print('Your run has been ended.')
+           time.sleep(2)
     def defend4():
             "defend,run"
             time.sleep(2)
