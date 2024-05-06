@@ -1,7 +1,11 @@
 import time
 import random
+import json
+import os
 from storyline import storyline
-player = []
+
+player = open("player.json", encoding="utf8")
+data = json.load(player)
 
 class User:
     def __init__(self, username, health, damage, Class, weapon):
@@ -16,14 +20,14 @@ class User:
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
         if Class == "Archer": 
-            s = User(username, 20, 20, Class, "Short Bow")
-            player.append(s.__dict__)
+            s = User(username, 20, 20, "Archer", "Short Bow")
+            data.append(s.__dict__)
         elif Class == "Mage":
-            s = User(username, 15, 30, Class, "Magic Wand")
-            player.append(s.__dict__)
+            s = User(username, 15, 30, "Mage", "Magic Wand")
+            data.append(s.__dict__)
         elif Class == "Swordsman":
-            s = User(username, 30, 10, Class, "Wooden Sword")
-            player.append(s.__dict__)
+            s = User(username, 30, 10, "Swordsman", "Wooden Sword")
+            data.append(s.__dict__)
             
 def classconfirmation():
     while True:
@@ -39,11 +43,11 @@ def identifyingclass():
 
 def storylinetime():
     p = storyline
-    if player["Class"] == "Archer":
-        p.archer()
-    elif player["Class"] == "Mage": 
+    if data["Class"] == "Archer":
+        p.archerstoryline()
+    elif data['Class'] == "Mage": 
         p.mage()
-    elif player["Class"] == "Swordsman":
+    elif data["Class"] == "Swordsman":
         p.swordsman()
 
 print("Hello player, welcome!")
@@ -53,7 +57,9 @@ print(f"Hello {username}, welcome to Zhou Dynasty!")
 time.sleep(1)
 identifyingclass()
 start = input("Are you ready to begin your adventure? Y/N: ")
-print("It didn't matter what you pick.")
+if start.upper() != "Y":
+    print("It didn't matter what you picked.")
+
 time.sleep(1)
 storylinetime()
 
