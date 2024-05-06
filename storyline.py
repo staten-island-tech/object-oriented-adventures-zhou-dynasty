@@ -40,6 +40,14 @@ class storyline:
                         print('The skeleton hits you again for 1 damage.')
                         time.sleep(2)
                         print('Player: 17/20 hp , Skeleton: 10/30 hp')     
+                def shootcontinuance3():
+                        "shoot, defend, shoot"
+                        time.sleep(1)
+                        print('You have done 20 damage.')
+                        time.sleep(2)
+                        print('The Skeleton has died.')
+                        time.sleep(2)
+                        print('Player: 17 hp, Skeleton: 0 hp')
                 def shoot4():
                         "shoot,run"
                         time.sleep(1)
@@ -47,7 +55,10 @@ class storyline:
                         time.sleep(2)
                         print('The skeleton hits you again for 4 damage.')
                         time.sleep(2)
-                        print('Player: 14/20 hp , Skeleton: 10/30 hp')            
+                        print('Player: 14/20 hp , Skeleton: 10/30 hp')      
+                def shootcontinuance4():
+                        "shoot, run, shoot"
+                        
                 def defend():
                         "defend"
                         time.sleep(2)
@@ -97,6 +108,12 @@ class storyline:
                         'defend, defend, defend, defend'
                         time.sleep(2)
                         print('4 times now is insane.')
+                        time.sleep(2)
+                        print('Your run has been ended.')
+                        time.sleep(2)
+                        print('You can restart by rerunning the code.')
+                        time.sleep(1)
+                        print('Have fun!')
                 def defend4():
                         "defend,run"
                         time.sleep(2)
@@ -143,10 +160,13 @@ class storyline:
                         time.sleep(2)
                         print('Player: 13 hp, Skeleton 10 hp')
                 def rundefendcontinuance2():
+                        'run, defend, shoot, shoot'
                         'force them to shoot again'
                         print('Player has shot again, killing the skeleton')
                         time.sleep(1)
-                        print('')
+                        print('Took long enough.')
+                        time.sleep(2)
+                        print('Player: 13 hp, Skeleton 0 hp')
                 def run4():
                         "run, run"
                         print('You have chosen to Run.')
