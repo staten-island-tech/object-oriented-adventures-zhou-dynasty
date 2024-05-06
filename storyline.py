@@ -167,10 +167,13 @@ class storyline:
                         time.sleep(2)
                         print('Player: 13 hp, Skeleton 10 hp')
                 def rundefendcontinuance2():
+                        'run, defend, shoot, shoot'
                         'force them to shoot again'
                         print('Player has shot again, killing the skeleton')
                         time.sleep(1)
-                        print('')
+                        print('Took long enough.')
+                        time.sleep(2)
+                        print('Player: 13 hp, Skeleton 0 hp')
                 def run4():
                         "run, run"
                         print('You have chosen to Run.')
