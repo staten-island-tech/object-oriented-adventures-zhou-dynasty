@@ -4,8 +4,8 @@ import json
 import os
 from storyline import storyline
 
-player = open("player.json", encoding="utf8")
-data = json.load(player)
+with open("player.json", "r") as player:
+    data = json.load(player)
 
 class User:
     def __init__(self, username, health, damage, Class, weapon):
@@ -20,13 +20,13 @@ class User:
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
         if Class == "Archer": 
-            s = User(username, 20, 20, "Archer", "Short Bow")
+            s = User(username, 20, 20, Class, "Short Bow")
             data.append(s.__dict__)
         elif Class == "Mage":
-            s = User(username, 15, 30, "Mage", "Magic Wand")
+            s = User(username,15, 30, Class, "Magic Wand")
             data.append(s.__dict__)
         elif Class == "Swordsman":
-            s = User(username, 30, 10, "Swordsman", "Wooden Sword")
+            s = User(username, 30, 10, Class, "Wooden Sword")
             data.append(s.__dict__)
             
 def classconfirmation():
@@ -43,11 +43,11 @@ def identifyingclass():
 
 def storylinetime():
     p = storyline
-    if data["Class"] == "Archer":
+    if player["Class"] == "Archer":
         p.archerstoryline()
-    elif data['Class'] == "Mage": 
+    elif player['Class'] == "Mage": 
         p.mage()
-    elif data["Class"] == "Swordsman":
+    elif player["Class"] == "Swordsman":
         p.swordsman()
 
 print("Hello player, welcome!")
