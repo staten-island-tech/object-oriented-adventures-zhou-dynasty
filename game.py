@@ -20,14 +20,24 @@ class User():
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
         if Class == "Archer": 
-            s = User(username, 20, 20, Class, "Short Bow")
-            data.append(s.__dict__)
+            user = User(username, 20, 20, Class, "Short Bow")
+            data.append(user.__dict__)
         elif Class == "Mage":
-            s = User(username, 15, 30, Class, "Magic Wand")
-            data.append(s.__dict__)
+            user = User(username, 15, 30, Class, "Magic Wand")
+            data.append(user.__dict__)
         elif Class == "Swordsman":
-            s = User(username, 30, 10, Class, "Wooden Sword")
-            data.append(s.__dict__)
+            user = User(username, 30, 10, Class, "Wooden Sword")
+            data.append(user.__dict__)
+            
+            new_file = "updated.json"
+            with open(new_file, "w") as f:
+                json_string = json.dumps(data)
+
+            f.write(json_string)
+
+            os.remove("player.json")
+            os.rename(new_file, "player.json")
+
             
 def classconfirmation():
     while True:
@@ -55,7 +65,18 @@ time.sleep(1)
 username = input("What will your username be? ")
 print(f"Hello {username}, welcome to Zhou Dynasty!")
 time.sleep(1)
+
 identifyingclass()
+new_file = "updated.json"
+with open(new_file, "w") as f:
+    json_string = json.dumps(data)
+
+    f.write(json_string)
+
+os.remove("player.json")
+os.rename(new_file, "player.json")
+
+
 start = input("Are you ready to begin your adventure? Y/N: ")
 if start.upper() != "Y":
     print("It didn't matter what you picked.")
