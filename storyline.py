@@ -209,6 +209,11 @@ def selector():
                         r = input('Pick your next move (Shoot, Defend, Run): ')
                         if r == 'Shoot':
                                 storyline.archerstoryline.shoot2()
+                        elif r == 'Defend': 
+                                storyline.archerstoryline.shoot3()
+                        elif r == 'Run':
+                                storyline.archerstoryline.shoot4()
+                        else:
                                 break
                 elif p == 'Defend':
                         storyline.archerstoryline.defend()
