@@ -7,7 +7,7 @@ from storyline import storyline
 with open("player.json", "r") as player:
     data = json.load(player)
 
-class User:
+class User():
     def __init__(self, username, health, damage, Class, weapon):
         self.username = username
         self.health = health
@@ -15,7 +15,7 @@ class User:
         self.Class = Class
         self.weapon = weapon
     def __str__(self):
-        return f"{self.username}, {self. health}, {self.damage}, {self.Class}, {self.weapon}"
+        return f"{self.username}, {self.health}, {self.damage}, {self.Class}, {self.weapon}"
 
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
@@ -23,7 +23,7 @@ def classselction():
             s = User(username, 20, 20, Class, "Short Bow")
             data.append(s.__dict__)
         elif Class == "Mage":
-            s = User(username,15, 30, Class, "Magic Wand")
+            s = User(username, 15, 30, Class, "Magic Wand")
             data.append(s.__dict__)
         elif Class == "Swordsman":
             s = User(username, 30, 10, Class, "Wooden Sword")
