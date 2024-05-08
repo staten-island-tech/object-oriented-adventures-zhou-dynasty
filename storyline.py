@@ -12,10 +12,13 @@ class storyline:
                         print('You look around, confused, you decide to wander around.')
                         time.sleep(1)
                         print('You search for answers, none to be found.')
-                        time.sleep(4)
-                        print('UNTIL......')
+                        time.sleep(3)
+                        print('Until.')
+                        time.sleep(2)
                         print('You encounter a skeleton, a fierce battle begins.')
                         time.sleep(3)
+                        print('Player: 20 hp')
+                
                 def shoot():
                         "shoot"
                         time.sleep(1)
@@ -139,7 +142,7 @@ class storyline:
                         time.sleep(2)
                         print('Skeleton attacks, dealing 2 damage.')
                         time.sleep(2)
-                        print('Player: 15/20, Skeleton: 30 hp')
+                        print('Player: 15 hp, Skeleton: 30 hp')
                         time.sleep(1)
                 def run2():
                         "run, shoot"
@@ -198,6 +201,21 @@ class storyline:
                         input('Enter the Letter Y, if not press the letter N').upper()
 
 def selector():
-        p = input('Pick your move (Shoot, Defend, Run)')
-        if p = 'Shoot'
-        
+        while True:
+                print('All options are case sensitive')
+                p = input('Pick your move (Shoot, Defend, Run): ')
+                if p == 'Shoot':
+                        storyline.archerstoryline.shoot()
+                        r = input('Pick your next move (Shoot, Defend, Run): ')
+                        if r == 'Shoot':
+                                storyline.archerstoryline.shoot2()
+                                break
+                elif p == 'Defend':
+                        storyline.archerstoryline.defend()
+                        break
+                elif p == 'Run':
+                        storyline.archerstoryline.run()
+                        break
+                else:
+                        print('pick an actual option given, thanks')
+selector()
