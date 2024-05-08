@@ -8,9 +8,3 @@ class Skeleton():
         return f"{self.name}, {self.health}, {self.damage}, {self.weapon}"
     
 WitherSkeleton = Skeleton("Wither Skeleton", 20, 20, "Stone Sword")
-
-a = []
-a.append(WitherSkeleton)
-for a in a:
-    print(a['name'])
-
