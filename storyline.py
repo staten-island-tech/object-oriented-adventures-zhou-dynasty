@@ -198,3 +198,6 @@ class storyline:
                         input('Enter the Letter Y, if not press the letter N').upper()
 
 def selector():
+        p = input('Pick your move (Shoot, Defend, Run)')
+        if p = 'Shoot'
+        
