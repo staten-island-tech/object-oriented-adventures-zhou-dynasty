@@ -16,13 +16,13 @@ class User:
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
         if Class == "Archer": 
-            s = User(username, 20, 20, Class, "Short Bow")
+            s = User(username, 20, 20, "Archer", "Short Bow")
             player.append(s.__dict__)
         elif Class == "Mage":
-            s = User(username, 15, 30, Class, "Magic Wand")
+            s = User(username, 15, 30, "Mage", "Magic Wand")
             player.append(s.__dict__)
         elif Class == "Swordsman":
-            s = User(username, 30, 10, Class, "Wooden Sword")
+            s = User(username, 30, 10, "Swordsman", "Wooden Sword")
             player.append(s.__dict__)
             
 def classconfirmation():
@@ -40,7 +40,7 @@ def identifyingclass():
 def storylinetime():
     p = storyline
     if player["Class"] == "Archer":
-        p.archer()
+        p.archerstoryline()
     elif player["Class"] == "Mage": 
         p.mage()
     elif player["Class"] == "Swordsman":
