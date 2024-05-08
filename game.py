@@ -3,9 +3,7 @@ import random
 import json
 import os
 from storyline import storyline
-
-with open("player.json", "r") as player:
-    data = json.load(player)
+Player = []
 
 class User():
     def __init__(self, username, health, damage, Class, weapon):
@@ -21,24 +19,14 @@ def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
         if Class == "Archer": 
             user = User(username, 20, 20, Class, "Short Bow")
-            data.append(user.__dict__)
+            Player.append(user.__dict__)
         elif Class == "Mage":
             user = User(username, 15, 30, Class, "Magic Wand")
-            data.append(user.__dict__)
+            Player.append(user.__dict__)
         elif Class == "Swordsman":
             user = User(username, 30, 10, Class, "Wooden Sword")
-            data.append(user.__dict__)
-            
-            new_file = "updated.json"
-            with open(new_file, "w") as f:
-                json_string = json.dumps(data)
+            Player.append(user.__dict__)
 
-            f.write(json_string)
-
-            os.remove("player.json")
-            os.rename(new_file, "player.json")
-
-            
 def classconfirmation():
     while True:
         confirmation = input("Are you sure you want to select this class? Y/N: ")
@@ -53,11 +41,11 @@ def identifyingclass():
 
 def storylinetime():
     p = storyline
-    if player["Class"] == "Archer":
+    if Player["Class"] == "Archer":
         p.archerstoryline()
-    elif player['Class'] == "Mage": 
+    elif Player['Class'] == "Mage": 
         p.mage()
-    elif player["Class"] == "Swordsman":
+    elif Player["Class"] == "Swordsman":
         p.swordsman()
 
 print("Hello player, welcome!")
@@ -67,15 +55,6 @@ print(f"Hello {username}, welcome to Zhou Dynasty!")
 time.sleep(1)
 
 identifyingclass()
-new_file = "updated.json"
-with open(new_file, "w") as f:
-    json_string = json.dumps(data)
-
-    f.write(json_string)
-
-os.remove("player.json")
-os.rename(new_file, "player.json")
-
 
 start = input("Are you ready to begin your adventure? Y/N: ")
 if start.upper() != "Y":
