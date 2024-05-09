@@ -1,7 +1,4 @@
 import time
-import random
-import json
-import os
 from storyline import storyline
 Player = []
 
@@ -17,14 +14,14 @@ class User():
 
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
-        if Class == "Archer": 
-            user = User(username, 20, 20, Class, "Short Bow")
+        if Class.upper() == "ARCHER": 
+            user = User(username, 20, 20, Class.upper(), "Short Bow")
             Player.append(user.__dict__)
-        elif Class == "Mage":
-            user = User(username, 15, 30, Class, "Magic Wand")
+        elif Class.upper() == "MAGE":
+            user = User(username, 15, 30, Class.upper(), "Magic Wand")
             Player.append(user.__dict__)
-        elif Class == "Swordsman":
-            user = User(username, 30, 10, Class, "Wooden Sword")
+        elif Class.upper() == "SWORDSMAN":
+            user = User(username, 30, 10, Class.upper(), "Wooden Sword")
             Player.append(user.__dict__)
 
 def classconfirmation():
@@ -41,13 +38,15 @@ def identifyingclass():
 
 def storylinetime():
     p = storyline
-    if Player["Class"] == "Archer":
-        p.archerstoryline()
-    elif Player['Class'] == "Mage": 
-        p.mage()
-    elif Player["Class"] == "Swordsman":
-        p.swordsman()
+    for x in Player:
+        if x['Class'] == "ARCHER":
+            p.archerstoryline
+        elif x['Class'] == "MAGE": 
+            p.mage()
+        elif x['Class'] == "SWORDSMAN":
+            p.swordsman()
 
+#start
 print("Hello player, welcome!")
 time.sleep(1)
 username = input("What will your username be? ")
@@ -57,10 +56,10 @@ time.sleep(1)
 identifyingclass()
 
 start = input("Are you ready to begin your adventure? Y/N: ")
-if start.upper() != "Y":
-    print("It didn't matter what you picked.")
+print("It didn't matter what you picked.")
 
 time.sleep(1)
+
 storylinetime()
 
 

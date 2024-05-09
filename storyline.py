@@ -1,13 +1,14 @@
 import time
+from game import User
 a = open("classes.py")
 
 class storyline:
-        class archerstoryline():
+        class archerstoryline:
                 def __init__(self):
                         self.archerstoryline = True 
 
                 def archer():
-                        print('Your adventure begins now {username}.')
+                        print('Your adventure begins now .')
                         time.sleep(2)
                         print('You look around, confused, you decide to wander around.')
                         time.sleep(1)
