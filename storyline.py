@@ -20,42 +20,36 @@ class storyline:
                         print('Player: 20 hp')
                 
                 def shoot():
-                        "shoot"
                         print('You have done 20 damage.')
                         time.sleep(2)
                         print('Skeleton attacks, dealing 2 damage.')
                         time.sleep(2)
                         print('Player: 18/20 hp , Skeleton: 10/30 hp')
                 def shoot2():
-                        "shoot, shoot"
                         print('You have done 20 damage.')
                         time.sleep(2)
                         print('The skeleton has sadly passed away due to you piercing it with your arrow.')
                         time.sleep(2)
                         print('Player: 18/20 hp , Skeleton: 0/30 hp')
                 def shoot3():
-                        "shoot, defend"
                         print('You have done 0 damage.')
                         time.sleep(2)
                         print('The skeleton hits you again for 1 damage.')
                         time.sleep(2)
                         print('Player: 17/20 hp , Skeleton: 10/30 hp')     
                 def shootcontinuance3():
-                        "shoot, defend, shoot"
                         print('You have done 20 damage.')
                         time.sleep(2)
                         print('The skeleton has passed away due to your shot.')
                         time.sleep(2)
                         print('Player: 17/20 hp , Skeleton: 0 hp')                         
                 def shoot4():
-                        "shoot,run"
                         print('No Running')
                         time.sleep(2)
                         print('The skeleton hits you again for 4 damage.')
                         time.sleep(2)
                         print('Player: 14/20 hp , Skeleton: 10/30 hp')            
                 def shootcontinuance4():
-                        "shoot, run, shoot"
                         print('You shoot to kill.')
                         time.sleep(2)
                         print('The skeleton has died from your arrow.')
@@ -64,14 +58,12 @@ class storyline:
                         time.sleep(1)
                         print('It dropped an Artisanal Shortbow (25 damage)')
                 def defend():
-                        "defend"
                         print('You have decided to defend, no damage dealt.')
                         time.sleep(2)
                         print('Skeleton attacks, dealing 1 damage.')
                         time.sleep(2)
                         print('Player: 19/20 hp, Skeleton: 30 hp')
                 def defend2():
-                        "defend, shoot"
                         print('You have chosen to shoot.')
                         time.sleep(2)
                         print('You have dealt 20 damage.')
@@ -80,15 +72,12 @@ class storyline:
                         time.sleep(2)
                         print('Player: 17/20 hp, Skeleton: 10 hp')
                 def defendshootcontinuance():
-                        "defend, shoot, shoot"
-                        "only option to shoot"
-                        "else, pick the option given"
                         print('You killed the skeleton.')
                         time.sleep(2)
                         print('Player: 17/20, Skeleton: 0 hp')
                         print('It dropped an Artisanal Shortbow (25 damage)')
+                        print('Your reward for wasting this much time.')
                 def defend3():
-                        "defend, defend"
                         print('You have chosen to Defend again for some reason.')
                         time.sleep(2)
                         print('You have dealt 0 damage.')
@@ -172,8 +161,6 @@ class storyline:
                         time.sleep(2)
                         print('Player 10/20, Skeleton: 10/30 hp')
                 def runcontinuance():
-                        "input next move"
-                        "run, run, run"
                         print('You have chosen to run for a third time?')
                         print('This is the end of your miserable life.')
                         time.sleep(2)
@@ -189,10 +176,20 @@ def selector():
                         r = input('Pick your next move (Shoot, Defend, Run): ')
                         if r == 'Shoot':
                                 storyline.archerstoryline.shoot2()
+                                break
+                        g = input('Pick your next move(Only Shoot Available): ')
+                        if g == 'Shoot':
+                                storyline.archerstoryline.defendshootcontinuance
                         elif r == 'Defend': 
                                 storyline.archerstoryline.shoot3()
+                        q = input('Pick your next move (Only Shoot Available): ')
+                        if q == 'Shoot':
+                                storyline.archerstoryline.shootcontinuance3
                         elif r == 'Run':
                                 storyline.archerstoryline.shoot4()
+                        g = input('Pick your next move (Only Shoot Available): ')
+                        if g == 'Shoot':
+                                storyline.archerstoryline.shootcontinuance4
                         else:
                                 print('pick an actual option give, thanks')
                                 selector()
@@ -203,6 +200,12 @@ def selector():
                                 storyline.archerstoryline.defend2()
                         elif r == 'Defend':
                                 storyline.archerstoryline.defend3()
+                        g = input('Pick your next move (Must pick Shoot): ')
+                        if g == 'Shoot':
+                                storyline.archerstoryline.defendcontinuance
+                                time.sleep(10)
+                                print("I've decided to move for you.")
+                                storyline.archerstoryline.defendcontinuance2
                         elif r == 'Run':
                                 storyline.archerstoryline.defend4()
                                 print('pick an actual option give, thanks')
@@ -214,8 +217,17 @@ def selector():
                                 storyline.archerstoryline.run2()
                         elif r == 'Defend':
                                 storyline.archerstoryline.run3()
+                                time.sleep(10)
+                                print("You raise your bow in preperation to shoot.")
+                                storyline.archerstoryline.rundefendcontinuance
+                                time.sleep(10)
+                                print('It suddenly happens again???')
+                                storyline.archerstoryline.rundefendcontinuance2
                         elif r == 'Run':
                                 storyline.archerstoryline.run4()
+                        e = input('Pick your next move (Shoot, Defend, Run): ')
+                        if e == 'Shoot':
+                                storyline.archerstoryline
                 else:
                         print('pick an actual option given, thanks')
 selector()
