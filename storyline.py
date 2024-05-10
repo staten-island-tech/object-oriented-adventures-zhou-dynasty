@@ -165,12 +165,10 @@ class storyline:
                         print('This is the end of your miserable life.')
                         time.sleep(2)
                         print('If you wish to restart your run and be smarter this time.')
+                        input('Enter the Letter Y, if not press the letter N').upper()
                 def storyline2():
                         print('After a long or possibly fought battle, you finally defeated one mob.')
-                        input('What do you wish to do:')
-        class magestoryline():
-                def __init__(self):
-                        self.magestoryline = True 
+                        input('What do you wish to do :\na')
 
 def selector():
         while True:
@@ -230,29 +228,13 @@ def selector():
                                 time.sleep(10)
                                 print('It suddenly happens again???')
                                 storyline.archerstoryline.rundefendcontinuance2
-                                break
                         elif r == 'Run':
                                 storyline.archerstoryline.run4()
                         e = input('Pick your next move (Shoot, Defend, Run): ')
-<<<<<<< HEAD
-<<<<<<< HEAD
-                        if e == 'Shoot':
-                                storyline.archerstoryline()
-=======
-                        if e == 'Run':
-                                storyline.archerstoryline.runcontinuance()
->>>>>>> gary
-=======
                         if e == 'Shoot':
                                 storyline.archerstoryline()
                         if e == 'Run':
                                 storyline.archerstoryline.runcontinuance()
-                        f = input('Do you wish to restart Y/N?').upper
-                        if f == 'Y':
-                                selector()
-                        elif f == 'N':
-                                break
->>>>>>> gary
                 else:
                         print('pick an actual option given, thanks')
 selector()
