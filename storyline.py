@@ -227,7 +227,7 @@ def selector():
                                 storyline.archerstoryline.run4()
                         e = input('Pick your next move (Shoot, Defend, Run): ')
                         if e == 'Shoot':
-                                storyline.archerstoryline
+                                storyline.archerstoryline()
                 else:
                         print('pick an actual option given, thanks')
 selector()
