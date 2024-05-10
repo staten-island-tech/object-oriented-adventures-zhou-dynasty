@@ -1,5 +1,6 @@
 import time
 from storyline import storyline
+from classes import ClassSelection
 Player = []
 
 class User():
@@ -11,6 +12,16 @@ class User():
         self.weapon = weapon
     def __str__(self):
         return f"{self.username}, {self.health}, {self.damage}, {self.Class}, {self.weapon}"
+
+def storylinetime():
+    p = storyline
+    for x in Player:
+        if x['Class'] == "ARCHER":
+            p.archerstoryline
+        elif x['Class'] == "MAGE": 
+            p.mage()
+        elif x['Class'] == "SWORDSMAN":
+            p.swordsman()
 
 def classselction():
         Class = input("Choose class (Archer, Mage, Swordsman): ")
@@ -25,26 +36,16 @@ def classselction():
             Player.append(user.__dict__)
 
 def classconfirmation():
-    while True:
-        confirmation = input("Are you sure you want to select this class? Y/N: ")
-        if confirmation.upper() != "Y":
-            classselction()
-        else: 
-            break
-
+        while True:
+            confirmation = input("Are you sure you want to select this class? Y/N: ")
+            if confirmation.upper() != "Y":
+                classselction()
+            else: 
+                break
+    
 def identifyingclass():
     classselction()
     classconfirmation()
-
-def storylinetime():
-    p = storyline
-    for x in Player:
-        if x['Class'] == "ARCHER":
-            p.archerstoryline
-        elif x['Class'] == "MAGE": 
-            p.mage()
-        elif x['Class'] == "SWORDSMAN":
-            p.swordsman()
 
 #start
 print("Hello player, welcome!")
