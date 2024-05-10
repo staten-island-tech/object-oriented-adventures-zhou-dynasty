@@ -166,6 +166,9 @@ class storyline:
                         time.sleep(2)
                         print('If you wish to restart your run and be smarter this time.')
                         input('Enter the Letter Y, if not press the letter N').upper()
+                def storyline2():
+                        print('After a long or possibly fought battle, you finally defeated one mob.')
+                        input('What do you wish to do :\na')
 
 def selector():
         while True:
@@ -177,9 +180,6 @@ def selector():
                         if r == 'Shoot':
                                 storyline.archerstoryline.shoot2()
                                 break
-                        g = input('Pick your next move(Only Shoot Available): ')
-                        if g == 'Shoot':
-                                storyline.archerstoryline.defendshootcontinuance
                         elif r == 'Defend': 
                                 storyline.archerstoryline.shoot3()
                         q = input('Pick your next move (Only Shoot Available): ')
@@ -190,6 +190,7 @@ def selector():
                         g = input('Pick your next move (Only Shoot Available): ')
                         if g == 'Shoot':
                                 storyline.archerstoryline.shootcontinuance4
+                                break
                         else:
                                 print('pick an actual option give, thanks')
                                 selector()
@@ -198,6 +199,9 @@ def selector():
                         r = input('Pick your next move (Shoot, Defend, Run): ')
                         if r == 'Shoot':
                                 storyline.archerstoryline.defend2()
+                        e = input('Pick your next move (Pick Shoot)')
+                        if e == 'Shoot':
+                                storyline.archerstoryline.defendshootcontinuance
                         elif r == 'Defend':
                                 storyline.archerstoryline.defend3()
                         g = input('Pick your next move (Must pick Shoot): ')
@@ -206,6 +210,7 @@ def selector():
                                 time.sleep(10)
                                 print("I've decided to move for you.")
                                 storyline.archerstoryline.defendcontinuance2
+                                break
                         elif r == 'Run':
                                 storyline.archerstoryline.defend4()
                                 print('pick an actual option give, thanks')
@@ -226,8 +231,13 @@ def selector():
                         elif r == 'Run':
                                 storyline.archerstoryline.run4()
                         e = input('Pick your next move (Shoot, Defend, Run): ')
+<<<<<<< HEAD
                         if e == 'Shoot':
                                 storyline.archerstoryline()
+=======
+                        if e == 'Run':
+                                storyline.archerstoryline.runcontinuance()
+>>>>>>> gary
                 else:
                         print('pick an actual option given, thanks')
 selector()
