@@ -163,31 +163,9 @@ class storyline:
                         print('If you wish to restart your run and be smarter this time.')
                         input('Enter the Letter Y, if not press the letter N').upper()
                 def storyline2():
-<<<<<<< HEAD
                         print('After a long or possibly fought battle, you finally defeated one mob.')
                         input('What do you wish to do: ')
 
-=======
-                        while True:
-                                print('After a long or possibly fought battle, you finally defeated one mob.')
-                                x = input('What do you wish to do (Travel North, Travel South, Quit):').title()
-                                if x == 'Travel North':
-                                        print('You begin your long and harsh journey.')
-                                        print('It hopes of reaching some sort of civilziation.')
-                                        time.sleep(2)
-                                        print('Pushing through, using ')
-                                elif x == 'Travel South':
-                                        print('You begin a long and harsh journey.')
-                                        print('In hopes of reaching some sort of civilization.')
-                                        time.sleep(2)
-                                        print('')
-                                elif x == 'Quit':
-                                        print('You have decided to quit, Goodbye!!!')
-                                        break
-                                else:
-                                        print('Pick a choice given, thanks')
-                        
->>>>>>> gary
 def selector():
         while True:
                 print('Please make the first letter uppercase, and choose a given option')
