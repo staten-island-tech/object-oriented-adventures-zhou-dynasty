@@ -168,7 +168,7 @@ class storyline:
                         input('Enter the Letter Y, if not press the letter N').upper()
                 def storyline2():
                         print('After a long or possibly fought battle, you finally defeated one mob.')
-                        input('What do you wish to do :\na')
+                        input('What do you wish to do: ')
 
 def selector():
         while True:
