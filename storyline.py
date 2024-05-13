@@ -15,8 +15,13 @@ class storyline:
                         time.sleep(3)
                         print('Until.')
                         time.sleep(2)
-                        print('You encounter a skeleton, a fierce battle begins.')
-                        time.sleep(3)
+                        print('You encounter a skeleton')
+                        time.sleep(1)
+                        print('It seems agitated?')
+                        time.sleep(1)
+                        print('It fires an arrow.')
+                        print('A battle begins.')
+                        time.sleep(1)
                         print('Player: 20 hp')
                 
                 def shoot():
@@ -86,14 +91,12 @@ class storyline:
                         time.sleep(2)
                         print('Player: 18/20 hp, Skeleton: 10 hp')
                 def defendcontinuance():
-                        'defend, defend, shoot'
                         print('You have done 20 damage.')
                         time.sleep(2)
                         print('The skeleton hits you again for 1 damage.')
                         time.sleep(2)
                         print('Player: 17/20 hp , Skeleton: 10/30 hp')          
                 def defendcontinuance2():
-                        "defend, defend, shoot, shoot"
                         print('You have done 20 damage.')
                         time.sleep(2)
                         print('The skeleton has died.')
@@ -102,7 +105,6 @@ class storyline:
                         time.sleep(1)                               
                         print('It dropped an Artisanal Shortbow (25 damage)')    
                 def defend4():
-                        "defend,run"
                         print('You have chosen to Run.')
                         time.sleep(2)
                         print('After defending is insane.')
@@ -111,7 +113,6 @@ class storyline:
                         time.sleep(2)
                         print("I'm taking away your privilege to run.")
                 def run():
-                        "run"
                         print('WRONG CHOICE, YOU ARE NOT ALLOWED TO RUN!!!!')
                         print('You have taken 3 damage.')
                         time.sleep(2)
@@ -120,14 +121,12 @@ class storyline:
                         print('Player: 15 hp, Skeleton: 30 hp')
                         time.sleep(1)
                 def run2():
-                        "run, shoot"
                         print('You have done 20 damage.')
                         time.sleep(2)
                         print('Skeleton attacks, dealing 2 damage.')
                         time.sleep(2)
                         print('Player: 15/20 hp , Skeleton: 10/30 hp')
                 def run3():
-                        "run, defend"
                         print('You have chosen to Defend for some reason.')
                         print('You have dealt 0 damage.')
                         time.sleep(2)
@@ -135,8 +134,6 @@ class storyline:
                         time.sleep(2)
                         print('Player: 15/20 hp, Skeleton: 30/30 hp')
                 def rundefendcontinuance():
-                        "run, defend, shoot"
-                        "force them to shoot"
                         print('You have done damage.')
                         print('Skeleton has also done damage')
                         time.sleep(2)
@@ -149,7 +146,6 @@ class storyline:
                         time.sleep(2)
                         print('Player: 13 hp, Skeleton 0 hp')
                 def run4():
-                        "run, run"
                         print('You have chosen to Run.')
                         print("Someone didn't learn their lesson")
                         time.sleep(2)
@@ -165,13 +161,27 @@ class storyline:
                         print('This is the end of your miserable life.')
                         time.sleep(2)
                         print('If you wish to restart your run and be smarter this time.')
+                        input('Enter the Letter Y, if not press the letter N').upper()
                 def storyline2():
-                        print('After a long or possibly fought battle, you finally defeated one mob.')
-                        input('What do you wish to do:')
-        class magestoryline():
-                def __init__(self):
-                        self.magestoryline = True 
-
+                        while True:
+                                print('After a long or possibly fought battle, you finally defeated one mob.')
+                                x = input('What do you wish to do (Travel North, Travel South, Quit):').title()
+                                if x == 'Travel North':
+                                        print('You begin your long and harsh journey.')
+                                        print('It hopes of reaching some sort of civilziation.')
+                                        time.sleep(2)
+                                        print('Pushing through, using ')
+                                elif x == 'Travel South':
+                                        print('You begin a long and harsh journey.')
+                                        print('In hopes of reaching some sort of civilization.')
+                                        time.sleep(2)
+                                        print('')
+                                elif x == 'Quit':
+                                        print('You have decided to quit, Goodbye!!!')
+                                        break
+                                else:
+                                        print('Pick a choice given, thanks')
+                        
 def selector():
         while True:
                 print('Please make the first letter uppercase, and choose a given option')
@@ -230,19 +240,13 @@ def selector():
                                 time.sleep(10)
                                 print('It suddenly happens again???')
                                 storyline.archerstoryline.rundefendcontinuance2
-                                break
                         elif r == 'Run':
                                 storyline.archerstoryline.run4()
                         e = input('Pick your next move (Shoot, Defend, Run): ')
                         if e == 'Shoot':
-                                storyline.archerstoryline()
+                                storyline.archerstoryline('placeholder') 
                         if e == 'Run':
                                 storyline.archerstoryline.runcontinuance()
-                        f = input('Do you wish to restart Y/N?').upper
-                        if f == 'Y':
-                                selector()
-                        elif f == 'N':
-                                break
                 else:
                         print('pick an actual option given, thanks')
 selector()
