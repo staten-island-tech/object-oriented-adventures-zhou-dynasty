@@ -1,6 +1,5 @@
 import time
 from storyline import storyline
-from classes import ClassSelection
 Player = []
 
 class User():
@@ -34,34 +33,39 @@ def classselction():
         elif Class.upper() == "SWORDSMAN":
             user = User(username, 30, 10, Class.upper(), "Wooden Sword")
             Player.append(user.__dict__)
+    
 
 def classconfirmation():
-        while True:
-            confirmation = input("Are you sure you want to select this class? Y/N: ")
-            if confirmation.upper() != "Y":
-                classselction()
-            else: 
-                break
-    
-def identifyingclass():
+    while True:
+        confirmation = input("Are you sure you want to select this class? Y/N: ")
+        if confirmation.upper() != "Y":
+            classselction()
+        else: 
+            break
+
+def identifyingroles():
     classselction()
     classconfirmation()
 
-#start
-print("Hello player, welcome!")
-time.sleep(1)
-username = input("What will your username be? ")
-print(f"Hello {username}, welcome to Zhou Dynasty!")
-time.sleep(1)
+    
+#menu 
+while True:
+    menu = input("Start | Quit: ")
+    if menu.upper() == "QUIT": 
+        break
+    elif menu.upper() == "START":
+        print("Hello player, welcome!")
+        time.sleep(1)
+        username = input("What will your username be? ")
+        print(f"Hello {username}, welcome to Zhou Dynasty!")
+        time.sleep(1)
 
-identifyingclass()
-
-start = input("Are you ready to begin your adventure? Y/N: ")
-print("It didn't matter what you picked.")
-
-time.sleep(1)
-
-storylinetime()
+        identifyingroles()
+    
+        start = input("Are you ready to begin your adventure? Y/N: ")
+        print("It didn't matter what you picked.")
+        time.sleep(1)
+        storylinetime()
 
 
 

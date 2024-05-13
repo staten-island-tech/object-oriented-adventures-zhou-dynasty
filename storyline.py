@@ -1,6 +1,4 @@
 import time
-from game import User
-a = open("classes.py")
 
 class storyline:
         class archerstoryline:
