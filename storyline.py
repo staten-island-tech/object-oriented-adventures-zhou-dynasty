@@ -15,6 +15,7 @@ class storyline:
                         print('UNTIL......')
                         print('You encounter a skeleton, a fierce battle begins.')
                         time.sleep(3)
+                
                 def shoot():
                         "shoot"
                         time.sleep(1)
@@ -23,6 +24,7 @@ class storyline:
                         print('Skeleton attacks, dealing 2 damage.')
                         time.sleep(2)
                         print('Player: 18/20 hp , Skeleton: 10/30 hp')
+                
                 def shoot2():
                         "shoot, shoot"
                         time.sleep(1)
