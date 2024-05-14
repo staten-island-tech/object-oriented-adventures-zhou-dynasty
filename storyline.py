@@ -288,13 +288,13 @@ def selector():
                                 time.sleep(10)
                                 print('It suddenly happens again???')
                                 storyline.archerstoryline.rundefendcontinuance2
-                        elif r == 'Run':
+                        elif r == 'r    un':
                                 storyline.archerstoryline.run4()
-                        e = input('Pick your next move (Shoot, Defend, Run): ')
-                        if e == 'Shoot':
+                        e = input('Pick your next move (Shoot, Defend, Run): ').lower
+                        if e == 'shoot':
                                 storyline.archerstoryline('placeholder') 
                         if e == 'Run':
                                 storyline.archerstoryline.runcontinuance()
                 else:
                         print('pick an actual option given, thanks')
-selector()
+                        selector()
