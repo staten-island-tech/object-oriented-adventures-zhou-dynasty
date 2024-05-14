@@ -1,4 +1,6 @@
 import time
+import os
+os.system("cls")
 a = open("classes.py")
 
 class storyline:
@@ -22,7 +24,8 @@ class storyline:
                         print('It fires an arrow.')
                         print('A battle begins.')
                         time.sleep(1)
-                        print('Player: 20 hp')
+                        os.system("cls")
+                        print('Player: 20 hp, Skeleton: 30 hp')
                 
                 def shoot():
                         print('You have done 20 damage.')
@@ -170,7 +173,24 @@ class storyline:
                                         print('You begin your long and harsh journey.')
                                         print('It hopes of reaching some sort of civilziation.')
                                         time.sleep(2)
-                                        print('Pushing through, using ')
+                                        print('Pushing through, using all your might, all your energy(at least try to imagine it)')
+                                        time.sleep(1)
+                                        print('After a long journey, you come upon a city, a well developed one matter of fact.')
+                                        time.sleep(1)
+                                        print('You wonder, why would there be such an advanced civilization in a world like this.')
+                                        time.sleep(1)
+                                        print('No matter, you wander into the civilization, you get stopped by a stranger.')
+                                        time.sleep(1)
+                                        print('Unknown: Hey!')
+                                        print('You: Hi, who are you.')
+                                        time.sleep(1)
+                                        print('Walter: My name is Walter.')
+                                        print('You: Hey Walter!')
+                                        time.sleep(1)
+                                        print('You: Nice to meet you.')
+                                        print('You: What made you come up to me anyways Walter.')
+                                        time.sleep(1)
+                                        print('Walter: Oh you know, you looked a little bit lost and I just wanted to help.')
                                 elif x == 'Travel South':
                                         print('You begin a long and harsh journey.')
                                         print('In hopes of reaching some sort of civilization.')
@@ -178,10 +198,38 @@ class storyline:
                                         print('')
                                 elif x == 'Quit':
                                         print('You have decided to quit, Goodbye!!!')
+                                        print('Your progress does not save, have fun!!!')
                                         break
                                 else:
                                         print('Pick a choice given, thanks')
-                        
+                                storyline.archerstoryline.storyline2()
+                def storyline2continuance():
+                        while True:
+                                y = input('Walter: Come with me. (Follow, Leave)').upper()
+                                if y == 'Follow':
+                                                print('You begin following Walter.')
+                                                print('You end up in his house somehow.')
+                                                time.sleep(2)
+                                                print('Walter: Go to sleep, it is dark out, dw I gotchu.')
+                                                print('You follow his request for some reason??')
+                                                time.sleep(1)
+                                                print('Never trust Walters, he killed you in your sleep.')
+                                                print('Bye Bye!!')
+                                                break
+                                elif y == 'Leave':
+                                                print('You are lucky this time buddy.')
+                                                print('Did not listen to a Walter, smart.')
+                                                time.sleep(2)
+                                                print('You: No thanks, Im more of an indepedent guy.')
+                                                print('Walter: Aw man, well see you around.')
+                                                time.sleep(2)
+                                                print('You: Bye!')
+                                                print('As you both begin to part ways, your mind starts racing, what would have happened if you actually decided to follow him.')
+                                else:
+                                                print('please pick an option within the parentheses, thanks')
+                                storyline.archerstoryline.storyline2continuance()
+
+
 def selector():
         while True:
                 print('Please make the first letter uppercase, and choose a given option')
