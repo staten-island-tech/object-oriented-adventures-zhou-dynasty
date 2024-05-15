@@ -225,17 +225,21 @@ class storyline:
                                                 time.sleep(2)
                                                 print('You: Bye!')
                                                 print('As you both begin to part ways, your mind starts racing, what would have happened if you actually decided to follow him.')
+                                                time.sleep(2)
+                                                print('Would would have happened to me, you ponder.')
+                                                print('But anyways you decide to wander off, deeper into the heart of the city.')
+                                                time.sleep(2)
+                                                
                                 else:
                                                 print('please pick an option within the parentheses, thanks')
-                                storyline.archerstoryline.storyline2continuance()
+                                                storyline.archerstoryline.storyline2continuance()
 
-
-def selector():
-        while True:
-                print('Please make the first letter uppercase, and choose a given option')
-                p = input('Pick your move (Shoot, Defend, Run): ')
-                if p == 'Shoot':
-                        storyline.archerstoryline.shoot()
+class Game:
+        def selector():
+                while True:
+                        p = input('Pick your move (Shoot, Defend, Run): ')
+                        if p == 'Shoot':
+                                storyline.archerstoryline.shoot()
                         r = input('Pick your next move (Shoot, Defend, Run): ')
                         if r == 'Shoot':
                                 storyline.archerstoryline.shoot2()
@@ -253,8 +257,8 @@ def selector():
                                 break
                         else:
                                 print('pick an actual option give, thanks')
-                                selector()
-                elif p == 'Defend':
+                                Game.selector()
+                        elif p == 'Defend':
                         storyline.archerstoryline.defend()
                         r = input('Pick your next move (Shoot, Defend, Run): ')
                         if r == 'Shoot':
@@ -274,13 +278,13 @@ def selector():
                         elif r == 'Run':
                                 storyline.archerstoryline.defend4()
                                 print('pick an actual option give, thanks')
-                                selector()
-                elif p == 'Run':
-                        storyline.archerstoryline.run()
-                        r = input('Pick your next move (Shoot, Defend, Run): ')
-                        if r == 'Shoot':
+                                Game.selector()
+                        elif p == 'Run':
+                                storyline.archerstoryline.run()
+                        r = input('Pick your next move (Shoot, Defend, Run): ').lower
+                        if r == 'shoot':
                                 storyline.archerstoryline.run2()
-                        elif r == 'Defend':
+                        elif r == 'defend':
                                 storyline.archerstoryline.run3()
                                 time.sleep(10)
                                 print("You raise your bow in preperation to shoot.")
@@ -288,13 +292,13 @@ def selector():
                                 time.sleep(10)
                                 print('It suddenly happens again???')
                                 storyline.archerstoryline.rundefendcontinuance2
-                        elif r == 'r    un':
+                        elif r == 'run':
                                 storyline.archerstoryline.run4()
                         e = input('Pick your next move (Shoot, Defend, Run): ').lower
                         if e == 'shoot':
                                 storyline.archerstoryline('placeholder') 
                         if e == 'Run':
                                 storyline.archerstoryline.runcontinuance()
-                else:
-                        print('pick an actual option given, thanks')
-                        selector()
+                        else:
+                                print('pick an actual option given, thanks')
+                                Game.selector()
