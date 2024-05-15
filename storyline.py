@@ -213,7 +213,7 @@ class storyline:
                                                 print('Walter: Go to sleep, it is dark out, dw I gotchu.')
                                                 print('You follow his request for some reason??')
                                                 time.sleep(1)
-                                                print('Never trust Walters, he killed you in your sleep.')
+                                                print('Never trust Walter, he killed you in your sleep.')
                                                 print('Bye Bye!!')
                                                 break
                                 elif y == 'Leave':
@@ -229,7 +229,14 @@ class storyline:
                                                 print('Would would have happened to me, you ponder.')
                                                 print('But anyways you decide to wander off, deeper into the heart of the city.')
                                                 time.sleep(2)
-                                                
+                                                print("You check your pockets and remember you don't got money..")
+                                                print('Fluckers.')
+                                                time.sleep(2)
+                                                print('You decide to head back out, in pitch darkness.')
+                                                print('It was never a good idea, you ended up getting jumped by a bunch of drunk hooligans and passed on into the afterlife.')
+                                                time.sleep(2)
+                                                print('AHAHAHA, BYE')
+                                                break
                                 else:
                                                 print('please pick an option within the parentheses, thanks')
                                                 storyline.archerstoryline.storyline2continuance()
