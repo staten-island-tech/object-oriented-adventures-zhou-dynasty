@@ -62,13 +62,5 @@ Scylla
 
 Astraea
 
-## Experience
-
-Skeleton - 2 Levels
-
-Wither Skeleton - 4 Levels
-
-Stray - 5 Levels
-
 
 ## Levels

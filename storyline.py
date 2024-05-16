@@ -1,5 +1,6 @@
 import time
 import os
+import random
 os.system("cls")
 a = open("classes.py")
 
@@ -195,7 +196,21 @@ class storyline:
                                         print('You begin a long and harsh journey.')
                                         print('In hopes of reaching some sort of civilization.')
                                         time.sleep(2)
-                                        print('')
+                                        print('You walk long and far, no person or building in sight.')
+                                        print('You notice that something looks wrong?')
+                                        time.sleep(2)
+                                        print('You see a dark aura illuminating around one of the trees.')
+                                        print('A dark skeleton appears, similar to the one you encountered within the beginning.')
+                                        time.sleep(2)
+                                        print("It's holding as word, it looks dangerous.")
+                                        print('It begins charging at you, guess you gotta fight.')
+                                        time.sleep(2)
+                                        os.system('cls')
+                                        print('Your hp has been reset from the last fight, at the cost of the run move.')
+                                        print('Player: 20 hp, Wither Skeleton: 50 hp')
+                                        
+
+                                        print()
                                 elif x == 'Quit':
                                         print('You have decided to quit, Goodbye!!!')
                                         print('Your progress does not save, have fun!!!')
@@ -203,6 +218,14 @@ class storyline:
                                 else:
                                         print('Pick a choice given, thanks')
                                 storyline.archerstoryline.storyline2()
+                def storyline2south():
+                        while True:
+                                x = input('What do you wish to do (Shoot, Defend)').lower
+                                if x == 'shoot':
+                                        print('You fired off an arrow at it, it pierced through it.')
+                                        print("It attempts to strike with it's sword, it connects.")
+                                        time.sleep(3)
+                                        print('Player: 17 hp, Wither Skeleton: 30 hp')
                 def storyline2continuance():
                         while True:
                                 y = input('Walter: Come with me. (Follow, Leave)').upper()
@@ -235,13 +258,13 @@ class storyline:
                                                 print('You decide to head back out, in pitch darkness.')
                                                 print('It was never a good idea, you ended up getting jumped by a bunch of drunk hooligans and passed on into the afterlife.')
                                                 time.sleep(2)
-                                                print('AHAHAHA, BYE')
+                                                print('AHAHAHAAHAHAHAHA, BYE')
                                                 break
                                 else:
                                                 print('please pick an option within the parentheses, thanks')
                                                 storyline.archerstoryline.storyline2continuance()
 
-class Game:
+class Selector1:
         def selector():
                 while True:
                         p = input('Pick your move (Shoot, Defend, Run): ')
@@ -264,7 +287,7 @@ class Game:
                                 break
                         else:
                                 print('pick an actual option give, thanks')
-                                Game.selector()
+                                Selector1.selector()
                         elif p == 'Defend':
                         storyline.archerstoryline.defend()
                         r = input('Pick your next move (Shoot, Defend, Run): ')
@@ -285,7 +308,7 @@ class Game:
                         elif r == 'Run':
                                 storyline.archerstoryline.defend4()
                                 print('pick an actual option give, thanks')
-                                Game.selector()
+                                Selector1.selector()
                         elif p == 'Run':
                                 storyline.archerstoryline.run()
                         r = input('Pick your next move (Shoot, Defend, Run): ').lower
@@ -308,4 +331,4 @@ class Game:
                                 storyline.archerstoryline.runcontinuance()
                         else:
                                 print('pick an actual option given, thanks')
-                                Game.selector()
+                                Selector1.selector()
