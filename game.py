@@ -49,8 +49,6 @@ while True:
     print("Disclaimer: Your data does not save, it resets everytime you play.")
     menu = input("Start | Quit: ")
     if menu.upper() == "QUIT": 
-        os.system('cls')
-        print("Game over")
         break
     elif menu.upper() == "START":
         os.system('cls')
@@ -72,8 +70,6 @@ while True:
         for x in Player:
             if x['health'] <= 0:
                 break
-
-
 
 
 
