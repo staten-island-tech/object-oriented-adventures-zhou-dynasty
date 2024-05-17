@@ -1,21 +1,19 @@
 import time
-a = open("classes.py")
 
 class storyline:
-        class archerstoryline():
+        class archerstoryline:
                 def __init__(self):
                         self.archerstoryline = True 
 
                 def archer():
-                        print('Your adventure begins now {username}.')
+                        print('Your adventure begins now .')
                         time.sleep(2)
                         print('You look around, confused, you decide to wander around.')
                         time.sleep(1)
                         print('You search for answers, none to be found.')
                         time.sleep(3)
-                        print('Until.')
-                        time.sleep(2)
-                        print('You encounter a skeleton')
+                def shoot():
+                        "shoot"
                         time.sleep(1)
                         print('It seems agitated?')
                         time.sleep(1)
@@ -30,6 +28,7 @@ class storyline:
                         print('Skeleton attacks, dealing 2 damage.')
                         time.sleep(2)
                         print('Player: 18/20 hp , Skeleton: 10/30 hp')
+                
                 def shoot2():
                         print('You have done 20 damage.')
                         time.sleep(2)
