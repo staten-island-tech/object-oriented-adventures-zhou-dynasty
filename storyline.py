@@ -208,9 +208,6 @@ class storyline:
                                         os.system('cls')
                                         print('Your hp has been reset from the last fight, at the cost of the run move.')
                                         print('Player: 20 hp, Wither Skeleton: 50 hp')
-                                        
-
-                                        print()
                                 elif x == 'Quit':
                                         print('You have decided to quit, Goodbye!!!')
                                         print('Your progress does not save, have fun!!!')
@@ -218,14 +215,49 @@ class storyline:
                                 else:
                                         print('Pick a choice given, thanks')
                                 storyline.archerstoryline.storyline2()
-                def storyline2south():
-                        while True:
-                                x = input('What do you wish to do (Shoot, Defend)').lower
-                                if x == 'shoot':
-                                        print('You fired off an arrow at it, it pierced through it.')
-                                        print("It attempts to strike with it's sword, it connects.")
-                                        time.sleep(3)
-                                        print('Player: 17 hp, Wither Skeleton: 30 hp')
+                def storyline2southshoot():
+                        'shoot1'
+                        print('You fired off an arrow at it, it pierced through it.')
+                        print("It attempts to strike with it's sword, it connects.")
+                        time.sleep(3)
+                        print('Player: 17 hp, Wither Skeleton: 30 hp')
+                def storyline2southdefend():
+                        'defend1'
+                        print('You defend. ')
+                        print('It does so much to help you not gonna lie.')
+                        time.sleep(3)
+                        print('You did not deal damage.')
+                        print('The wither skeleton attacked dealing 1 damage.')
+                        time.sleep(2)
+                        print('Player 19 hp, Wither Skeleton 50 hp')
+                def storyline2southshoot3():
+                        print('You kill it.')
+                        print('Good Job.')
+                        time.sleep(3)
+                        print('Player 14 hp, Wither Skeleton 0 hp')
+                def storyline2southdefend3():
+                        print('Yeah this guy has no clue what he is doing.')
+                        print('Player 17 hp, Wither Skeleton 50 hp')
+                def storyline2southsouthshootdefend():
+                        print('Defending after attacking, ingenious.')
+                        print('You defend, only taking 1 damage.')
+                        time.sleep(3)
+                        print('Player 16 hp, Wither Skeleton 30 hp')
+                def storyline2southshoot2():
+                        print('You fired off another arrow, you made another hole within it.')
+                        print('It hits you again.')
+                        time.sleep(3)
+                        print('Player: 14hp, Wither Skeleton 10 hp')
+                def storyline2southshootdefendshoot():
+                        print('You fire off another arrow again.')
+                        print('')
+                def storyline2southdefend2():
+                        print('You defend again.')
+                        print('Absolute genius.')
+                        time.sleep(2)
+                        print('The mob deals another 1 damage.')
+                        time.sleep(1)
+                        print('Player 18, Wither Skeleton 50hp')
                 def storyline2continuance():
                         while True:
                                 y = input('Walter: Come with me. (Follow, Leave)').upper()
@@ -267,38 +299,35 @@ class storyline:
 class Selector1:
         def selector():
                 while True:
-                        p = input('Pick your move (Shoot, Defend, Run): ')
+                        p = input('Pick your move (Shoot, Defend, Run): ').capitalize()
                         if p == 'Shoot':
                                 storyline.archerstoryline.shoot()
-                        r = input('Pick your next move (Shoot, Defend, Run): ')
+                        r = input('Pick your next move (Shoot, Defend, Run): ').capitalize()
                         if r == 'Shoot':
                                 storyline.archerstoryline.shoot2()
                                 break
                         elif r == 'Defend': 
                                 storyline.archerstoryline.shoot3()
-                        q = input('Pick your next move (Only Shoot Available): ')
+                        q = input('Pick your next move (Only Shoot Available): ').capitalize()
                         if q == 'Shoot':
                                 storyline.archerstoryline.shootcontinuance3
                         elif r == 'Run':
                                 storyline.archerstoryline.shoot4()
-                        g = input('Pick your next move (Only Shoot Available): ')
+                        g = input('Pick your next move (Only Shoot Available): ').capitalize()
                         if g == 'Shoot':
                                 storyline.archerstoryline.shootcontinuance4
                                 break
-                        else:
-                                print('pick an actual option give, thanks')
-                                Selector1.selector()
                         elif p == 'Defend':
-                        storyline.archerstoryline.defend()
-                        r = input('Pick your next move (Shoot, Defend, Run): ')
+                                storyline.archerstoryline.defend()
+                        r = input('Pick your next move (Shoot, Defend, Run): ').capitalize()
                         if r == 'Shoot':
                                 storyline.archerstoryline.defend2()
-                        e = input('Pick your next move (Pick Shoot)')
+                        e = input('Pick your next move (Pick Shoot)').capitalize()
                         if e == 'Shoot':
                                 storyline.archerstoryline.defendshootcontinuance
                         elif r == 'Defend':
                                 storyline.archerstoryline.defend3()
-                        g = input('Pick your next move (Must pick Shoot): ')
+                        g = input('Pick your next move (Must pick Shoot): ').capitalize()
                         if g == 'Shoot':
                                 storyline.archerstoryline.defendcontinuance
                                 time.sleep(10)
@@ -311,7 +340,7 @@ class Selector1:
                                 Selector1.selector()
                         elif p == 'Run':
                                 storyline.archerstoryline.run()
-                        r = input('Pick your next move (Shoot, Defend, Run): ').lower
+                        r = input('Pick your next move (Shoot, Defend, Run): ').lower()
                         if r == 'shoot':
                                 storyline.archerstoryline.run2()
                         elif r == 'defend':
@@ -324,7 +353,7 @@ class Selector1:
                                 storyline.archerstoryline.rundefendcontinuance2
                         elif r == 'run':
                                 storyline.archerstoryline.run4()
-                        e = input('Pick your next move (Shoot, Defend, Run): ').lower
+                        e = input('Pick your next move (Shoot, Defend, Run): ').lower()
                         if e == 'shoot':
                                 storyline.archerstoryline('placeholder') 
                         if e == 'Run':
