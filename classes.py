@@ -1,5 +1,12 @@
 #Mobs
-class Skeleton():
+class Mobs():
+    def __init__(self, name, health):
+        self.name = name
+        self.health = health
+    def __str__(self):
+        return f"{self.name}, {self.health}"
+    
+class Skeleton(Mobs):
     def __init__(self, name, health, damage, weapon):
         self.name = name
         self.health = health
