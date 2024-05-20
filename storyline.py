@@ -26,8 +26,7 @@ class storyline:
                         print('A battle begins.')
                         time.sleep(1)
                         os.system("cls")
-                        print('Player: 20 hp, Skeleton: 30 hp')
-                
+                        print('Player: 20 hp, Skeleton: 30 hp')            
                 def shoot():
                         print('You have done 20 damage.')
                         time.sleep(2)
@@ -231,33 +230,52 @@ class storyline:
                         time.sleep(2)
                         print('Player 19 hp, Wither Skeleton 50 hp')
                 def storyline2southshoot3():
+                        'shoot3'
                         print('You kill it.')
                         print('Good Job.')
                         time.sleep(3)
                         print('Player 14 hp, Wither Skeleton 0 hp')
                 def storyline2southdefend3():
+                        'defend3'
                         print('Yeah this guy has no clue what he is doing.')
                         print('Player 17 hp, Wither Skeleton 50 hp')
                 def storyline2southsouthshootdefend():
+                        'attack, defend'
                         print('Defending after attacking, ingenious.')
                         print('You defend, only taking 1 damage.')
                         time.sleep(3)
                         print('Player 16 hp, Wither Skeleton 30 hp')
                 def storyline2southshoot2():
+                        'shoot2'
                         print('You fired off another arrow, you made another hole within it.')
                         print('It hits you again.')
                         time.sleep(3)
-                        print('Player: 14hp, Wither Skeleton 10 hp')
+                        print('Player: 14 hp, Wither Skeleton 10 hp')
                 def storyline2southshootdefendshoot():
                         print('You fire off another arrow again.')
-                        print('')
+                        print('You dealt damage.')
+                        time.sleep(3)
+                        print('Learning already?')
+                        print('The wither skeleton barely hit you.')
+                        print('Player: 14 hp, Wither Skeleton 10 hp')
                 def storyline2southdefend2():
                         print('You defend again.')
                         print('Absolute genius.')
                         time.sleep(2)
                         print('The mob deals another 1 damage.')
                         time.sleep(1)
-                        print('Player 18, Wither Skeleton 50hp')
+                        print('Player 18 hp, Wither Skeleton 50hp')
+                def storyline2southdefend3():
+                        print('Defending a third time?')
+                        print('Do you plan on just giving up???')
+                        time.sleep(3)
+                        print('Player 17 hp, Wither Skeleton 50 hp')
+                def storyline2southdefend4():
+                        while True:
+                                print('Well since you wish on doing no damage.')
+                                print('Might as well end this run because why not.')
+                                time.sleep(3)
+                                break
                 def storyline2continuance():
                         while True:
                                 y = input('Walter: Come with me. (Follow, Leave)').upper()
