@@ -8,15 +8,16 @@ class Mobs():
         return f"{self.name}, {self.health}"
     
 class Skeleton(Mobs):
-    def __init__(self, name, health, damage, weapon):
+    def __init__(self, name, health, weapon):
         self.name = name
         self.health = health
-        self.damage = damage
         self.weapon = weapon
     def __str__(self):
-        return f"{self.name}, {self.health}, {self.damage}, {self.weapon}"
+        return f"{self.name}, {self.health}, {self.weapon}"
     
-WitherSkeleton = Skeleton("Wither Skeleton", 20, 20, "Stone Sword")
+Skeleton1 = Skeleton("Skeleton", 30, "Wooden Sword")
+WitherSkeleton = Skeleton("Wither Skeleton", 20, "Stone Sword")
+Wither = Skeleton("Wither", 100, "???")
 
 #Player
 class User():
@@ -52,5 +53,5 @@ class ClassSelection:
 
         if UserClassChoice == "ARCHER":
             self.Player = User(self.username, 20, 20, UserClassChoice, "Short Bow")
-        else:
+        elif UserClassChoice == "MAGE":
             self.Player = User(self.username, 15, 30, UserClassChoice, "Magic Wand")
