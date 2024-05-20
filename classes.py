@@ -29,27 +29,28 @@ class User():
     def __str__(self):
         return f"{self.username}, {self.health}, {self.damage}, {self.Class}, {self.weapon}"
 
-class CLassSelection:
+class ClassSelection:
     def __init__(self, username):
-        self.Player = []
-        self.Username = username
-        self.Class = None
+        self.username = username
+        self.Player = None
 
-    def SelectingAClass(self):
-        ClassChoices = ["ARCHER", "MAIN"]
-        ClassChoice = input("Choose your class (Archer, Mage): ").upper()
+    def SelectAClass(self):
+        ClassChoices = ["ARCHER", "MAGE"]
+        UserClassChoice = input("Choose your class (Archer, Mage): ").upper()
 
         while True:
-            while ClassChoice not in ClassChoices:
+            while UserClassChoice not in ClassChoices:
                 os.system('cls')
-                ClassChoice = input("Choose your class (Archer, Mage): ").upper()
+                UserClassChoice = input("Choose your class (Archer, Mage): ").upper()
 
-            confirmation = input(f"Are you sure you want to choose {ClassChoice}? (Y/N): ").upper()
+            confirmation = input(f"Are you sure you want to choose {UserClassChoice}? (Y/N): ").upper()
             if confirmation == 'Y':
                 break
             else:
                 os.system('cls')
                 UserClassChoice = input("Choose your class (Archer, Mage): ").upper()
 
-    
-
+        if UserClassChoice == "ARCHER":
+            self.Player = User(self.username, 20, 20, UserClassChoice, "Short Bow")
+        else:
+            self.Player = User(self.username, 15, 30, UserClassChoice, "Magic Wand")
