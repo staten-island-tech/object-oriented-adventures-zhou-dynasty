@@ -70,10 +70,7 @@ def game():
         time.sleep(1)
 
         
-    
-        for x in Player:
-            if x['health'] <= 0:
-                break
+
 
 
 
