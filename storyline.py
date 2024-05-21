@@ -4,171 +4,167 @@ import random
 os.system("cls")
 a = open("classes.py")
 
-class loot:
-        def random():
-                randint = random.randint(1,10)
-                if randint == [1, 2, 3, 4, 5]:
-                        print('You dropped ')
-
+def sleep():
+        time.sleep(2)
 class storyline:
+
         class archerstoryline():
                 def __init__(self):
                         self.archerstoryline = True 
-
-                def archer():
+                
+                def archer():   
                         print('Your adventure begins now {username}.')
-                        time.sleep(2)
+                        sleep()
                         print('You look around, confused, you decide to wander around.')
-                        time.sleep(1)
+                        sleep()
                         print('You search for answers, none to be found.')
-                        time.sleep(3)
+                        sleep()
                         print('Until.')
-                        time.sleep(2)
-                        print('You encounter a skeleton')
+                        time.sleep(1)
+                        print('You encounter a skeleton!')
                         time.sleep(1)
                         print('It seems agitated?')
                         time.sleep(1)
-                        print('It fires an arrow.')
+                        print('It charges at you.')
                         print('A battle begins.')
                         time.sleep(1)
                         os.system("cls")
-                        print('Player: 20 hp, Skeleton: 30 hp')            
+                        print('Player: 20 hp, Skeleton: 30 hp')    
+                archer()        
                 def shoot():
                         print('You have done 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 2 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 18/20 hp , Skeleton: 10/30 hp')
                 def shoot2():
                         print('You have done 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton has sadly passed away due to you piercing it with your arrow.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 18/20 hp , Skeleton: 0/30 hp')
                 def shoot3():
                         print('You have done 0 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton hits you again for 1 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 17/20 hp , Skeleton: 10/30 hp')     
                 def shootcontinuance3():
                         print('You have done 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton has passed away due to your shot.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 17/20 hp , Skeleton: 0 hp')                         
                 def shoot4():
                         print('No Running')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton hits you again for 4 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 14/20 hp , Skeleton: 10/30 hp')            
                 def shootcontinuance4():
                         print('You shoot to kill.')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton has died from your arrow.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 14 hp, Skeleton 0 hp')
                         time.sleep(1)
                         print('It dropped an Artisanal Shortbow (25 damage)')
                 def defend():
                         print('You have decided to defend, no damage dealt.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 1 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 19/20 hp, Skeleton: 30 hp')
                 def defend2():
                         print('You have chosen to shoot.')
-                        time.sleep(2)
+                        sleep()
                         print('You have dealt 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 2 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 17/20 hp, Skeleton: 10 hp')
                 def defendshootcontinuance():
                         print('You killed the skeleton.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 17/20, Skeleton: 0 hp')
                         print('It dropped an Artisanal Shortbow (25 damage)')
                         print('Your reward for wasting this much time.')
                 def defend3():
                         print('You have chosen to Defend again for some reason.')
-                        time.sleep(2)
+                        sleep()
                         print('You have dealt 0 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 1 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 18/20 hp, Skeleton: 10 hp')
                 def defendcontinuance():
                         print('You have done 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton hits you again for 1 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 17/20 hp , Skeleton: 10/30 hp')          
                 def defendcontinuance2():
                         print('You have done 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('The skeleton has died.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 17/20 hp , Skeleton: 0 hp')     
                         time.sleep(1)                               
                         print('It dropped an Artisanal Shortbow (25 damage)')    
                 def defend4():
                         print('You have chosen to Run.')
-                        time.sleep(2)
+                        sleep()
                         print('After defending is insane.')
-                        time.sleep(2)
+                        sleep()
                         print('Why coward out of a fight?')
-                        time.sleep(2)
+                        sleep()
                         print("I'm taking away your privilege to run.")
                 def run():
                         print('WRONG CHOICE, YOU ARE NOT ALLOWED TO RUN!!!!')
                         print('You have taken 3 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 2 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 15 hp, Skeleton: 30 hp')
                         time.sleep(1)
                 def run2():
                         print('You have done 20 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 2 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 15/20 hp , Skeleton: 10/30 hp')
                 def run3():
                         print('You have chosen to Defend for some reason.')
                         print('You have dealt 0 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Skeleton attacks, dealing 1 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 15/20 hp, Skeleton: 30/30 hp')
                 def rundefendcontinuance():
                         print('You have done damage.')
                         print('Skeleton has also done damage')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 13 hp, Skeleton 10 hp')
                 def rundefendcontinuance2():
-                        'run, defend, shoot, shoot'
-                        'force them to shoot again'
                         print('Player has shot again, killing the skeleton')
                         print('Took long enough.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 13 hp, Skeleton 0 hp')
                 def run4():
                         print('You have chosen to Run.')
                         print("Someone didn't learn their lesson")
-                        time.sleep(2)
+                        sleep()
                         print('Why coward out of a fight?')
-                        time.sleep(2)
+                        sleep()
                         print('You have taken 5 damage')
-                        time.sleep(3)
+                        sleep()
                         print('Skeleton decides to take pity due to your stupidity')
                         time.sleep(2)
                         print('Player 10 hp, Skeleton: 10/30 hp')
                 def runcontinuance():
                         print('You have chosen to run for a third time?')
                         print('This is the end of your miserable life.')
-                        time.sleep(2)
+                        sleep()
                         print('If you wish to restart your run and be smarter this time.')
                         input('Enter the Letter Y, if not press the letter N').upper()
                 def storyline2():
@@ -233,7 +229,7 @@ class storyline:
                         time.sleep(3)
                         print('You did not deal damage.')
                         print('The wither skeleton attacked dealing 1 damage.')
-                        time.sleep(2)
+                        sleep()
                         print('Player 19 hp, Wither Skeleton 50 hp')
                 def storyline2southshoot3():
                         'shoot3'
@@ -246,7 +242,7 @@ class storyline:
                         print('Yeah this guy has no clue what he is doing.')
                         print('Player 17 hp, Wither Skeleton 50 hp')
                 def storyline2southsouthshootdefend():
-                        'attack, defend'
+                        'shoot, defend'
                         print('Defending after attacking, ingenious.')
                         print('You defend, only taking 1 damage.')
                         time.sleep(3)
@@ -265,11 +261,28 @@ class storyline:
                         print('Learning already?')
                         print('The wither skeleton barely hit you.')
                         print('Player: 14 hp, Wither Skeleton 10 hp')
+                def storyline2southshootdefenddefendshoot():
+                        'shoot, defend, defend, shoot'
+                        print('Actually listening.')
+                        print('Good job.')
+                        sleep()
+                        print('You fire off an arrow.')
+                        print('It connects.')
+                        sleep()
+                        print('The wither skeleton hits you, but it was not that effective.')
+                        print('Player: 14 hp, Wither Skeleton: 10 hp')
+                def storyline2southshootdefendedefendshoot():
+                        'shoot defend defend shoot shoot'
+                        print('You killed it.')
+                        print('Nice.')
+                        sleep()
                 def storyline2southshootdefenddefend():
+                        'shoot defend defend'
                         print('Defend one more time and I will end this run.')
-                        time.sleep(2)
+                        sleep()
                         print('Player: 16 hp, Wither Skeleton 0 hp')
                 def storyline2southshootdefendefenddefend():
+                        'shoot, defend, defend, defend'
                         while True:
                                 print('Bye.')
                                 break
@@ -300,6 +313,9 @@ class storyline:
                                 print('Might as well end this run because you are wasting my time.')
                                 time.sleep(3)
                                 break
+                def storyline2southdefendshoot():
+                        'defend, shoot'
+                        print("We're onto something with this one!")
                 def storyline2continuance():
                         while True:
                                 y = input('Walter: Come with me. (Follow, Leave)').upper()
@@ -389,10 +405,10 @@ class Selector1:
                                 storyline.archerstoryline.run3()
                                 time.sleep(10)
                                 print("You raise your bow in preperation to shoot.")
-                                storyline.archerstoryline.rundefendcontinuance
+                                storyline.archerstoryline.rundefendcontinuance()
                                 time.sleep(10)
                                 print('It suddenly happens again???')
-                                storyline.archerstoryline.rundefendcontinuance2
+                                storyline.archerstoryline.rundefendcontinuance2()
                         elif r == 'run':
                                 storyline.archerstoryline.run4()
                         e = input('Pick your next move (Shoot, Defend, Run): ').lower()
@@ -402,7 +418,7 @@ class Selector1:
                                 storyline.archerstoryline.runcontinuance()
                         else:
                                 print('pick an actual option given, thanks')
-                                Selector1.selector()
+                                storyline.selector1()
 
 class Selector2():
         def selector2():
@@ -410,3 +426,8 @@ class Selector2():
                                 r = input('Pick your move (Shoot, Defend): ').lower
                                 if r == 'shoot':
                                         storyline.archerstoryline.storyline2southshoot()
+
+
+
+
+class Mage:

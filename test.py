@@ -8,6 +8,7 @@ class storyline:
         
         def storyline2():
                         while True:
+                                y = 2
                                 print('After a long or possibly fought battle, you finally defeated one mob.')
                                 x = input('What do you wish to do (Travel North, Travel South, Quit): ').title()
                                 if x == 'Travel North':
