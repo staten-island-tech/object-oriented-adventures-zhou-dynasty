@@ -55,3 +55,61 @@ class ClassSelection:
             self.Player = User(self.username, 20, 20, UserClassChoice, "Short Bow")
         elif UserClassChoice == "MAGE":
             self.Player = User(self.username, 15, 30, UserClassChoice, "Magic Wand")
+
+#menu
+class Menu:
+    def __init__(self):
+        self.Menu = True
+        
+    def menu():
+        while True:
+            os.system('cls')
+            x = input("Would you like to learn about the game? Y/N: ").upper()
+            if x == "Y":
+                os.system('cls')
+                print("What would you like to know about?")
+                y = input("Mobs | Roles | Quit: ").upper()
+                if y == "MOBS":
+                    os.system('cls')
+                    print("Skeleton - HP: 20 | Weapon: Wooden Sword")
+                    print("Wither Skeleton - HP: 50 | Weapon: Stone Sword")
+                    print("Wither - HP: ??? | Weapon: ???")
+                    x = input("Type to continue ")
+                elif y.upper() == "ROLES":
+                    os.system('cls')
+                    print("Archer - HP: 20 | DAMAGE: 20 | Weapon: Short Bow")
+                    print("Mage - HP: 15 | DAMAGE: 30 | Weapon: Magic Wand")
+                    x = input("Type to continue ")
+                elif y == "QUIT":
+                    break
+            elif x == "N":
+                break
+        
+    def menu2():
+        while True:
+            os.system('cls')
+            x = input("Would you like to learn about the game? Y/N: ").upper()
+            if x == "Y":
+                os.system('cls')
+                print("What would you like to know about?")
+                y = input("Mobs | Roles: ").upper()
+                if y == "MOBS":
+                    os.system('cls')
+                    print("Skeleton - HP: 20 | Weapon: Wooden Sword")
+                    print("Wither Skeleton - HP: 50 | Weapon: Stone Sword")
+                    print("Wither - HP: ??? | Weapon: ???")
+                    x = input("Type to continue ")
+                elif y.upper() == "ROLES":
+                    os.system('cls')
+                    print("Archer - HP: 20 | DAMAGE: 20 | Weapon: Short Bow")
+                    print("Mage - HP: 15 | DAMAGE: 30 | Weapon: Magic Wand")
+                    x = input("Type to continue ")
+            elif x == "N":
+                break
+    
+    def message():
+        print("What would you like to do?")
+        print("Game - Relearn about the game")
+        print("Reselect - Reselect your class")
+        print("Quit - Quit the game")
+

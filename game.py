@@ -1,8 +1,9 @@
 import time
 import os
 from storyline import storyline
-from classes import ClassSelection, WitherSkeleton
+from classes import ClassSelection, Menu
 Player = []
+M = Menu
 
 def storylinetime():
     p = storyline
@@ -39,36 +40,38 @@ def game():
         time.sleep(2)
         os.system('cls')
 
-        while True:
-            os.system('cls')
-            x = input("Would you like to learn about the game? Y/N: ").upper()
-            if x == "Y":
-                os.system('cls')
-                print("What would you like to know about?")
-                y = input("Mobs | Roles | Quit: ").upper()
-                if y == "MOBS":
-                    os.system('cls')
-                    print("Skeleton - HP: 20 | Weapon: Wooden Sword")
-                    print("Wither Skeleton - HP: 50 | Weapon: Stone Sword")
-                    print("Wither - HP: ??? | Weapon: ???")
-                    x = input("Type to continue ")
-                elif y.upper() == "ROLES":
-                    os.system('cls')
-                    print("Archer - HP: 20 | DAMAGE: 20 | Weapon: Short Bow")
-                    print("Mage - HP: 15 | DAMAGE: 30 | Weapon: Magic Wand")
-                    x = input("Type to continue ")
-                elif y == "QUIT":
-                    break
-            elif x == "N":
-                break
-
+        M.menu()
         a.SelectAClass()
 
-        start = input("Are you ready to begin your adventure? Y/N: ")
-        os.system('cls')
-        print("It didn't matter what you picked.")
-        time.sleep(1)
+        while True:
+            start = input("Are you ready to begin your adventure? Y/N: ").upper()
+            os.system('cls')
+            if start == "Y":
+                break
+            elif start == "N":
+                AskOptions = ["GAME", "RESELECT", "QUIT"]
+                M.message()
+                Ask = input().upper()
 
+                while Ask not in AskOptions: 
+                    M.message
+                    Ask = input().upper()
+
+                if Ask == "GAME":
+                    M.menu2()
+                elif Ask == "RESELECT":
+                    os.system('cls')
+                    a.SelectAClass()
+                elif Ask == "QUIT":
+                    os.system('cls')
+                    print("Game over...")
+                    os.abort()
+
+        os.system('cls')
+
+    
+        
+game()
         
 
 
