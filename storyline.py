@@ -1,8 +1,21 @@
-import time
-import os
-import random
+import time, os,  random
 os.system("cls")
 a = open("classes.py")
+
+x = archerhp = 20
+
+class skeletonbattle:
+        def shoot():
+                x = archerhp - 2
+                return(f'You have {x} hp left.')
+        def defend():
+                x = archerhp - 1
+                return(f'You have {x} hp left.')
+        def death():
+                while True:
+                        if x == 0:
+                                return(f'You have {x} hp left.')
+                        break
 
 def sleep():
         time.sleep(2)
@@ -59,12 +72,23 @@ class storyline:
                         print('No Running')
                         sleep()
                         print('The skeleton hits you again for 4 damage.')
+                        # x = 10
+                        # x = x-4
+                        # return(f"u have {x} heakth")
+                        # return
                         sleep()
                         print('Player: 14/20 hp , Skeleton: 10/30 hp')            
                 def shootcontinuance4():
                         print('You shoot to kill.')
                         sleep()
                         print('The skeleton has died from your arrow.')
+        
+                        # skeletonhp = 10
+                        # if skeletonhp == 0:
+                        #         print("skeledied")
+                        #         print("it dropped artisanal bow"
+                        # def find:
+                        #         # code function that searches "artisanal bow" withiihn ur json
                         sleep()
                         print('Player: 14 hp, Skeleton 0 hp')
                         time.sleep(1)
@@ -307,7 +331,7 @@ class storyline:
                         time.sleep(3)
                         print('Player 17 hp, Wither Skeleton 50 hp')
                 def storyline2southdefend4():
-                        'defend 4'
+                        'defend 4' 
                         while True:
                                 print('Well since you wish on doing no damage.')
                                 print('Might as well end this run because you are wasting my time.')
