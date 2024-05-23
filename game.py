@@ -1,8 +1,9 @@
 import time
 import os
 from storyline import storyline
-from classes import User
+from classes import ClassSelection, Menu
 Player = []
+M = Menu
 
 def storylinetime():
     p = storyline
@@ -11,65 +12,70 @@ def storylinetime():
             p.archerstoryline.archer()
         elif x['Class'] == "MAGE": 
             p.magestoryline.mage()
-    
-
-def classselction():
-        while True:
-            Class = input("Choose your class (Archer, Mage): ")
-            if Class.upper() == "ARCHER": 
-                user = User(username, 20, 20, Class.upper(), "Short Bow")
-                Player.append(user.__dict__)
-                break
-            elif Class.upper() == "MAGE":
-                user = User(username, 15, 30, Class.upper(), "Magic Wand")
-                Player.append(user.__dict__)
-                break
-            else:
-                print("Pick a class.")
-
-    
-    
-
-def classconfirmation():
-    while True:
-        confirmation = input("Are you sure you want to select this class? Y/N: ")
-        if confirmation.upper() != "Y":
-            classselction()
-        else: 
-            break
-
-def identifyingroles():
-    classselction()
-    classconfirmation()
 
     
 #menu 
-while True:
+def game():
     os.system('cls')
+    menuChoices = ["START", "QUIT"]
     print("Disclaimer: Your data does not save, it resets everytime you play.")
-    menu = input("Start | Quit: ")
-    if menu.upper() == "QUIT": 
-        break
-    elif menu.upper() == "START":
+    menu = input("Start | Quit: ").upper()
+
+    while menu not in menuChoices:
+        os.system('cls')
+        print("Disclaimer: Your data does not save, it resets everytime you play.")
+        menu = input("Start | Quit: ").upper()
+
+    if menu == "QUIT": 
+        os.system('cls')
+        print("Game over...")
+        os.abort()
+    elif menu == "START":
         os.system('cls')
         print("Hello player, welcome!")
         time.sleep(1)
         username = input("What will your username be? ")
+        a = ClassSelection(username=username)
         print(f"Hello {username}, welcome to Zhou Dynasty!")
         time.sleep(2)
         os.system('cls')
-        identifyingroles()
-    
-        start = input("Are you ready to begin your adventure? Y/N: ")
-        os.system('cls')
-        print("It didn't matter what you picked.")
-        time.sleep(1)
 
-        storylinetime()
-        
-        for x in Player:
-            if x['health'] <= 0:
+        M.menu()
+        a.SelectAClass()
+
+        while True:
+            start = input("Are you ready to begin your adventure? Y/N: ").upper()
+            os.system('cls')
+            if start == "Y":
                 break
+            elif start == "N":
+                AskOptions = ["GAME", "RESELECT", "QUIT"]
+                M.message()
+                Ask = input().upper()
+
+                while Ask not in AskOptions: 
+                    M.message
+                    Ask = input().upper()
+
+                if Ask == "GAME":
+                    M.menu2()
+                elif Ask == "RESELECT":
+                    os.system('cls')
+                    a.SelectAClass()
+                elif Ask == "QUIT":
+                    os.system('cls')
+                    print("Game over...")
+                    os.abort()
+
+        os.system('cls')
+
+
+
+        
+game()
+        
+
+
 
 
 
