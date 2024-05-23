@@ -1,11 +1,14 @@
 import time, os,  random, json
 os.system("cls")
 a = open("classes.py")
-
-
+player = open("player.json", encoding="utf8")
+data = json.load(player)
 class finder:
-    def finder():
-        
+    def __init__(self, data):
+        self.finder = True
+        self.data = data    
+    def finder1():
+        y = 'placeholder'
 x = archerhp = 20
 class skeletonbattle:
     def shoot():
@@ -13,6 +16,9 @@ class skeletonbattle:
         return(f'You have {x} hp left.')
     def defend():
         x = archerhp - 1
+        return(f'You have {x} hp left.')
+    def run():
+        x = archerhp - 4
         return(f'You have {x} hp left.')
     def death():
         while True:
@@ -27,9 +33,11 @@ class skeletonhealth:
     def attackadefended():
         y = skeletonhp - 0
         return(f'Skeleton has {y} hp left.')
-    def killed():
-        y = print(random.randint(1,10))
-        if y == '1,2,3,4,5':
+
+    def skeletonkilled():
+        'unfinished'
+        x = random.randint(1,10)
+        if x == '1,2,3,4,5':
             print('You dropped an artisanal shortbow.')
             delay()
             print('Nice!')
@@ -68,3 +76,10 @@ class storyline:
                 if x == 'shoot':
                     print('You fired off an arrow.')
                     skeletonbattle.shoot()
+                elif x == 'defend':
+                    print('You defended, smart. Very smart.')
+                    delay()
+                    skeletonbattle.defend()
+                elif x == 'run':
+                    print('Cannot run loser')
+                    skeletonbattle.run()
