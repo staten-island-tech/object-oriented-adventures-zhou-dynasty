@@ -3,8 +3,8 @@ os.system("cls")
 a = open("classes.py")
 
 
-class finder:
-    def finder():
+class finder:  
+    def finder1():
         
 x = archerhp = 20
 class skeletonbattle:
@@ -13,6 +13,9 @@ class skeletonbattle:
         return(f'You have {x} hp left.')
     def defend():
         x = archerhp - 1
+        return(f'You have {x} hp left.')
+    def run():
+        x = archerhp - 4
         return(f'You have {x} hp left.')
     def death():
         while True:
@@ -25,6 +28,9 @@ class skeletonhealth:
         y = skeletonhp - 20
         return(f'Skeleton has {y} hp left.')
     def attackadefended():
+        y = skeletonhp - 0
+        return(f'Skeleton has {y} hp left.')
+    def hittingrunner():
         y = skeletonhp - 0
         return(f'Skeleton has {y} hp left.')
     def killed():
@@ -63,8 +69,63 @@ class storyline:
                 time.sleep(1)
                 os.system("cls")
                 print('Player: 20 hp, Skeleton: 30 hp')
-            def encounter():
-                x - input('Pick your first move (Shoot, Defend, Run)').lower()
+
+            def encounter1():
+                while True:
+                    x = input('Pick your first move (Shoot, Defend, Run)').lower()
+                    if x == 'shoot':
+                        print('You fired off an arrow.')
+                        skeletonbattle.shoot()
+                        skeletonhealth.shot()
+                    elif x == 'defend':
+                        print('You defended, smart.')
+                        skeletonbattle.defend()
+                        skeletonhealth.attackadefended()
+                    elif x == 'run':
+                        print('You attempted run.')
+                        delay()
+                        print('too bad, too sad')
+                        skeletonbattle.run()
+                        skeletonhealth.hittingrunner()
+                    else:
+                        print('please pick a move given')
+                        storyline.archerstoryline.encounter1()
+
+"""             def encounter():
+                x = input('Pick your first move (Shoot, Defend, Run)').lower()
                 if x == 'shoot':
                     print('You fired off an arrow.')
                     skeletonbattle.shoot()
+                    skeletonhealth.shot()
+                if x == 'defend':
+                    print('You defended, smart.')
+                    skeletonbattle.defend()
+                    skeletonhealth.attackadefended()
+                if x == 'run':
+                    print('You attempted run.')
+                    delay()
+                    print('too bad too sad')
+                    skeletonbattle.run()
+                    skeletonhealth.hittingrunner()
+                else:
+                    print('please pick a move given')
+                    storyline.archerstoryline.encounter()
+                delay()
+                print('Round 2')
+            def encounter2():
+                x = input('Pick your next move (Shoot, Defend, Run)').lower()
+                if x == 'shoot':
+                    print('You fired off a second arrow')
+                    skeletonbattle.shoot()
+                    skeletonhealth.shot()
+                elif x == 'defend':
+                    print('You defended, good job')
+                    skeletonbattle.shoot()
+                    skeletonhealth.shot()
+                elif x == 'run':
+                    print('wow.')
+                    skeletonbattle.run()
+                    skeletonhealth.hittingrunner()
+                else:
+                    print('please pick a move given')
+                    storyline.archerstoryline.encounter2() """
