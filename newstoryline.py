@@ -2,6 +2,10 @@ import time, os,  random
 os.system("cls")
 a = open("classes.py")
 
+
+class finder:
+    def finder():
+        
 x = archerhp = 20
 class skeletonbattle:
     def shoot():
