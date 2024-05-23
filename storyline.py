@@ -1,6 +1,10 @@
+<<<<<<< HEAD
 import time, os,  random
 os.system("cls")
 a = open("classes.py")
+=======
+import time
+>>>>>>> main
 
 x = archerhp = 20
 
@@ -20,6 +24,7 @@ class skeletonbattle:
 def sleep():
         time.sleep(2)
 class storyline:
+<<<<<<< HEAD
 
         class archerstoryline():
                 def __init__(self):
@@ -28,13 +33,28 @@ class storyline:
                 def archer():   
                         print('Your adventure begins now {username}.')
                         sleep()
+=======
+        class archerstoryline:
+                def __init__(self):
+                        self.archerstoryline = True 
+
+                def archer():
+                        print('Your adventure begins now .')
+                        time.sleep(2)
+>>>>>>> main
                         print('You look around, confused, you decide to wander around.')
                         sleep()
                         print('You search for answers, none to be found.')
+<<<<<<< HEAD
                         sleep()
                         print('Until.')
                         time.sleep(1)
                         print('You encounter a skeleton!')
+=======
+                        time.sleep(3)
+                def shoot():
+                        "shoot"
+>>>>>>> main
                         time.sleep(1)
                         print('It seems agitated?')
                         time.sleep(1)
@@ -50,6 +70,7 @@ class storyline:
                         print('Skeleton attacks, dealing 2 damage.')
                         sleep()
                         print('Player: 18/20 hp , Skeleton: 10/30 hp')
+                
                 def shoot2():
                         print('You have done 20 damage.')
                         sleep()
@@ -192,6 +213,7 @@ class storyline:
                         print('If you wish to restart your run and be smarter this time.')
                         input('Enter the Letter Y, if not press the letter N').upper()
                 def storyline2():
+<<<<<<< HEAD
                         while True:
                                 print('After a long or possibly fought battle, you finally defeated one mob.')
                                 x = input('What do you wish to do (Travel North, Travel South, Quit):').title()
@@ -385,6 +407,18 @@ class Selector1:
                         if p == 'Shoot':
                                 storyline.archerstoryline.shoot()
                         r = input('Pick your next move (Shoot, Defend, Run): ').capitalize()
+=======
+                        print('After a long or possibly fought battle, you finally defeated one mob.')
+                        input('What do you wish to do: ')
+
+def selector():
+        while True:
+                print('Please make the first letter uppercase, and choose a given option')
+                p = input('Pick your move (Shoot, Defend, Run): ')
+                if p == 'Shoot':
+                        storyline.archerstoryline.shoot()
+                        r = input('Pick your next move (Shoot, Defend, Run): ')
+>>>>>>> main
                         if r == 'Shoot':
                                 storyline.archerstoryline.shoot2()
                                 break

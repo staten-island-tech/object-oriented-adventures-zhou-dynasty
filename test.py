@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import time
 import os
 
@@ -95,3 +96,9 @@ class storyline:
                                 else:
                                                 print('please pick an option within the parentheses, thanks')
 storyline.storyline2continuance()
+=======
+from storyline import storyline
+
+p = storyline
+p.archerstoryline()
+>>>>>>> main
