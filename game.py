@@ -1,7 +1,7 @@
 import time
 import os
 from storyline import storyline
-from classes import ClassSelection, Menu
+from classes import *
 Player = []
 M = Menu
 
@@ -31,17 +31,21 @@ def game():
         print("Game over...")
         os.abort()
     elif menu == "START":
+        global Player
         os.system('cls')
         print("Hello player, welcome!")
         time.sleep(1)
         username = input("What will your username be? ")
         a = ClassSelection(username=username)
+        
+
         print(f"Hello {username}, welcome to Zhou Dynasty!")
         time.sleep(2)
         os.system('cls')
 
         M.menu()
         a.SelectAClass()
+        Player.append(a.Player)
 
         while True:
             start = input("Are you ready to begin your adventure? Y/N: ").upper()
@@ -62,6 +66,8 @@ def game():
                 elif Ask == "RESELECT":
                     os.system('cls')
                     a.SelectAClass()
+                    Player.clear
+                    Player.append(a.Player)
                 elif Ask == "QUIT":
                     os.system('cls')
                     print("Game over...")
@@ -69,13 +75,11 @@ def game():
 
         os.system('cls')
 
-
+        print(Player)
 
         
 game()
         
-
-
 
 
 
