@@ -48,13 +48,18 @@ def killed(self, delay_duration):
             print(result["message"])
             delay(delay_duration)
             print('Nice!')
-            with open('artisanal_shortbows.json', 'a') as json_file:
+            with open('artisanal_shortbows.json', 'w+') as json_file:
                 json.dump(result, json_file)
                 json_file.write('\n')
         else:
             result = None
             print('No drop, too bad too sad.')
         return result
+class Witherskeletonbattle:
+    def __init__(self):
+        pass
+
+
 class Witherskeletonhealth:
     def init(self):
         self.witherskeletonhp = 50
@@ -82,7 +87,7 @@ class Storyline:
             delay(delay_duration)
             print('Until.')
             delay(delay_duration)
-            print('You encounter a skeleton')
+            print('You encounter a skeleton.')
             delay(delay_duration)
             print('It seems agitated?')
             delay(delay_duration)
@@ -92,11 +97,12 @@ class Storyline:
             delay(delay_duration)
             os.system("cls")
             print(f'Player: {self.skeleton_battle.archerhp} hp, Skeleton: {self.skeleton_health.skeletonhp} hp')
+            self.encounter1(1)
 
         def encounter1(self, delay_duration):
-            os.system('cls')
-            print('Player: 20 hp, Skeleton: 30 hp')
             while self.skeleton_health.skeletonhp > 0:
+                os.system('cls')
+                print('Player: 20 hp, Skeleton: 30 hp')
                 move = input('Pick your first move (Shoot, Defend, Run): ').lower()
                 os.system('cls')
                 if move == 'shoot':
@@ -124,7 +130,9 @@ class Storyline:
             if self.skeleton_health.skeletonhp <= 0:
                 print("You defeated the skeleton!")
                 print(self.skeleton_health.killed(delay_duration))
-class storylinecontinuance:
+
+                
+""" class storylinecontinuance:
     def storyline2():
         while True:
             print('After a long or possibly fought battle, you finally defeated one mob.')
@@ -209,7 +217,7 @@ class storyline2continuance():
                 break
             else:
                 print('please pick an option within the parentheses, thanks')
-                storyline.archerstoryline.storyline2continuance()
+                storyline.archerstoryline.storyline2continuance() """
 def delay(duration):
     time.sleep(duration)
 
@@ -218,7 +226,7 @@ delay_duration = int(input("Input delay: "))
 storyline = Storyline()
 archer_story = storyline.ArcherStoryline()
 archer_story.beginning(delay_duration)
-archer_story.encounter1(delay_duration)
+# archer_story.encounter1(delay_duration)
 
 """             def encounter():
                 x = input('Pick your first move (Shoot, Defend, Run)').lower()
