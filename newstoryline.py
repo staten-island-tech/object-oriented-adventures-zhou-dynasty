@@ -48,6 +48,19 @@ class SkeletonHealth:
             print('No drop, too bad too sad.')
         return f'Skeleton has {self.skeletonhp} hp left.'
 
+class WitherSkeletonBattle:
+    def init(self):
+        self.skeletonhp = 30
+
+    def shot(self, has_artisinal_shortbow):
+        if has_artisinal_shortbow:
+            self.skeletonhp -= 25
+        else:
+            self.skeletonhp -= 20
+
+        if self.skeletonhp < 0:
+            self.skeletonhp = 0
+        return f'Skeleton has {self.skeletonhp} hp left.'
 class Storyline:
     class ArcherStoryline:
         def __init__(self):
@@ -60,7 +73,7 @@ class Storyline:
             print('You search for answers, none to be found.')
             print('Until.')
             delay(delay_duration)
-            print('You encounter a TITAN G-MAN SKIBIDI TOILET!')
+            print('You encounter a skeleton!')
             delay(delay_duration)
             print('It seems agitated?')
             delay(delay_duration)
@@ -74,7 +87,7 @@ class Storyline:
             os.system('cls')
             print('Player: 20 hp, Skeleton: 30 hp')
             while self.skeleton_health.skeletonhp > 0:
-                move = input('Pick your first move (Shoot, Defend, Run): ').lower()
+                move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
                 os.system('cls')
                 if move == 'shoot':
                     print('You fired off an arrow.')

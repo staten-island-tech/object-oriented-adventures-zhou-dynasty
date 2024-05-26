@@ -456,3 +456,4 @@ class Selector2():
 
 
 class Mage:
+        pass
