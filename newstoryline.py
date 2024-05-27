@@ -41,12 +41,20 @@ class SkeletonHealth:
     def killed(self, delay_duration):
         drop_chance = random.randint(1, 10)
         if drop_chance <= 5:
-            print('You dropped an artisanal shortbow.')
+            result = {
+                "artisanal_shortbow_dropped": True,
+                "message": 'You dropped an artisanal shortbow.'
+            }
+            print(result["message"])
             delay(delay_duration)
             print('Nice!')
+            with open('artisanal_shortbows.json', 'a') as json_file:
+                json.dump(result, json_file)
+                json_file.write('\n')
         else:
+            result = None
             print('No drop, too bad too sad.')
-        return f'Skeleton has {self.skeletonhp} hp left.'
+        return result
 
 class WitherSkeletonBattle:
     def init(self):
