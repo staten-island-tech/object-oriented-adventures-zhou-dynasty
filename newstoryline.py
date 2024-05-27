@@ -50,17 +50,17 @@ class SkeletonHealth:
 
 class WitherSkeletonBattle:
     def init(self):
-        self.skeletonhp = 30
+        self.witherskeletonhp = 50
 
     def shot(self, has_artisinal_shortbow):
         if has_artisinal_shortbow:
-            self.skeletonhp -= 25
+            self.witherskeletonhp -= 25
         else:
-            self.skeletonhp -= 20
+            self.witherskeletonhp -= 20
 
-        if self.skeletonhp < 0:
-            self.skeletonhp = 0
-        return f'Skeleton has {self.skeletonhp} hp left.'
+        if self.witherskeletonhp < 0:
+            self.witherskeletonhp = 0
+        return f'Skeleton has {self.witherskeletonhp} hp left.'
 class Storyline:
     class ArcherStoryline:
         def __init__(self):
