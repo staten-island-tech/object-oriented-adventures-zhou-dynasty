@@ -69,6 +69,7 @@ class WitherSkeletonBattle:
         if self.witherskeletonhp < 0:
             self.witherskeletonhp = 0
         return f'Skeleton has {self.witherskeletonhp} hp left.'
+
 class Storyline:
     class ArcherStoryline:
         def __init__(self):
@@ -94,6 +95,38 @@ class Storyline:
         def encounter1(self, delay_duration):
             os.system('cls')
             print('Player: 20 hp, Skeleton: 30 hp')
+            while self.skeleton_health.skeletonhp > 0:
+                move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
+                os.system('cls')
+                if move == 'shoot':
+                    print('You fired off an arrow.')
+                    print(self.skeleton_battle.shoot())
+                    print(self.skeleton_health.shot())
+                elif move == 'defend':
+                    print('You defended, smart.')
+                    print(self.skeleton_battle.defend())
+                    print(self.skeleton_health.attackadefended())
+                elif move == 'run':
+                    print('You attempted to run.')
+                    delay(delay_duration)
+                    print('Too bad, too sad.')
+                    print(self.skeleton_battle.run())
+                    print(self.skeleton_health.hittingrunner())
+                else:
+                    print('Please pick a valid move.')
+                
+                if self.skeleton_battle.archerhp <= 0:
+                    self.skeleton_battle.archerhp = 0
+                    print("You died!")
+                    break
+
+            if self.skeleton_health.skeletonhp <= 0:
+                print("You defeated the skeleton!")
+                print(self.skeleton_health.killed(delay_duration))
+
+        def encounter2(self, delay_duration):
+            os.system('cls')
+            print('Player: 20 hp, Wither Skeleton: 50 hp')
             while self.skeleton_health.skeletonhp > 0:
                 move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
                 os.system('cls')
