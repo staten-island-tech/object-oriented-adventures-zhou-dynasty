@@ -67,9 +67,7 @@ while True:
 
         storylinetime()
         
-        for x in Player:
-            if x['health'] <= 0:
-                break
+
 
 
 
