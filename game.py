@@ -65,8 +65,9 @@ def game():
                     M.menu2()
                 elif Ask == "RESELECT":
                     os.system('cls')
+                    Player.clear()
                     a.SelectAClass()
-                    Player.clear
+                    Player.clear()
                     Player.append(a.Player)
                 elif Ask == "QUIT":
                     os.system('cls')
@@ -76,6 +77,12 @@ def game():
         os.system('cls')
 
         print(Player)
+
+        for x in Player:
+            if x['Class'] == "ARCHER":
+                pass
+            elif x['Class'] == "MAGE":
+                pass
 
         
 game()

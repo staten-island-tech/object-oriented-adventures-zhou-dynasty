@@ -38,6 +38,7 @@ class ClassSelection:
     def SelectAClass(self):
         ClassChoices = ["ARCHER", "MAGE"]
         UserClassChoice = input("Choose your class (Archer, Mage): ").upper()
+        self.Player.clear()
 
         while True:
             while UserClassChoice not in ClassChoices:
