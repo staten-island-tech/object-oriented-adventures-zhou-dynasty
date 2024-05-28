@@ -36,10 +36,11 @@ class SkeletonHealth:
         drop_chance = random.randint(1, 10)
         if drop_chance <= 5:
             result = {
-                "artisanal_shortbow_dropped": True,
-                "message": 'You dropped an artisanal shortbow.'
+                'artisanal_shortbow_dropped': True,
+                'message': 'You dropped an artisanal shortbow.'
             }
-            print(result["message"])
+
+            print('You dropped an artisanal shortbow.')
             delay(delay_duration)
             print('Nice!')
             with open('artisanal_shortbows.json', 'a') as json_file:
@@ -76,8 +77,14 @@ class WitherSkeletonHealth:
     def __init__(self):
         self.witherskeletonhp = 50
 
+    def shotbow(self):
+        self.witherskeletonhp -= 25
+        if self.witherskeletonhp < 0:
+            self.witherskeletonhp = 0
+        return f'Wither Skeleton has {self.witherskeletonhp} hp left.'
+
     def shot(self):
-        self.witherskeletonhp -= 50
+        self.witherskeletonhp -= 20
         if self.witherskeletonhp < 0:
             self.witherskeletonhp = 0
         return f'Wither Skeleton has {self.witherskeletonhp} hp left.'
@@ -109,6 +116,10 @@ class Storyline:
             self.skeleton_health = SkeletonHealth()
             self.witherskeleton_battle = WitherSkeletonBattle(self.archerhp)
             self.witherskeleton_health = WitherSkeletonHealth()
+            json1 = open("artisanal_shortbows.json", encoding="utf8")
+            data = json.load(json1)
+            self.data = data
+
 
         def beginning(self, delay_duration):
             print("Your adventure begins now.")
@@ -137,7 +148,7 @@ class Storyline:
                     print(self.skeleton_battle.shoot())
                     print(self.skeleton_health.shot())
                 elif move == 'defend':
-                    print('You defended, smart.')
+                    print('You defended, smart.') 
                     print(self.skeleton_battle.defend())
                 elif move == 'run':
                     print('You attempted to run.')
@@ -168,6 +179,12 @@ class Storyline:
                     print('You fired off an arrow.')
                     print(self.witherskeleton_battle.shoot())
                     print(self.witherskeleton_health.shot())
+                elif move == 'shoot':
+                    for json1 in self.data:
+                        if {'artisanal shortbow'} in self.data:
+                            print('You fired of an arrow with your stronger bow.')
+                            print(self.witherskeleton_battle.shoot())
+                            print(self.witherskeleton_health.shotbow())
                 elif move == 'defend':
                     print('You defended, smart.')
                     print(self.witherskeleton_battle.defend())
@@ -198,7 +215,7 @@ storyline = Storyline()
 archer_story = storyline.ArcherStoryline()
 archer_story.beginning(delay_duration)
 archer_story.encounter1(delay_duration)
-
+"""archer_story.encounter2(delay_duration)"""
 """             def encounter():
                 x = input('Pick your first move (Shoot, Defend, Run)').lower()
                 if x == 'shoot':
