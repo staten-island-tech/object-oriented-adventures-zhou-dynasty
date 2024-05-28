@@ -33,11 +33,12 @@ class User():
 class ClassSelection:
     def __init__(self, username):
         self.username = username
-        self.Player = None
+        self.Player = []
 
     def SelectAClass(self):
         ClassChoices = ["ARCHER", "MAGE"]
         UserClassChoice = input("Choose your class (Archer, Mage): ").upper()
+        self.Player.clear()
 
         while True:
             while UserClassChoice not in ClassChoices:
@@ -52,9 +53,9 @@ class ClassSelection:
                 UserClassChoice = input("Choose your class (Archer, Mage): ").upper()
 
         if UserClassChoice == "ARCHER":
-            self.Player = User(self.username, 20, 20, UserClassChoice, "Short Bow")
+            self.Player.append(User(self.username, 20, 20, UserClassChoice, "Short Bow").__dict__)
         elif UserClassChoice == "MAGE":
-            self.Player = User(self.username, 15, 30, UserClassChoice, "Magic Wand")
+            self.Player.append(User(self.username, 15, 30, UserClassChoice, "Magic Wand").__dict__)
 
 #menu
 class Menu:
