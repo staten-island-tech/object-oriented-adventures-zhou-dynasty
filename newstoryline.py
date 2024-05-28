@@ -1,9 +1,8 @@
 import time, random, os, json
 
-archerhp = 20
 class SkeletonBattle:
-    def __init__(self):
-        self.archerhp = 20
+    def __init__(self, archerhp):
+        self.archerhp = archerhp
 
     def shoot(self):
         self.archerhp -= 2
@@ -33,18 +32,6 @@ class SkeletonHealth:
             self.skeletonhp = 0
         return f'Skeleton has {self.skeletonhp} hp left.'
 
-    def defend(self):
-        self.archerhp -= 1
-        if self.archerhp < 0:
-            self.archerhp = 0
-        return f'You have {self.archerhp} hp left.'
-
-    def run(self):
-        self.archerhp -= 4
-        if self.archerhp < 0:
-            self.archerhp = 0
-        return f'You have {self.archerhp} hp left.'
-
     def killed(self, delay_duration):
         drop_chance = random.randint(1, 10)
         if drop_chance <= 5:
@@ -64,8 +51,8 @@ class SkeletonHealth:
         return result
 
 class WitherSkeletonBattle:
-    def __init__(self):
-        self.archerhp = 20
+    def __init__(self, archerhp):
+        self.archerhp = archerhp
 
     def shoot(self):
         self.archerhp -= 3
@@ -93,19 +80,7 @@ class WitherSkeletonHealth:
         self.witherskeletonhp -= 50
         if self.witherskeletonhp < 0:
             self.witherskeletonhp = 0
-        return f'Skeleton has {self.witherskeletonhp} hp left.'
-
-    def defend(self):
-        self.archerhp -= 1
-        if self.archerhp < 0:
-            self.archerhp = 0
-        return f'You have {self.archerhp} hp left.'
-
-    def run(self):
-        self.archerhp -= 4
-        if self.archerhp < 0:
-            self.archerhp = 0
-        return f'You have {self.archerhp} hp left.'
+        return f'Wither Skeleton has {self.witherskeletonhp} hp left.'
 
     def killed(self, delay_duration):
         drop_chance = random.randint(1, 100)
@@ -129,9 +104,10 @@ class WitherSkeletonHealth:
 class Storyline:
     class ArcherStoryline:
         def __init__(self):
-            self.skeleton_battle = SkeletonBattle()
+            self.archerhp = 20
+            self.skeleton_battle = SkeletonBattle(self.archerhp)
             self.skeleton_health = SkeletonHealth()
-            self.witherskeleton_battle = WitherSkeletonBattle()
+            self.witherskeleton_battle = WitherSkeletonBattle(self.archerhp)
             self.witherskeleton_health = WitherSkeletonHealth()
 
         def beginning(self, delay_duration):
@@ -148,11 +124,11 @@ class Storyline:
             print('A battle begins.')
             delay(delay_duration)
             os.system("cls")
-            print(f'Player: {self.skeleton_battle.archerhp} hp, Skeleton: {self.skeleton_health.skeletonhp} hp')
+            print(f'Player: {self.archerhp} hp, Skeleton: {self.skeleton_health.skeletonhp} hp')
 
         def encounter1(self, delay_duration):
             os.system('cls')
-            print(f'Player: {self.skeleton_battle.archerhp} hp, Skeleton: {self.skeleton_health.skeletonhp} hp')
+            print(f'Player: {self.archerhp} hp, Skeleton: {self.skeleton_health.skeletonhp} hp')
             while self.skeleton_health.skeletonhp > 0:
                 move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
                 os.system('cls')
@@ -163,17 +139,18 @@ class Storyline:
                 elif move == 'defend':
                     print('You defended, smart.')
                     print(self.skeleton_battle.defend())
-                    print(self.skeleton_health.defend())
                 elif move == 'run':
                     print('You attempted to run.')
                     delay(delay_duration)
                     print('Too bad, too sad.')
                     print(self.skeleton_battle.run())
-                    print(self.skeleton_health.run())
                 else:
                     print('Please pick a valid move.')
 
-                if self.skeleton_battle.archerhp <= 0:
+                self.archerhp = self.skeleton_battle.archerhp
+                print(f'Player: {self.archerhp} hp, Skeleton: {self.skeleton_health.skeletonhp} hp')
+
+                if self.archerhp <= 0:
                     print("You died!")
                     break
 
@@ -183,7 +160,7 @@ class Storyline:
 
         def encounter2(self, delay_duration):
             os.system('cls')
-            print(f'Player: {self.witherskeleton_battle.archerhp} hp, Wither Skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
+            print(f'Player: {self.archerhp} hp, Wither Skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
             while self.witherskeleton_health.witherskeletonhp > 0:
                 move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
                 os.system('cls')
@@ -194,22 +171,23 @@ class Storyline:
                 elif move == 'defend':
                     print('You defended, smart.')
                     print(self.witherskeleton_battle.defend())
-                    print(self.witherskeleton_health.defend())
                 elif move == 'run':
                     print('You attempted to run.')
                     delay(delay_duration)
                     print('Too bad, too sad.')
                     print(self.witherskeleton_battle.run())
-                    print(self.witherskeleton_health.run())
                 else:
                     print('Please pick a valid move.')
 
-                if self.witherskeleton_battle.archerhp <= 0:
+                self.archerhp = self.witherskeleton_battle.archerhp
+                print(f'Player: {self.archerhp} hp, Wither Skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
+
+                if self.archerhp <= 0:
                     print("You died!")
                     break
 
             if self.witherskeleton_health.witherskeletonhp <= 0:
-                print("You defeated the wither skeleton!")
+                print("You defeated the black skeleton!")
                 print(self.witherskeleton_health.killed(delay_duration))
 
 def delay(duration):
