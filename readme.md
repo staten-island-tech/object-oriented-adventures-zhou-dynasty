@@ -3,44 +3,28 @@ A dungeon game created after Chuyuan Zhang, this game entails
 
 ### Controls
 
-## Player
 ### Classes
-Archer - HP/ATK/DEF
-
+Archer - HP: 20  |  Damage: 20, 25, 50  |  Weapons: Short Bow, Artisanal Bow, Hurricane Bow            |
+                                        |
 Mage - HP/ATK/DEF
 ## Mobs
-
-Skeleton - HP/DAMAGE/WEAPON
-
-Wither Skeleton - HP/ATK/WEAPON
-
-Wither - HP/DAMAGE/WEAPON
-
+```
+Skeleton          ❤ HP: 20 | ❁ Dmg: 2
+Wither Skeleton   ❤ HP: 50 | ❁ Dmg: 3
+Wither            ❤ HP: ???| ❁ Dmg: ???
+```
 ## Weapons
+_Currently obtainable:_
 
-<<<<<<< HEAD
-Wooden Sword
-
-Stone Sword
-
-Iron Sword
-
-Rageblade
-
-Frost Sword
-
-Ruby Sword
-
-Hyperion
-
-Dark Claymore
-
-Valkyrie
-
-Scylla
-
-Astraea
-=======
->>>>>>> a6e93f728851c25e5f63de41a7a2b821a9fac4c6
-
-
+### **Archers**
+```
+- Short Bow 
+- Artisanal Bow 
+- Wither Bow
+```
+### **Mages**
+```
+- Magic Wand
+- Starlight Wand
+- Hyperion
+```
