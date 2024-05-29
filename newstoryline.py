@@ -158,9 +158,9 @@ class Witherhealth:
 class Storyline:
     class ArcherStoryline:
         def __init__(self):
-            self.archerhp = 20
+            self.archerhp = archerhp = 20
             self.has_artisanal_bow = self.check_artisanal_bow()
-            self.skeleton_battle = SkeletonBattle()
+            self.skeleton_battle = SkeletonBattle(self.archerhp)
             self.skeleton_health = SkeletonHealth()
             self.witherskeleton_battle = WitherSkeletonBattle(self.archerhp, self.has_artisanal_bow)
             self.witherskeleton_health = WitherSkeletonHealth()
@@ -215,7 +215,7 @@ class Storyline:
                 if move == 'shoot':
                     print('You fired off an arrow.')
                     print(self.skeleton_battle.shoot())
-                    print(self.skeleton_health.shot(self.has_artisanal_bow))
+                    print(self.skeleton_health.shot())
                 elif move == 'defend':
                     print('You defended, nice job big back!.')
                     print(self.skeleton_battle.defend())
@@ -301,7 +301,7 @@ class Storyline:
                     break
 
             if self.wither_health.witherhp <= 0:
-                print("You defeated the wither skeleton! очень плохой")
+                print("You defeated the wither! очень плохой")
                 print(self.wither_health.killed(delay_duration))
 
 
