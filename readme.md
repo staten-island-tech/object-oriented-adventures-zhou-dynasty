@@ -2,14 +2,19 @@
 A dungeon game created after Chuyuan Zhang, this game entails  
 
 ### Controls
-
+```
+Shoot - Attack the enemies
+Defend - Defend from the enemies
+Run - Run from the enemies 
+```
 ### Classes
-Archer - HP: 20  |  Damage: 20, 25, 50  |  Weapons: Short Bow, Artisanal Bow, Hurricane Bow            |
-                                        |
-Mage - HP/ATK/DEF
+```
+Archer      ❤ HP: 20 | ❁ Dmg: 20
+Mage        ❤ HP: 15 | ❁ Dmg: 30
+```
 ## Mobs
 ```
-Skeleton          ❤ HP: 20 | ❁ Dmg: 2
+Skeleton          ❤ HP: 30 | ❁ Dmg: 2
 Wither Skeleton   ❤ HP: 50 | ❁ Dmg: 3
 Wither            ❤ HP: ???| ❁ Dmg: ???
 ```
