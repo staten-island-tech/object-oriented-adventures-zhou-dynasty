@@ -2,7 +2,11 @@
 A dungeon game created after Chuyuan Zhang, this game entails  
 
 ### Controls
-
+```
+Shoot - Attack the enemies
+Defend - Defend from the enemies
+Run - Run from the enemies 
+```
 ### Classes
 ```
 Archer      ❤ HP: 30 | ❁ Dmg: 10
