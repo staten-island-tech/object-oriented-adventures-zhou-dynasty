@@ -59,7 +59,7 @@ def game():
                     Player.clear()
                     a.SelectAClass()
                     Player.clear()
-                    a.Player = Player
+                    Player = a.Player
                 elif Ask == "QUIT":
                     os.system('cls')
                     print("Game over...")
@@ -67,7 +67,7 @@ def game():
 
         os.system('cls')
 
-        print(Player)
+        
 
         
 game()
