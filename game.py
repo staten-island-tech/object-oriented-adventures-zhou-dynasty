@@ -67,7 +67,11 @@ def game():
 
         os.system('cls')
 
-        
+        for x in Player:
+            if x['Class'] == "ARCHER":
+                pass
+            elif x['Class'] == "MAGE":
+                pass
 
         
 game()
