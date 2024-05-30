@@ -36,7 +36,7 @@ def game():
 
         M.menu()
         a.SelectAClass()
-        Player.append(a.Player)
+        Player.append(a.Player.__dir__)
 
         while True:
             start = input("Are you ready to begin your adventure? Y/N: ").upper()
@@ -59,7 +59,7 @@ def game():
                     Player.clear()
                     a.SelectAClass()
                     Player.clear()
-                    Player.append(a.Player)
+                    Player.append(a.Player.__dir__)
                 elif Ask == "QUIT":
                     os.system('cls')
                     print("Game over...")
@@ -67,13 +67,7 @@ def game():
 
         os.system('cls')
 
-        print(Player)
-
-        for x in Player:
-            if x[['Class']] == "ARCHER":
-                print("helo")
-            elif x[['Class']] == "MAGE": 
-                print("hi")
+        
 
         
 game()

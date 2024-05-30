@@ -10,7 +10,7 @@ Run - Run from the enemies
 ### Classes
 ```
 Archer      ❤ HP: 20 | ❁ Dmg: 20
-Mage        ❤ HP: 15 | ❁ Dmg: 30
+Mage        ❤ HP: 15 | ❁ Dmg: 30  
 ```
 ## Mobs
 ```
