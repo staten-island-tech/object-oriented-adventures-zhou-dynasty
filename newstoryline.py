@@ -1,45 +1,3 @@
-<<<<<<< HEAD
-import time, os,  random, json
-os.system("cls")
-a = open("classes.py")
-player = open("player.json", encoding="utf8")
-data = json.load(player)
-class finder:
-    def __init__(self, data):
-        self.finder = True
-        self.data = data    
-    def finder1():
-        y = 'placeholder'
-x = archerhp = 20
-class skeletonbattle:
-    def shoot():
-        x = archerhp - 2
-        return(f'You have {x} hp left.')
-    def defend():
-        x = archerhp - 1
-        return(f'You have {x} hp left.')
-    def run():
-        x = archerhp - 4
-        return(f'You have {x} hp left.')
-    def death():
-        while True:
-            if x == 0:
-                return(f'You have {x} hp left.')
-            break
-y = skeletonhp = 30
-class skeletonhealth:
-    def shot():
-        y = skeletonhp - 20
-        return(f'Skeleton has {y} hp left.')
-    def attackadefended():
-        y = skeletonhp - 0
-        return(f'Skeleton has {y} hp left.')
-
-    def skeletonkilled():
-        'unfinished'
-        x = random.randint(1,10)
-        if x == '1,2,3,4,5':
-=======
 import time, random, os, json
 
 class SkeletonBattle:
@@ -84,7 +42,6 @@ class SkeletonHealth:
                 'message': 'You dropped an artisanal shortbow.'
             }
 
->>>>>>> gary
             print('You dropped an artisanal shortbow.')
             delay(delay_duration)
             print('Nice!')
@@ -257,16 +214,6 @@ class Storyline:
                 os.system('cls')
                 if move == 'shoot':
                     print('You fired off an arrow.')
-<<<<<<< HEAD
-                    skeletonbattle.shoot()
-                elif x == 'defend':
-                    print('You defended, smart. Very smart.')
-                    delay()
-                    skeletonbattle.defend()
-                elif x == 'run':
-                    print('Cannot run loser')
-                    skeletonbattle.run()
-=======
                     print(self.skeleton_battle.shoot())
                     print(self.skeleton_health.shot())
                 elif move == 'defend':
@@ -373,4 +320,3 @@ with open("artisanal_shortbows.json", mode='w') as a:
     json.dump(a, {})
 with open("wither_bow.json", mode='w') as b:
     json.dump(b, {})
->>>>>>> gary

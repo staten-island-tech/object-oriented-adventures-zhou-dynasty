@@ -455,8 +455,5 @@ class Selector2():
 
 
 
-<<<<<<< HEAD
-=======
 class Mage:
         pass
->>>>>>> gary
