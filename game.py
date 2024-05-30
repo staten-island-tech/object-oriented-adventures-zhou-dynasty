@@ -34,7 +34,6 @@ def game():
         time.sleep(2)
         os.system('cls')
 
-<<<<<<< HEAD
         M.menu()
         a.SelectAClass()
         Player.append(a.Player.__dir__)
@@ -73,11 +72,6 @@ def game():
         
 game()
         
-=======
-        storylinetime()
-        
-
->>>>>>> gary
 
 
 
