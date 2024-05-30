@@ -1,19 +1,10 @@
 import time
 import os
-from storyline import storyline
+""" from newstoryline import * """
 from classes import *   
 Player = []
 M = Menu
 
-def storylinetime():
-    p = storyline
-    for x in Player:
-        if x['Class'] == "ARCHER":
-            p.archerstoryline.archer()
-        elif x['Class'] == "MAGE": 
-            p.magestoryline.mage()
-
-    
 #menu 
 def game():
     os.system('cls')
@@ -79,10 +70,10 @@ def game():
         print(Player)
 
         for x in Player:
-            if x['Class'] == "ARCHER":
-                pass
-            elif x['Class'] == "MAGE":
-                pass
+            if x[['Class']] == "ARCHER":
+                print("helo")
+            elif x[['Class']] == "MAGE": 
+                print("hi")
 
         
 game()
