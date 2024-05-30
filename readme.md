@@ -9,12 +9,12 @@ Run - Run from the enemies
 ```
 ### Classes
 ```
-Archer      ❤ HP: 30 | ❁ Dmg: 10
-Mage        ❤ HP: 20 | ❁ Dmg: 15
+Archer      ❤ HP: 20 | ❁ Dmg: 20
+Mage        ❤ HP: 15 | ❁ Dmg: 30
 ```
 ## Mobs
 ```
-Skeleton          ❤ HP: 20 | ❁ Dmg: 2
+Skeleton          ❤ HP: 30 | ❁ Dmg: 2
 Wither Skeleton   ❤ HP: 50 | ❁ Dmg: 3
 Wither            ❤ HP: ???| ❁ Dmg: ???
 ```
