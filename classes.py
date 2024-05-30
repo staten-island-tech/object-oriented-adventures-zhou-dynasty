@@ -1,13 +1,13 @@
 import os
 #Mobs
-class Mobs():
+class Mob():
     def __init__(self, name, health):
         self.name = name
         self.health = health
     def __str__(self):
         return f"{self.name}, {self.health}"
-    
-class Skeleton(Mobs):
+
+class Skeleton(Mob):
     def __init__(self, name, health, weapon):
         self.name = name
         self.health = health

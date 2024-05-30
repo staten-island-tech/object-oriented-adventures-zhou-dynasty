@@ -1,19 +1,10 @@
 import time
 import os
-from storyline import storyline
-from classes import *
+""" from newstoryline import * """
+from classes import *   
 Player = []
 M = Menu
 
-def storylinetime():
-    p = storyline
-    for x in Player:
-        if x['Class'] == "ARCHER":
-            p.archerstoryline.archer()
-        elif x['Class'] == "MAGE": 
-            p.magestoryline.mage()
-
-    
 #menu 
 def game():
     os.system('cls')
@@ -45,7 +36,7 @@ def game():
 
         M.menu()
         a.SelectAClass()
-        Player.append(a.Player)
+        Player = a.Player
 
         while True:
             start = input("Are you ready to begin your adventure? Y/N: ").upper()
@@ -58,7 +49,7 @@ def game():
                 Ask = input().upper()
 
                 while Ask not in AskOptions: 
-                    M.message
+                    M.message()
                     Ask = input().upper()
 
                 if Ask == "GAME":
@@ -68,7 +59,7 @@ def game():
                     Player.clear()
                     a.SelectAClass()
                     Player.clear()
-                    Player.append(a.Player)
+                    a.Player = Player
                 elif Ask == "QUIT":
                     os.system('cls')
                     print("Game over...")
@@ -77,12 +68,6 @@ def game():
         os.system('cls')
 
         print(Player)
-
-        for x in Player:
-            if x['Class'] == "ARCHER":
-                pass
-            elif x['Class'] == "MAGE":
-                pass
 
         
 game()
