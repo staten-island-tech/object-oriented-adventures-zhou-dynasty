@@ -43,6 +43,7 @@ def game():
         time.sleep(2)
         os.system('cls')
 
+<<<<<<< HEAD
         M.menu()
         a.SelectAClass()
         Player.append(a.Player)
@@ -87,6 +88,11 @@ def game():
         
 game()
         
+=======
+        storylinetime()
+        
+
+>>>>>>> gary
 
 
 

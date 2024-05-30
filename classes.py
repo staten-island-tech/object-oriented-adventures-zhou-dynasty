@@ -28,6 +28,7 @@ class User():
         self.Class = Class
         self.weapon = weapon
     def __str__(self):
+<<<<<<< HEAD
         return f"{self.username}, {self.health}, {self.damage}, {self.Class}, {self.weapon}"
 
 class ClassSelection:
@@ -114,3 +115,6 @@ class Menu:
         print("Reselect - Reselect your class")
         print("Quit - Quit the game")
 
+=======
+        return f"{self.username}, {self.health}, {self.damage}, {self.Class}, {self.weapon}"
+>>>>>>> gary
