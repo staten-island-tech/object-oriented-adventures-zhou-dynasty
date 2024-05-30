@@ -1,6 +1,6 @@
 import time
 import os
-""" from newstoryline import * """
+from newstoryline import *
 from classes import *   
 Player = []
 M = Menu
@@ -28,15 +28,14 @@ def game():
         time.sleep(1)
         username = input("What will your username be? ")
         a = ClassSelection(username=username)
-        
-
+    
         print(f"Hello {username}, welcome to Zhou Dynasty!")
         time.sleep(2)
         os.system('cls')
 
         M.menu()
         a.SelectAClass()
-        Player.append(a.Player.__dir__)
+        Player = a.Player
 
         while True:
             start = input("Are you ready to begin your adventure? Y/N: ").upper()
@@ -59,7 +58,7 @@ def game():
                     Player.clear()
                     a.SelectAClass()
                     Player.clear()
-                    Player.append(a.Player.__dir__)
+                    Player = a.Player
                 elif Ask == "QUIT":
                     os.system('cls')
                     print("Game over...")
@@ -67,7 +66,11 @@ def game():
 
         os.system('cls')
 
-        
+        for x in Player:
+            if x['Class'] == "ARCHER":
+                pass
+            elif x['Class'] == "MAGE":
+                pass
 
         
 game()
