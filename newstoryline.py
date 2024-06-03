@@ -440,7 +440,7 @@ class Witherhealth2:
         self.witherhp -= damage
         if self.witherhp < 0:
             self.witherhp = 0
-        return f'Wither skeleton has {self.witherhp} hp left.'
+        return f'Wither has {self.witherhp} hp left.'
 
     def killed(self, delay_duration):
         while True:
