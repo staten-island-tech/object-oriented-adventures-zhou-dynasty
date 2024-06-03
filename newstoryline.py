@@ -594,26 +594,28 @@ class Storyline2:
 
 def delay(duration):
     time.sleep(duration)
+def Archer():
+    delay_duration = int(input("Input delay: "))
+    storyline = Storyline()
+    archer_story = storyline.ArcherStoryline()
+    archer_story.beginning(delay_duration)
+    archer_story.encounter1(delay_duration)
+    archer_story.encounter2(delay_duration)
+    archer_story.encounter3(delay_duration)
+    with open("artisanal_shortbows.json", mode='w') as outfile:
+        json.dump({},outfile)
+    with open("wither_bow.json", mode='w') as outfile:
+        json.dump({},outfile)
 
-delay_duration = int(input("Input delay: "))
-storyline = Storyline()
-archer_story = storyline.ArcherStoryline()
-archer_story.beginning(delay_duration)
-archer_story.encounter1(delay_duration)
-archer_story.encounter2(delay_duration)
-archer_story.encounter3(delay_duration)
-with open("artisanal_shortbows.json", mode='w') as outfile:
-    json.dump({},outfile)
-with open("wither_bow.json", mode='w') as outfile:
-    json.dump({},outfile)
-
-storyline2 = Storyline2()
-mage_story = storyline2.Magestoryline()
-mage_story.beginning2(delay_duration)
-mage_story.mageencounter1(delay_duration)
-mage_story.mageencounter2(delay_duration)
-mage_story.mageencounter3(delay_duration)
-with open("starlight_wand.json", mode='w') as outfile:
-    json.dump({},outfile)
-with open("hyperion.json", mode='w') as outfile:
-    json.dump({},outfile)
+def Mage():
+    delay_duration = int(input("Input delay: "))
+    storyline2 = Storyline2()
+    mage_story = storyline2.Magestoryline()
+    mage_story.beginning2(delay_duration)
+    mage_story.mageencounter1(delay_duration)
+    mage_story.mageencounter2(delay_duration)
+    mage_story.mageencounter3(delay_duration)
+    with open("starlight_wand.json", mode='w') as outfile:
+        json.dump({},outfile)
+    with open("hyperion.json", mode='w') as outfile:
+        json.dump({},outfile)

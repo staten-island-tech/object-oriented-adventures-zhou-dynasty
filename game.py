@@ -68,9 +68,9 @@ def game():
 
         for x in Player:
             if x['Class'] == "ARCHER":
-                pass
+                Archer()
             elif x['Class'] == "MAGE":
-                pass
+                Mage()
 
         
 game()
