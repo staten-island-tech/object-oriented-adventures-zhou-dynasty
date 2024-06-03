@@ -506,7 +506,6 @@ class Storyline2:
 
         def mageencounter1(self, delay_duration):
             os.system('cls')
-            print(f'Player: {self.magehp} hp, skeleton: {self.skeleton_health.skeletonhp} hp')
             while self.skeleton_health.skeletonhp > 0:
                 move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
                 os.system('cls')
@@ -535,7 +534,6 @@ class Storyline2:
                 print(self.skeleton_health.killed(delay_duration))
 
         def mageencounter2(self, delay_duration):
-            print(f'Player: {self.magehp} hp, Wither skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
             os.system('cls')
             while self.witherskeleton_health.witherskeletonhp > 0:
                 move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
@@ -565,7 +563,6 @@ class Storyline2:
                 print(self.witherskeleton_health.killed(delay_duration))
 
         def mageencounter3(self, delay_duration):
-            print(f'Player: {self.magehp} hp, Wither: {self.wither_health.witherhp} hp')
             os.system('cls')
             while self.wither_health.witherhp > 0:
                 move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
@@ -608,9 +605,9 @@ archer_story.encounter1(delay_duration)
 archer_story.encounter2(delay_duration)
 archer_story.encounter3(delay_duration)
 with open("artisanal_shortbows.json", mode='w') as outfile:
-    json.dump(outfile)
+    json.dump({},outfile)
 with open("wither_bow.json", mode='w') as outfile:
-    json.dump(outfile)
+    json.dump({},outfile)
 
 storyline2 = Storyline2()
 mage_story = storyline2.Magestoryline()
@@ -619,6 +616,6 @@ mage_story.mageencounter1(delay_duration)
 mage_story.mageencounter2(delay_duration)
 mage_story.mageencounter3(delay_duration)
 with open("starlight_wand.json", mode='w') as outfile:
-    json.dump(outfile)
+    json.dump({},outfile)
 with open("hyperion.json", mode='w') as outfile:
-    json.dump(outfile)
+    json.dump({},outfile)
