@@ -71,7 +71,8 @@ def game():
                 Archer()
             elif x['Class'] == "MAGE":
                 Mage()
-
+            
+       
         
 game()
         
