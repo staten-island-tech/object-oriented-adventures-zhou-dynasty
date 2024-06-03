@@ -226,8 +226,6 @@ class Storyline:
                     print(self.skeleton_battle.run())
                 else:
                     print('Please pick a valid move.')
-
-                self.archerhp = self.skeleton_battle.archerhp
                 print(f'Player: {self.archerhp} hp, skeleton: {self.skeleton_health.skeletonhp} hp')
 
                 if self.archerhp <= 0:
@@ -258,8 +256,6 @@ class Storyline:
                     print(self.witherskeleton_battle.run())
                 else:
                     print('PICK A MOVE GODDAMN')
-
-                self.archerhp = self.witherskeleton_battle.archerhp
                 print(f'Player: {self.archerhp} hp, Wither skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
 
                 if self.archerhp <= 0:
@@ -291,8 +287,6 @@ class Storyline:
                 else:
                     print('PICK A MOVE GOD')
                     print("SHOULDN'T BE THAT HARD")
-
-                self.archerhp = self.wither_battle.archerhp
                 print(f'Player: {self.archerhp} hp, Wither: {self.wither_health.witherhp} hp')
 
                 if self.archerhp <= 0:
@@ -530,8 +524,6 @@ class Storyline2:
                     print(self.skeleton_battle.run())
                 else:
                     print('Please pick a valid move.')
-
-                self.magehp = self.skeleton_battle.magehp
                 print(f'Player: {self.magehp} hp, skeleton: {self.skeleton_health.skeletonhp} hp')
 
                 if self.magehp <= 0:
@@ -562,8 +554,6 @@ class Storyline2:
                     print(self.witherskeleton_battle.run())
                 else:
                     print('PICK A MOVE GODDAMN')
-
-                self.magehp = self.witherskeleton_battle.magehp
                 print(f'Player: {self.magehp} hp, Wither skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
 
                 if self.magehp <= 0:
@@ -595,8 +585,6 @@ class Storyline2:
                 else:
                     print('PICK A MOVE GOD')
                     print("SHOULDN'T BE THAT HARD")
-
-                self.magehp = self.wither_battle.magehp
                 print(f'Player: {self.magehp} hp, Wither: {self.wither_health.witherhp} hp')
 
                 if self.magehp <= 0:
@@ -620,9 +608,9 @@ archer_story.encounter1(delay_duration)
 archer_story.encounter2(delay_duration)
 archer_story.encounter3(delay_duration)
 with open("artisanal_shortbows.json", mode='w') as outfile:
-    json.dump([], outfile)
+    json.dump(outfile)
 with open("wither_bow.json", mode='w') as outfile:
-    json.dump([], outfile)
+    json.dump(outfile)
 
 storyline2 = Storyline2()
 mage_story = storyline2.Magestoryline()
@@ -631,6 +619,6 @@ mage_story.mageencounter1(delay_duration)
 mage_story.mageencounter2(delay_duration)
 mage_story.mageencounter3(delay_duration)
 with open("starlight_wand.json", mode='w') as outfile:
-    json.dump([], outfile)
+    json.dump(outfile)
 with open("hyperion.json", mode='w') as outfile:
-    json.dump([], outfile)
+    json.dump(outfile)
