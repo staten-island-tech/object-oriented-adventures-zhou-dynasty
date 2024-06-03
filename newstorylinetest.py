@@ -7,6 +7,7 @@ class SkeletonBattle:
         self.player_hp = player_hp
 
     def shoot(self):
+        self.player_hp -=2
         return "You shoot the skeleton with an arrow."
 
     def defend(self):
@@ -19,10 +20,10 @@ class SkeletonBattle:
 
 class SkeletonHealth:
     def __init__(self):
-        self.skeletonhp = 10
+        self.skeletonhp = 30
 
     def shot(self, has_special_weapon=False):
-        damage = 5 if has_special_weapon else 2
+        damage = 20 if has_special_weapon else 2
         self.skeletonhp -= damage
         return f"Skeleton took {damage} damage."
 
@@ -231,7 +232,7 @@ class Storyline:
 
     class MageStoryline:
         def __init__(self):
-            self.magehp = 25
+            self.magehp = 20
             self.has_starlight_wand = self.check_starlight_wand()
             self.skeleton_battle = SkeletonBattle(self.magehp)
             self.skeleton_health = SkeletonHealth()

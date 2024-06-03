@@ -7,8 +7,6 @@ class SkeletonBattle:
     def shoot(self):
         damage = 2
         self.archerhp -= damage
-        if self.archerhp < 0:
-            self.archerhp = 0
         return f'You have {self.archerhp} hp left.'
 
     def defend(self):
