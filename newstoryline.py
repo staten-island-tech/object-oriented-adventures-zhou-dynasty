@@ -165,7 +165,7 @@ class Storyline:
             except (FileNotFoundError, json.JSONDecodeError):
                 return False
             
-        def check_wither_bow(self):
+        def check_wither_bow(self): 
             try:
                 with open("wither_bow.json", encoding="utf8") as json_file:
                     data = json.load(json_file)
