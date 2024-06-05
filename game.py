@@ -66,11 +66,20 @@ def game():
 
         os.system('cls')
 
+        
         for x in Player:
             if x['Class'] == "ARCHER":
-                Archer()
+                while Player.archerhp > 0:
+                    Archer()
+                    if Player.archerhp < 0:
+                        print("You died..")
+                        os.abort()
             elif x['Class'] == "MAGE":
-                Mage()
+                while Player.magehp > 0:
+                    Mage()
+                    if Player.magehp < 0:
+                        print("You died..")
+                        os.abort()
             
        
         
