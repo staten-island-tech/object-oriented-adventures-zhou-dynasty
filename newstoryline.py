@@ -1,4 +1,4 @@
-import time, random, os, json
+import time, random, os, json, sys
 
 class SkeletonBattle:
     def __init__(self, archerhp):
@@ -8,13 +8,17 @@ class SkeletonBattle:
         damage = 2
         self.archerhp -= damage
         return f'You have {self.archerhp} hp left.'
-
+        
     def defend(self): 
         self.archerhp -= 1
+        if self.archerhp < 0:
+            self.archerhp = 0
         return f'You have {self.archerhp} hp left.'
 
     def run(self):
         self.archerhp -= 4
+        if self.archerhp < 0:
+            self.archerhp = 0        
         return f'You have {self.archerhp} hp left.'
 
 class SkeletonHealth:
@@ -60,11 +64,15 @@ class WitherSkeletonBattle:
     def defend(self):
         damage = 1
         self.archerhp -= damage
+        if self.archerhp < 0:
+            self.archerhp = 0        
         return f'You have {self.archerhp} hp left.'
 
     def run(self):
         damage = 4
         self.archerhp -= damage
+        if self.archerhp < 0:
+            self.archerhp = 0
         return f'You have {self.archerhp} hp left.'
 
 class WitherSkeletonHealth:
@@ -107,16 +115,22 @@ class WitherBattle:
     def shoot(self):
         damage = 5
         self.archerhp -= damage
+        if self.archerhp < 0:
+            self.archerhp = 0        
         return f'You have {self.archerhp} hp left.'
 
     def defend(self):
         damage = 1
         self.archerhp -= damage
+        if self.archerhp < 0:
+            self.archerhp = 0        
         return f'You have {self.archerhp} hp left.'
 
     def run(self):
         damage = 4
         self.archerhp -= damage
+        if self.archerhp < 0:
+            self.archerhp = 0        
         return f'You have {self.archerhp} hp left.'
 
 class Witherhealth:
@@ -148,10 +162,10 @@ class Storyline:
             self.has_artisanal_bow = self.check_artisanal_bow()
             self.skeleton_battle = SkeletonBattle(archerhp)
             self.skeleton_health = SkeletonHealth()
-            self.witherskeleton_battle = WitherSkeletonBattle(self.has_artisanal_bow)
+            self.witherskeleton_battle = WitherSkeletonBattle(self.archerhp, self.has_artisanal_bow)
             self.witherskeleton_health = WitherSkeletonHealth()
             self.has_wither_bow = self.check_wither_bow()
-            self.wither_battle = WitherBattle(self.has_wither_bow)
+            self.wither_battle = WitherBattle(self.archerhp, self.has_wither_bow)
             self.wither_health = Witherhealth()
 
         def check_artisanal_bow(self):
@@ -159,9 +173,9 @@ class Storyline:
                 with open("artisanal_shortbows.json", encoding="utf8") as json_file:
                     data = json.load(json_file)
                     if isinstance(data, list):
-                        return any(bow.get('artisanal_shortbow_dropped') for bow in data)
+                        return True
                     else:
-                        return data.get('artisanal_shortbow_dropped', False)
+                        return False
             except (FileNotFoundError, json.JSONDecodeError):
                 return False
             
@@ -196,31 +210,28 @@ class Storyline:
             os.system('cls')
             print(f'Player: {self.archerhp} hp, skeleton: {self.skeleton_health.skeletonhp} hp')
             while self.skeleton_health.skeletonhp > 0:
-                move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
-                os.system('cls')
-                if move == 'shoot':
-                    print('You fired off an arrow.')
-                    print(self.skeleton_battle.shoot())
-                    print(self.skeleton_health.shot())
-                elif move == 'defend':
-                    print('You defended, nice job big back!.')
-                    print(self.skeleton_battle.defend())
-                elif move == 'run':
-                    print('You attempted to vent to a different location.')
-                    delay(delay_duration)
-                    print('skeleton found you and threw you into the backrooms.')
-                    print(self.skeleton_battle.run())
+                if self.archerhp > 0:
+                    move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
+                    os.system('cls')
+                    if move == 'shoot':
+                        print('You fired off an arrow.')
+                        print(self.skeleton_battle.shoot())
+                        print(self.skeleton_health.shot())
+                    elif move == 'defend':
+                        print('You defended, nice job big back!.')
+                        print(self.skeleton_battle.defend())
+                    elif move == 'run':
+                        print('You attempted to vent to a different location.')
+                        delay(delay_duration)
+                        print('skeleton found you and threw you into the backrooms.')
+                        print(self.skeleton_battle.run())
+                    else:
+                        print('Please pick a valid move.')
                 else:
-                    print('Please pick a valid move.')
-
-                if self.archerhp <= 0:
-                    print("You died!")
                     break
-
             if self.skeleton_health.skeletonhp <= 0:
                 print("You defeated the skeleton! Congratulations skeleton warrior!")
                 print(self.skeleton_health.killed(delay_duration))
-
         def encounter2(self, delay_duration):
             print(f'Player: {self.archerhp} hp, Wither skeleton: {self.witherskeleton_health.witherskeletonhp} hp')
             os.system('cls')
@@ -242,7 +253,7 @@ class Storyline:
                 else:
                     print('PICK A MOVE GODDAMN')
 
-                if self.archerhp <= 0:
+                if self.archerhp == 0:
                     print("YOU SUCK AT SPORTS FATTY")
                     break
 
@@ -593,7 +604,7 @@ def archer():
     except ValueError:
         delay_duration = 2
     storyline = Storyline
-    archer_story = storyline.ArcherStoryline()
+    archer_story = storyline.ArcherStoryline(20)
     archer_story.beginning(delay_duration)
     delay(delay_duration)
     archer_story.encounter1(delay_duration)
@@ -605,6 +616,7 @@ def archer():
         json.dump({},outfile)
     with open("wither_bow.json", mode='w') as outfile:
         json.dump({},outfile)
+archer()
 
 def mage():
     try:
@@ -624,5 +636,6 @@ def mage():
         json.dump({},outfile)
     with open("hyperion.json", mode='w') as outfile:
         json.dump({},outfile)
+mage()
 
-archer()
+

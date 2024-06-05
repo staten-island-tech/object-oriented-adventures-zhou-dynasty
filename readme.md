@@ -17,27 +17,17 @@ Wither Skeleton - HP/ATK/WEAPON
 Wither - HP/DAMAGE/WEAPON
 
 ## Weapons
+_Currently obtainable:_
 
-Wooden Sword
-
-Stone Sword
-
-Iron Sword
-
-Rageblade
-
-Frost Sword
-
-Ruby Sword
-
-Hyperion
-
-Dark Claymore
-
-Valkyrie
-
-Scylla
-
-Astraea
-
-
+### **Archers**
+```
+- Short Bow 
+- Artisanal Bow 
+- Wither Bow
+```
+### **Mages**
+```
+- Magic Wand
+- Starlight Wand
+- Hyperion
+```
