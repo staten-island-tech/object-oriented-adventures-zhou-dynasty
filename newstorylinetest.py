@@ -140,5 +140,3 @@ try:
 except ValueError:
     print("Invalid Input! Your delay durtion will be 2 seconds")
     duration = 2
-
-beginning()
