@@ -54,7 +54,7 @@ def fight_archer(enemy):
             if player.has_artisinal_bow:
                 damage += 5
             if player.has_wither_bow:
-                damage += 5
+                damage += 30
             enemy.hp -= damage
         elif move == 'defend':
             print('You defended, nice job big back!.')
