@@ -1,12 +1,12 @@
 import time
 import os
-from storyline import storyline
+from newstorylinetest import newstorylinetest
 from classes import *   
 Player = []
 
 
-def storylinetime():
-    p = storyline
+def newstorylinetime():
+    p = newstorylinetest
     for x in Player:
         if x['Class'] == "ARCHER":
             p.archerstoryline.archer()

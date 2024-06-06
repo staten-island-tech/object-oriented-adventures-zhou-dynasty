@@ -1,5 +1,6 @@
 import time, random, os, sys
 
+
 def wait(duration):
     time.sleep(duration)
 
@@ -17,9 +18,13 @@ def beginning():
     print('A battle of the ages begin.')
     wait(duration)
     os.system("clear")
+
+def archer():
     fight_archer(skeleton)
     fight_archer(wither_skeleton)
     fight_archer(wither)
+
+def mage():
     fight_mage(skeleton)
     fight_mage(wither_skeleton)
     fight_mage(wither)
@@ -62,6 +67,7 @@ def fight_archer(enemy):
             print(f"You have {player.hp} left!")
         else:
             print('Please pick a valid move.')
+            fight_archer()
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
         if enemy.name == "Wither":
@@ -82,7 +88,6 @@ def fight_archer(enemy):
             player.has_wither_bow = True
         else:
             print("No drop! Too bad, too sad.")
-            print("You can't win, AHAHAHAHAHA.")
 
 def fight_mage(enemy):
     while player.hp > 0 and enemy.hp > 0:
