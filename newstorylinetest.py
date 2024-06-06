@@ -45,7 +45,7 @@ def fight_archer(enemy):
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
         if move == 'shoot':
             print('You fired off an arrow.')
-            damage = 2
+            damage = 20
             if player.has_artisinal_bow:
                 damage += 5
             if player.has_wither_bow:
