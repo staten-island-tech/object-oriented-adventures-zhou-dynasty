@@ -44,7 +44,7 @@ wither_skeleton = entity("Wither Skeleton", 30)
 wither = entity("Wither", 200)
 
 def fight_archer(enemy):
-    while player.hp > 0 and enemy.hp > 0:
+    while player.hp > 0 or enemy.hp > 0:
         wait(duration)
         os.system("cls")
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
@@ -88,12 +88,10 @@ def fight_archer(enemy):
             player.has_wither_bow = True
         else:
             print("No drop! Too bad, too sad.")
-        if player.hp <= 0:
-            print("You suck bruh DAMN.")
-            sys.exit()
+
 
 def fight_mage(enemy):
-    while player.hp > 0 and enemy.hp > 0:
+    while player.hp > 0 or enemy.hp > 0:
         wait(duration)
         os.system("cls")
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
@@ -137,9 +135,7 @@ def fight_mage(enemy):
         else:
             print("No drop! Too bad, too sad.")
             print("You can't win, AHAHAHAHAHA.")
-        if player.hp <= 0:
-            print("You suck bruh DAMN.")
-            sys.exit()            
+      
 
 try:
     duration = int(input("Enter delay duration in seconds (default 2): "))
