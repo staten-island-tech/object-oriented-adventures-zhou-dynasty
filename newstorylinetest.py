@@ -17,7 +17,7 @@ def beginning():
     print('It charges at you.')
     print('A battle of the ages begin.')
     wait(duration)
-    os.system("clear")
+    os.system("cls")
 
 def archer():
     fight_archer(skeleton)
@@ -140,3 +140,4 @@ try:
 except ValueError:
     print("Invalid Input! Your delay durtion will be 2 seconds")
     duration = 2
+
