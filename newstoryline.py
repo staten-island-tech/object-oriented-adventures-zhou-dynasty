@@ -50,6 +50,7 @@ def fight_archer(enemy):
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
         if move == 'shoot':
             print('You fired off an arrow.')
+            print(f"You have {player.hp} hp left!")
             damage = 20
             if player.has_artisinal_bow:
                 damage += 5
@@ -58,13 +59,18 @@ def fight_archer(enemy):
             enemy.hp -= damage
         elif move == 'defend':
             print('You defended, nice job big back!.')
+            print(f"You have {player.hp} hp left!")            
             player.hp -= 1
         elif move == 'run':
             print('You attempted to vent to a different location.')
             wait(duration)
             print(f'{enemy.name} found you and threw you into the backrooms.')
             player.hp -= 4
+<<<<<<< HEAD:newstorylinetest.py
             print(f"You have {player.hp} HP left!")
+=======
+            print(f"You have {player.hp} hp left!")
+>>>>>>> 19e5e370d9f103cce61492d1d2a67ec713f52c31:newstoryline.py
         else:
             print('Please pick a valid move.')
             fight_archer()
@@ -109,6 +115,7 @@ def fight_mage(enemy):
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
         if move == 'shoot':
             print('You fired off an arrow.')
+            print(f"You have {player.hp} hp left!")
             damage = 20
             if player.has_starlight_wand:
                 damage += 5
@@ -116,7 +123,8 @@ def fight_mage(enemy):
                 damage += 30
             enemy.hp -= damage
         elif move == 'defend':
-            print('You defended, nice job big back!.')
+            print('You defended, nice job big man!.')
+            print(f"You have {player.hp} hp left!")
             player.hp -= 1
         elif move == 'run':
             print('You attempted to vent to a different location.')
@@ -162,6 +170,7 @@ def fight_mage(enemy):
       
 os.system('cls')
 try:
+
     duration = int(input("Enter delay duration in seconds (default 2): "))
 except ValueError:
     print("Invalid Input! Your delay durtion will be 2 seconds")

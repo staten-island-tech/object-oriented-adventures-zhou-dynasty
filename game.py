@@ -1,10 +1,33 @@
+<<<<<<< HEAD
 import time
 import os
 from newstorylinetest import *
 from classes import *   
 Player = []
 M = Menu
+=======
+import time, random, os, sys
+from newstoryline import *
+import newstoryline as n
+>>>>>>> 19e5e370d9f103cce61492d1d2a67ec713f52c31
 
+
+
+
+
+
+def newstorylinetime():
+
+    placeholder = input('pick a class (archer, mage): ').upper()
+    if placeholder == "ARCHER":
+            n.archer()
+    elif placeholder == "MAGE": 
+            n.mage()
+    else:
+        print('pick an option given')
+        newstorylinetime()
+
+    
 #menu 
 def game():
     os.system('cls')
@@ -27,11 +50,10 @@ def game():
         print("Hello player, welcome!")
         time.sleep(1)
         username = input("What will your username be? ")
-        a = ClassSelection(username=username)
-    
         print(f"Hello {username}, welcome to Zhou Dynasty!")
         time.sleep(2)
         os.system('cls')
+<<<<<<< HEAD
 
         M.menu()
         a.SelectAClass()
@@ -96,4 +118,7 @@ game()
 
 
 
+=======
+        beginning()
+>>>>>>> 19e5e370d9f103cce61492d1d2a67ec713f52c31
 
