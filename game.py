@@ -1,6 +1,6 @@
 import time, random, os, sys
-from newstorylinetest import *
-import newstorylinetest as n
+from newstoryline import *
+import newstoryline as n
 
 
 
