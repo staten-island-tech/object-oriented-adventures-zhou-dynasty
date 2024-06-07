@@ -1,24 +1,27 @@
 # Zhou Dynasty
-A dungeon game created after Chuyuan Zhang, this game entails  
+An adventure game created after Gary Zhou
 
 ### Controls
+```
+Shoot - Attack the enemies
+Defend - Defend from the enemies
+Run - Run from the enemies 
+```
 
-## Player
 ### Classes
-Archer - HP/ATK/DEF
-
-Mage - HP/ATK/DEF
+```
+Archer      ❤ HP: 20 | ❁ Dmg: 20
+Mage        ❤ HP: 15 | ❁ Dmg: 30  
+```
 ## Mobs
-
-Skeleton - HP/DAMAGE/WEAPON
-
-Wither Skeleton - HP/ATK/WEAPON
-
-Wither - HP/DAMAGE/WEAPON
+```
+Skeleton          ❤ HP: 30 | ❁ Dmg: 2
+Wither Skeleton   ❤ HP: 50 | ❁ Dmg: 3
+Wither            ❤ HP: ???| ❁ Dmg: ???
+```
 
 ## Weapons
 _Currently obtainable:_
-
 ### **Archers**
 ```
 - Short Bow 
@@ -31,3 +34,7 @@ _Currently obtainable:_
 - Starlight Wand
 - Hyperion
 ```
+<<<<<<< HEAD
+
+=======
+>>>>>>> gary
