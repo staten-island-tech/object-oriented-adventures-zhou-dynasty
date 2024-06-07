@@ -51,6 +51,7 @@ def fight_archer(enemy):
         if move == 'shoot':
             print('You fired off an arrow.')
             print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left")
             damage = 20
             if player.has_artisinal_bow:
                 damage += 5
@@ -59,7 +60,8 @@ def fight_archer(enemy):
             enemy.hp -= damage
         elif move == 'defend':
             print('You defended, nice job big back!.')
-            print(f"You have {player.hp} hp left!")            
+            print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left")                        
             player.hp -= 1
         elif move == 'run':
             print('You attempted to vent to a different location.')
@@ -67,6 +69,7 @@ def fight_archer(enemy):
             print(f'{enemy.name} found you and threw you into the backrooms.')
             player.hp -= 4
             print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left")            
         else:
             print('Please pick a valid move.')
             fight_archer()
@@ -112,6 +115,7 @@ def fight_mage(enemy):
         if move == 'shoot':
             print('You fired off an arrow.')
             print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left")            
             damage = 20
             if player.has_starlight_wand:
                 damage += 5
@@ -121,6 +125,7 @@ def fight_mage(enemy):
         elif move == 'defend':
             print('You defended, nice job big man!.')
             print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left")            
             player.hp -= 1
         elif move == 'run':
             print('You attempted to vent to a different location.')
@@ -128,6 +133,7 @@ def fight_mage(enemy):
             print(f'{enemy.name} found you and threw you into the backrooms.')
             player.hp -= 4
             print(f"You have {player.hp} left!")
+            print(f"The mob has {enemy.hp} hp left")            
         else:
             print('Please pick a valid move.')
     if player.hp > 0:
