@@ -70,6 +70,8 @@ def fight_archer(enemy):
             fight_archer()
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
+        os.system('cls')
+        print('good job, you beat the first mob')
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
@@ -94,6 +96,7 @@ def fight_archer(enemy):
         else:
             print("No drop! Too bad, too sad.")
         if player.hp <= 0:
+            os.system('cls')
             print('damn you must suck at this horribly made game')
             print('trash')
             sys.exit()
@@ -125,6 +128,9 @@ def fight_mage(enemy):
             print('Please pick a valid move.')
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
+        if enemy.name == 'Skeleton':
+            os.system('cls')
+            print('good job, you beat the first mob')
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
@@ -149,6 +155,7 @@ def fight_mage(enemy):
             print("No drop! Too bad, too sad.")
             print("You can't win, AHAHAHAHAHA.")
         if player.hp <= 0:
+            os.system('cls')
             print('damn you must suck at this horribly made game')
             print('trash')
             sys.exit()
@@ -159,4 +166,3 @@ try:
 except ValueError:
     print("Invalid Input! Your delay durtion will be 2 seconds")
     duration = 2
-
