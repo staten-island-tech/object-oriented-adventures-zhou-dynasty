@@ -51,12 +51,8 @@ def fight_archer(enemy):
         if move == 'shoot':
             print('You fired off an arrow.')
             print(f"You have {player.hp} hp left!")
-<<<<<<< HEAD
-=======
-            print(f"The mob has {enemy.hp} hp left")
-            damage1 = 2
->>>>>>> gary
             damage = 20
+            damage1 = 2
             if player.has_artisinal_bow:
                 damage += 5
             if player.has_wither_bow:
