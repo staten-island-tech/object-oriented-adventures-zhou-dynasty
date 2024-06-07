@@ -52,12 +52,14 @@ def fight_archer(enemy):
             print('You fired off an arrow.')
             print(f"You have {player.hp} hp left!")
             print(f"The mob has {enemy.hp} hp left")
+            damage1 = 2
             damage = 20
             if player.has_artisinal_bow:
                 damage += 5
             if player.has_wither_bow:
                 damage += 30
             enemy.hp -= damage
+            player.hp -= damage1
         elif move == 'defend':
             print('You defended, nice job big back!.')
             print(f"You have {player.hp} hp left!")
@@ -117,11 +119,13 @@ def fight_mage(enemy):
             print(f"You have {player.hp} hp left!")
             print(f"The mob has {enemy.hp} hp left")            
             damage = 20
+            damage1 = 2
             if player.has_starlight_wand:
                 damage += 5
             if player.has_hyperion:
                 damage += 30
             enemy.hp -= damage
+            player.hp -= damage1
         elif move == 'defend':
             print('You defended, nice job big man!.')
             print(f"You have {player.hp} hp left!")
