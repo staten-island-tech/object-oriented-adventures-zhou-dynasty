@@ -1,24 +1,10 @@
-import time, random, os, sys
-from newstorylinetest import *
-import newstorylinetest as n
+import time
+import os
+from newstoryline import *
+from classes import *   
+Player = []
+M = Menu
 
-
-
-
-
-
-def newstorylinetime():
-
-    placeholder = input('pick a class (archer, mage): ').upper()
-    if placeholder == "ARCHER":
-            n.archer()
-    elif placeholder == "MAGE": 
-            n.mage()
-    else:
-        print('pick an option given')
-        newstorylinetime()
-
-    
 #menu 
 def game():
     os.system('cls')
@@ -41,8 +27,71 @@ def game():
         print("Hello player, welcome!")
         time.sleep(1)
         username = input("What will your username be? ")
+        a = ClassSelection(username=username)
+    
         print(f"Hello {username}, welcome to Zhou Dynasty!")
         time.sleep(2)
         os.system('cls')
-        beginning()
+
+        M.menu()
+        a.SelectAClass()
+        Player = a.Player
+
+        while True:
+            start = input("Are you ready to begin your adventure? Y/N: ").upper()
+            os.system('cls')
+            if start == "Y":
+                break
+            elif start == "N":
+                AskOptions = ["GAME", "RESELECT", "QUIT"]
+                M.message()
+                Ask = input().upper()
+
+                while Ask not in AskOptions: 
+                    M.message
+                    Ask = input().upper()
+
+                if Ask == "GAME":
+                    M.menu2()
+                elif Ask == "RESELECT":
+                    os.system('cls')
+                    Player.clear()
+                    a.SelectAClass()
+                    Player.clear()
+                    Player = a.Player
+                elif Ask == "QUIT":
+                    os.system('cls')
+                    print("Game over...")
+                    os.abort()
+
+        os.system('cls')
+
+        
+        for x in Player:
+            if x['Class'] == "ARCHER":
+                archer()
+            elif x['Class'] == "MAGE":
+                mage()
+            
+       
+        
+game()
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
