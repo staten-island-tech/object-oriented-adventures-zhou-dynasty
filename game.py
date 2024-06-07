@@ -1,6 +1,6 @@
 import time
 import os
-from newstoryline import *
+from newstorylinetest import *
 from classes import *   
 Player = []
 M = Menu
@@ -68,6 +68,8 @@ def game():
 
         
         for x in Player:
+            
+            beginning()
             if x['Class'] == "ARCHER":
                 archer()
             elif x['Class'] == "MAGE":

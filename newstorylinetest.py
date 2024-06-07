@@ -64,7 +64,7 @@ def fight_archer(enemy):
             wait(duration)
             print(f'{enemy.name} found you and threw you into the backrooms.')
             player.hp -= 4
-            print(f"You have {player.hp} left!")
+            print(f"You have {player.hp} HP left!")
         else:
             print('Please pick a valid move.')
             fight_archer()
@@ -160,7 +160,7 @@ def fight_mage(enemy):
             print('trash')
             sys.exit()
       
-
+os.system('cls')
 try:
     duration = int(input("Enter delay duration in seconds (default 2): "))
 except ValueError:
