@@ -66,11 +66,7 @@ def fight_archer(enemy):
             wait(duration)
             print(f'{enemy.name} found you and threw you into the backrooms.')
             player.hp -= 4
-<<<<<<< HEAD:newstorylinetest.py
-            print(f"You have {player.hp} HP left!")
-=======
             print(f"You have {player.hp} hp left!")
->>>>>>> 19e5e370d9f103cce61492d1d2a67ec713f52c31:newstoryline.py
         else:
             print('Please pick a valid move.')
             fight_archer()
