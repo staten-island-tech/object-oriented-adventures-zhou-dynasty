@@ -88,6 +88,9 @@ def fight_archer(enemy):
             player.has_wither_bow = True
         else:
             print("No drop! Too bad, too sad.")
+        if player.hp <= 0:
+            print("You suck bruh DAMN.")
+            sys.exit()
 
 def fight_mage(enemy):
     while player.hp > 0 and enemy.hp > 0:
@@ -134,6 +137,9 @@ def fight_mage(enemy):
         else:
             print("No drop! Too bad, too sad.")
             print("You can't win, AHAHAHAHAHA.")
+        if player.hp <= 0:
+            print("You suck bruh DAMN.")
+            sys.exit()            
 
 try:
     duration = int(input("Enter delay duration in seconds (default 2): "))
