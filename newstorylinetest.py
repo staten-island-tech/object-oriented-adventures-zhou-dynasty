@@ -70,6 +70,11 @@ def fight_archer(enemy):
             fight_archer()
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
+        if enemy.name == 'Wither Skeleton':
+            print('Good job, you have done well ngl')
+            wait(duration)
+            print('you still cooked anyways bruh')
+            print('well gl')
         if enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
@@ -88,6 +93,10 @@ def fight_archer(enemy):
             player.has_wither_bow = True
         else:
             print("No drop! Too bad, too sad.")
+        if player.hp <= 0:
+            print('damn you must suck at this horribly made game')
+            print('trash')
+            sys.exit()
 
 
 def fight_mage(enemy):
@@ -116,12 +125,16 @@ def fight_mage(enemy):
             print('Please pick a valid move.')
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
+        if enemy.name == 'Wither Skeleton':
+            print('Good job, you have done well ngl')
+            wait(duration)
+            print('you still cooked anyways bruh')
+            print('well gl')
         if enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
             print('But good job anyways.')
             print('bye')
-            sys.exit()
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
             print("You got a starlight wand.")
             wait(duration)
@@ -135,6 +148,10 @@ def fight_mage(enemy):
         else:
             print("No drop! Too bad, too sad.")
             print("You can't win, AHAHAHAHAHA.")
+        if player.hp <= 0:
+            print('damn you must suck at this horribly made game')
+            print('trash')
+            sys.exit()
       
 
 try:
