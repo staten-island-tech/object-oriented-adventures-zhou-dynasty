@@ -28,6 +28,9 @@ def game():
         print("Hello player, welcome!")
         time.sleep(1)
         username = input("What will your username be? ")
+        a = ClassSelection(username=username)
+        
+
         print(f"Hello {username}, welcome to Zhou Dynasty!")
         time.sleep(2)
         os.system('cls')
@@ -47,7 +50,7 @@ def game():
                 Ask = input().upper()
 
                 while Ask not in AskOptions: 
-                    M.message
+                    M.message()
                     Ask = input().upper()
 
                 if Ask == "GAME":
@@ -65,18 +68,27 @@ def game():
 
         os.system('cls')
 
-        
         for x in Player:
-            
             beginning()
             if x['Class'] == "ARCHER":
                 archer()
             elif x['Class'] == "MAGE":
                 mage()
-            
-       
+
         
 game()
+        
+
+
+
+
+
+
+
+
+
+
+
         
 
 
