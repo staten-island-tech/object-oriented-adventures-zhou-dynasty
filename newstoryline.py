@@ -51,6 +51,7 @@ def fight_archer(enemy):
         if move == 'shoot':
             print('You fired off an arrow.')
             print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left.")
             damage = 20
             damage1 = 2
             if player.has_artisinal_bow:
@@ -114,6 +115,7 @@ def fight_mage(enemy):
         if move == 'shoot':
             print('You fired off an arrow.')
             print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left.")
             damage = 20
             damage1 = 2
             if player.has_starlight_wand:
