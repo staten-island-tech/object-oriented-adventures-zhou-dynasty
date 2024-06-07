@@ -44,7 +44,7 @@ wither_skeleton = entity("Wither Skeleton", 30)
 wither = entity("Wither", 200)
 
 def fight_archer(enemy):
-    while player.hp > 0 or enemy.hp > 0:
+    while player.hp > 0 and enemy.hp > 0:
         wait(duration)
         os.system("cls")
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
@@ -93,6 +93,8 @@ def fight_archer(enemy):
             wait(duration)
             print("Nice!")
             player.has_artisinal_bow = True
+            print("Gary is dum...")
+            time.sleep(5)
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a wither bow.")
             wait(duration)
@@ -105,10 +107,12 @@ def fight_archer(enemy):
             print('damn you must suck at this horribly made game')
             print('trash')
             sys.exit()
+    else:
+        print("You died L")
 
 
 def fight_mage(enemy):
-    while player.hp > 0 or enemy.hp > 0:
+    while player.hp > 0 and enemy.hp > 0:
         wait(duration)
         os.system("cls")
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
