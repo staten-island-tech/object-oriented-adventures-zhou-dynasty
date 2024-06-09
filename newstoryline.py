@@ -114,8 +114,6 @@ def fight_mage(enemy):
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
         if move == 'shoot':
             print('You fired off an arrow.')
-            print(f"You have {player.hp} hp left!")
-            print(f"The mob has {enemy.hp} hp left.")
             damage = 20
             damage1 = 2
             if player.has_starlight_wand:
@@ -124,6 +122,8 @@ def fight_mage(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+            print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
             print('You defended, nice job big man!.')
             print(f"You have {player.hp} hp left!")
