@@ -51,6 +51,10 @@ def fight_archer(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+
+            if enemy.hp <= 0:
+                enemy.hp = 0
+
             print(f"You have {player.hp} hp left!")
             print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
@@ -134,6 +138,10 @@ def fight_mage(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+
+            if enemy.hp <= 0:
+                enemy.hp = 0
+                
             print(f"You have {player.hp} hp left!")
             print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
