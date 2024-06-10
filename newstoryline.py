@@ -75,8 +75,10 @@ def fight_archer(enemy):
             fight_archer()
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
-        os.system('cls')
-        print('good job, you beat the first mob')
+        if enemy.name == 'Skeleton':
+            os.system('cls')
+            print('good job, you beat the first mob')
+            print('onwards.')
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
