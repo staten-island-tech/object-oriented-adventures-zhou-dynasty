@@ -145,6 +145,7 @@ def fight_mage(enemy):
             print(f"You have {player.hp} left!")
         else:
             print('Please pick a valid move.')
+            fight_mage(enemy)
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
         
