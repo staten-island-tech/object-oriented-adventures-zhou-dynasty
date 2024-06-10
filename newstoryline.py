@@ -65,10 +65,11 @@ def fight_archer(enemy):
             print(f"You have {player.hp} hp left!")
         else:
             print('Please pick a valid move.')
-            fight_archer()
+            fight_archer(enemy)
     if player.hp > 0:
         wait(duration)
         print(f"You defeated the {enemy.name}!")
+        wait(duration)
         
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
             print("You got an artisinal shortbow.")
@@ -93,12 +94,16 @@ def fight_archer(enemy):
             print('You decide to adventure because you have no choice because i said so.')
             wait(duration)
             print('you discovered a black coal mob.')
+            wait(duration)
         elif enemy.name == 'Wither Skeleton':
+            os.system('cls')
             print('Good job, you have done well ngl')
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
+            wait(duration)
         elif enemy.name == "Wither":
+            os.system('cls')
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
             print('But good job anyways.')
@@ -151,29 +156,37 @@ def fight_mage(enemy):
             wait(duration)
             print("Nice!")
             player.has_starlight_wand = True
+            os.system('cls')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a hyperion.")
             wait(duration)
             print("Nice!")
+            os.system('cls')
             player.has_hyperion = True
         else:
             print("No drop! Too bad, too sad.")
             print("You can't win, AHAHAHAHAHA.")
+            os.system('cls')
 
         if enemy.name == 'Skeleton':
             os.system('cls')
             print('good job, you beat the first mob')
             print('onwards.')
+            os.system('cls')
         elif enemy.name == 'Wither Skeleton':
+            os.system('cls')
             print('Good job, you have done well ngl')
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
+            os.system('cls')
         elif enemy.name == "Wither":
+            os.system('cls')
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
             print('But good job anyways.')
             print('bye')
+            os.system('cls')
             sys.exit()
         
         if player.hp <= 0:
