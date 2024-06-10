@@ -1,8 +1,9 @@
 import time, random, os, sys
-
+from classes import entity
 
 def wait(duration):
     time.sleep(duration)
+
 
 def beginning():
     print("Your adventure begins now.")
@@ -29,18 +30,10 @@ def mage():
     fight_mage(wither_skeleton)
     fight_mage(wither)
 
-class entity():
-    def __init__(self, name, hp, has_artisinal_bow = False, has_wither_bow = False, has_starlight_wand = False, has_hyperion = False):
-        self.name = name
-        self.hp = hp
-        self.has_artisinal_bow = has_artisinal_bow
-        self.has_wither_bow = has_wither_bow
-        self.has_starlight_wand = has_starlight_wand
-        self.has_hyperion = has_hyperion
 
 player = entity("Player", 20)
 skeleton = entity("Skeleton", 30)
-wither_skeleton = entity("Wither Skeleton", 30)
+wither_skeleton = entity("Wither Skeleton", 50)
 wither = entity("Wither", 200)
 
 def fight_archer(enemy):
@@ -58,6 +51,10 @@ def fight_archer(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+
+            if enemy.hp <= 0:
+                enemy.hp = 0
+
             print(f"You have {player.hp} hp left!")
             print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
@@ -72,31 +69,19 @@ def fight_archer(enemy):
             print(f"You have {player.hp} hp left!")
         else:
             print('Please pick a valid move.')
-            fight_archer()
+            fight_archer(enemy)
     if player.hp > 0:
+        wait(duration)
         print(f"You defeated the {enemy.name}!")
-        if enemy.name == 'Skeleton':
-            os.system('cls')
-            print('good job, you beat the first mob')
-            print('onwards.')
-        if enemy.name == 'Wither Skeleton':
-            print('Good job, you have done well ngl')
-            wait(duration)
-            print('you still cooked anyways bruh')
-            print('well gl')
-            wait(duration)
-            print('bc you are gonna very much need it')
-        if enemy.name == "Wither":
-            print('Wow, you won, you probably got lucky ngl.')
-            wait(duration)
-            print('But good job anyways.')
-            print('bye')
-            sys.exit()
+        wait(duration)
+        
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
             print("You got an artisinal shortbow.")
             wait(duration)
             print("Nice!")
             player.has_artisinal_bow = True
+            wait(duration)
+            print('jefferson sucks....')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a wither bow.")
             wait(duration)
@@ -104,6 +89,32 @@ def fight_archer(enemy):
             player.has_wither_bow = True
         else:
             print("No drop! Too bad, too sad.")
+
+        if enemy.name == 'Skeleton':
+            os.system('cls')
+            print('good job, you beat the first mob')
+            print('onwards.')
+            wait(duration)
+            print('You decide to adventure because you have no choice because i said so.')
+            wait(duration)
+            print('you discovered a black coal mob.')
+            wait(duration)
+        elif enemy.name == 'Wither Skeleton':
+            os.system('cls')
+            print('Good job, you have done well ngl')
+            wait(duration)
+            print('you still cooked anyways bruh')
+            print('well gl')
+            wait(duration)
+            print('im putting you against the last mob.')
+        elif enemy.name == "Wither":
+            os.system('cls')
+            print('Wow, you won, you probably got lucky ngl.')
+            wait(duration)
+            print('But good job anyways.')
+            print('bye')
+            sys.exit()
+
         if player.hp <= 0:
             os.system('cls')
             print('damn you must suck at this horribly made game')
@@ -126,6 +137,10 @@ def fight_mage(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+
+            if enemy.hp <= 0:
+                enemy.hp = 0
+                
             print(f"You have {player.hp} hp left!")
             print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
@@ -140,29 +155,20 @@ def fight_mage(enemy):
             print(f"You have {player.hp} left!")
         else:
             print('Please pick a valid move.')
+            fight_mage(enemy)
     if player.hp > 0:
+        wait(duration)
         print(f"You defeated the {enemy.name}!")
-        if enemy.name == 'Skeleton':
-            os.system('cls')
-            print('good job, you beat the first mob')
-            print('onwards.')
-        if enemy.name == 'Wither Skeleton':
-            print('Good job, you have done well ngl')
-            wait(duration)
-            print('you still cooked anyways bruh')
-            print('well gl')
-            wait(duration)
-            print('bc you are gonna very much need it')            
-        if enemy.name == "Wither":
-            print('Wow, you won, you probably got lucky ngl.')
-            wait(duration)
-            print('But good job anyways.')
-            print('bye')
+        wait(duration)
+
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
             print("You got a starlight wand.")
             wait(duration)
             print("Nice!")
             player.has_starlight_wand = True
+            wait(duration)
+            print("gary is dum..")
+            os.system('cls')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a hyperion.")
             wait(duration)
@@ -170,7 +176,28 @@ def fight_mage(enemy):
             player.has_hyperion = True
         else:
             print("No drop! Too bad, too sad.")
-            print("You can't win, AHAHAHAHAHA.")
+            
+        if enemy.name == 'Skeleton':
+            os.system('cls')
+            print('good job, you beat the first mob')
+            print('onwards.')
+            os.system('cls')
+        elif enemy.name == 'Wither Skeleton':
+            os.system('cls')
+            print('Good job, you have done well ngl')
+            wait(duration)
+            print('you still cooked anyways bruh')
+            print('well gl')
+            os.system('cls')
+        elif enemy.name == "Wither":
+            os.system('cls')
+            print('Wow, you won, you probably got lucky ngl.')
+            wait(duration)
+            print('But good job anyways.')
+            print('bye')
+            os.system('cls')
+            sys.exit()
+        
         if player.hp <= 0:
             os.system('cls')
             print('damn you must suck at this horribly made game')

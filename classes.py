@@ -1,34 +1,13 @@
 import os
-#Mobs
-class Mob():
-    def __init__(self, name, health):
+#Entity
+class entity():
+    def __init__(self, name, hp, has_artisinal_bow = False, has_wither_bow = False, has_starlight_wand = False, has_hyperion = False):
         self.name = name
-        self.health = health
-    def __str__(self):
-        return f"{self.name}, {self.health}"
-
-class Skeleton(Mob):
-    def __init__(self, name, health, weapon):
-        self.name = name
-        self.health = health
-        self.weapon = weapon
-    def __str__(self):
-        return f"{self.name}, {self.health}, {self.weapon}"
-    
-Skeleton1 = Skeleton("Skeleton", 30, "Wooden Sword")
-WitherSkeleton = Skeleton("Wither Skeleton", 20, "Stone Sword")
-Wither = Skeleton("Wither", 100, "???")
-
-#Player
-class User():
-    def __init__(self, username, health, damage, Class, weapon):
-        self.username = username
-        self.health = health
-        self.damage = damage
-        self.Class = Class
-        self.weapon = weapon
-    def __str__(self):
-        return f"{self.username}, {self.health}, {self.damage}, {self.Class}, {self.weapon}"
+        self.hp = hp
+        self.has_artisinal_bow = has_artisinal_bow
+        self.has_wither_bow = has_wither_bow
+        self.has_starlight_wand = has_starlight_wand
+        self.has_hyperion = has_hyperion
 
 #Player
 class User():
@@ -66,7 +45,7 @@ class ClassSelection:
         if UserClassChoice == "ARCHER":
             self.Player.append(User(self.username, 20, 20, UserClassChoice, "Short Bow").__dict__)
         elif UserClassChoice == "MAGE":
-            self.Player.append(User(self.username, 15, 30, UserClassChoice, "Magic Wand").__dict__)
+            self.Player.append(User(self.username, 20, 20, UserClassChoice, "Magic Wand").__dict__)
 
 #menu
 class Menu:
@@ -83,7 +62,7 @@ class Menu:
                 y = input("Mobs | Roles | Quit: ").upper()
                 if y == "MOBS":
                     os.system('cls')
-                    print("Skeleton - HP: 20 | Weapon: Wooden Sword")
+                    print("Skeleton - HP: 30 | Weapon: Wooden Sword")
                     print("Wither Skeleton - HP: 50 | Weapon: Stone Sword")
                     print("Wither - HP: ??? | Weapon: ???")
                     x = input("Type to continue ")
@@ -114,7 +93,7 @@ class Menu:
                 elif y.upper() == "ROLES":
                     os.system('cls')
                     print("Archer - HP: 20 | DAMAGE: 20 | Weapon: Short Bow")
-                    print("Mage - HP: 15 | DAMAGE: 30 | Weapon: Magic Wand")
+                    print("Mage - HP: 20 | DAMAGE: 30 | Weapon: Magic Wand")
                     x = input("Type to continue ")
             elif x == "N":
                 break
