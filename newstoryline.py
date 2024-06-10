@@ -80,7 +80,7 @@ def fight_archer(enemy):
             wait(duration)
             print("Nice!")
             player.has_artisinal_bow = True
-            time.sleep(3)
+            wait(duration)
             print('jefferson sucks....')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a wither bow.")
@@ -157,25 +157,26 @@ def fight_mage(enemy):
             print('Please pick a valid move.')
             fight_mage(enemy)
     if player.hp > 0:
+        wait(duration)
         print(f"You defeated the {enemy.name}!")
-        
+        wait(duration)
+
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
             print("You got a starlight wand.")
             wait(duration)
             print("Nice!")
             player.has_starlight_wand = True
+            wait(duration)
+            print("gary is dum..")
             os.system('cls')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a hyperion.")
             wait(duration)
             print("Nice!")
-            os.system('cls')
             player.has_hyperion = True
         else:
             print("No drop! Too bad, too sad.")
-            print("You can't win, AHAHAHAHAHA.")
-            os.system('cls')
-
+            
         if enemy.name == 'Skeleton':
             os.system('cls')
             print('good job, you beat the first mob')
