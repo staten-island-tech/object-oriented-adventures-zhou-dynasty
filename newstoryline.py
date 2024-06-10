@@ -1,5 +1,5 @@
 import time, random, os, sys
-
+from classes import entity
 
 def wait(duration):
     time.sleep(duration)
@@ -28,15 +28,6 @@ def mage():
     fight_mage(skeleton)
     fight_mage(wither_skeleton)
     fight_mage(wither)
-
-class entity():
-    def __init__(self, name, hp, has_artisinal_bow = False, has_wither_bow = False, has_starlight_wand = False, has_hyperion = False):
-        self.name = name
-        self.hp = hp
-        self.has_artisinal_bow = has_artisinal_bow
-        self.has_wither_bow = has_wither_bow
-        self.has_starlight_wand = has_starlight_wand
-        self.has_hyperion = has_hyperion
 
 player = entity("Player", 20)
 skeleton = entity("Skeleton", 30)
