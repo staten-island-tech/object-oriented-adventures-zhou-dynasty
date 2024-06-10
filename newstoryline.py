@@ -176,26 +176,8 @@ def fight_mage(enemy):
             wait(duration)
             print('But good job anyways.')
             print('bye')
-<<<<<<< HEAD
-            wait(duration)
-            print('im putting you against the last mob.')
-        if random.randint(1,2) == 1 and enemy.name == "Skeleton":
-            print("You got a starlight wand.")
-            wait(duration)
-            print("Nice!")
-            player.has_starlight_wand = True
-        elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
-            print("You got a hyperion.")
-            wait(duration)
-            print("Nice!")
-            player.has_hyperion = True
-        else:
-            print("No drop! Too bad, too sad.")
-            print("You can't win, AHAHAHAHAHA.")
-=======
             sys.exit()
         
->>>>>>> eaba67dd1b67fd834dfcd36c21823066a9dbc954
         if player.hp <= 0:
             os.system('cls')
             print('damn you must suck at this horribly made game')
