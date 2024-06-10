@@ -113,6 +113,8 @@ def fight_archer(enemy):
             print('trash')
             sys.exit()
 
+        if enemy.hp <= 0:
+            enemy.hp = 0
 
 
 def fight_mage(enemy):
