@@ -50,8 +50,6 @@ def fight_archer(enemy):
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
         if move == 'shoot':
             print('You fired off an arrow.')
-            print(f"You have {player.hp} hp left!")
-            print(f"The mob has {enemy.hp} hp left.")
             damage = 20
             damage1 = 2
             if player.has_artisinal_bow:
@@ -60,6 +58,8 @@ def fight_archer(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+            print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
             print('You defended, nice job big back!.')
             print(f"You have {player.hp} hp left!")            
@@ -75,8 +75,10 @@ def fight_archer(enemy):
             fight_archer()
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
-        os.system('cls')
-        print('good job, you beat the first mob')
+        if enemy.name == 'Skeleton':
+            os.system('cls')
+            print('good job, you beat the first mob')
+            print('onwards.')
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
@@ -118,8 +120,6 @@ def fight_mage(enemy):
         move = input('Pick your first/next move (Shoot, Defend, Run): ').lower()
         if move == 'shoot':
             print('You fired off an arrow.')
-            print(f"You have {player.hp} hp left!")
-            print(f"The mob has {enemy.hp} hp left.")
             damage = 20
             damage1 = 2
             if player.has_starlight_wand:
@@ -128,6 +128,8 @@ def fight_mage(enemy):
                 damage += 30
             enemy.hp -= damage
             player.hp -= damage1
+            print(f"You have {player.hp} hp left!")
+            print(f"The mob has {enemy.hp} hp left.")
         elif move == 'defend':
             print('You defended, nice job big man!.')
             print(f"You have {player.hp} hp left!")
@@ -145,6 +147,7 @@ def fight_mage(enemy):
         if enemy.name == 'Skeleton':
             os.system('cls')
             print('good job, you beat the first mob')
+            print('onwards.')
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
