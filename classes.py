@@ -93,7 +93,7 @@ class Menu:
                 elif y.upper() == "ROLES":
                     os.system('cls')
                     print("Archer - HP: 20 | DAMAGE: 20 | Weapon: Short Bow")
-                    print("Mage - HP: 15 | DAMAGE: 30 | Weapon: Magic Wand")
+                    print("Mage - HP: 20 | DAMAGE: 30 | Weapon: Magic Wand")
                     x = input("Type to continue ")
             elif x == "N":
                 break

@@ -65,6 +65,7 @@ def fight_archer(enemy):
             print('Please pick a valid move.')
             fight_archer()
     if player.hp > 0:
+        time.sleep(2)
         print(f"You defeated the {enemy.name}!")
         if enemy.name == 'Skeleton':
             os.system('cls')
