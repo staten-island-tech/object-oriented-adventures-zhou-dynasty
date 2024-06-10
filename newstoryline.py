@@ -71,19 +71,21 @@ def fight_archer(enemy):
         print(f"You defeated the {enemy.name}!")
         if enemy.name == 'Skeleton':
             os.system('cls')
+            wait(duration)
             print('good job, you beat the first mob')
             print('onwards.')
             wait(duration)
             print('You decide to adventure because you have no choice because i said so.')
             wait(duration)
             print('you discovered a black coal mob.')
-
-        if enemy.name == 'Wither Skeleton':
+            print("guess you're going into another battle.")
+            wait(duration)
+        elif enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
-        if enemy.name == "Wither":
+        elif enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
             print('But good job anyways.')
@@ -147,12 +149,12 @@ def fight_mage(enemy):
             os.system('cls')
             print('good job, you beat the first mob')
             print('onwards.')
-        if enemy.name == 'Wither Skeleton':
+        elif enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
-        if enemy.name == "Wither":
+        elif enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
             print('But good job anyways.')
