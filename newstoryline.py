@@ -85,6 +85,8 @@ def fight_archer(enemy):
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
+            wait(duration)
+            print('im putting you against the last mob.')
         elif enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
@@ -159,6 +161,8 @@ def fight_mage(enemy):
             wait(duration)
             print('But good job anyways.')
             print('bye')
+            wait(duration)
+            print('im putting you against the last mob.')
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
             print("You got a starlight wand.")
             wait(duration)
