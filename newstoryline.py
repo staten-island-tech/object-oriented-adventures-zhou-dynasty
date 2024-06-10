@@ -106,6 +106,7 @@ def fight_archer(enemy):
             print('you still cooked anyways bruh')
             print('well gl')
             wait(duration)
+            print('im putting you against the last mob.')
         elif enemy.name == "Wither":
             os.system('cls')
             print('Wow, you won, you probably got lucky ngl.')
@@ -119,8 +120,6 @@ def fight_archer(enemy):
             print('damn you must suck at this horribly made game')
             print('trash')
             sys.exit()
-    else:
-        print("You died L")
 
 
 def fight_mage(enemy):
@@ -156,6 +155,7 @@ def fight_mage(enemy):
             print(f"You have {player.hp} left!")
         else:
             print('Please pick a valid move.')
+            fight_mage(enemy)
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
         
