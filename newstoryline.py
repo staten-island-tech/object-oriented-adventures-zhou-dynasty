@@ -33,7 +33,7 @@ def mage():
 
 player = entity("Player", 20)
 skeleton = entity("Skeleton", 30)
-wither_skeleton = entity("Wither Skeleton", 30)
+wither_skeleton = entity("Wither Skeleton", 50)
 wither = entity("Wither", 200)
 
 def fight_archer(enemy):
@@ -67,7 +67,7 @@ def fight_archer(enemy):
             print('Please pick a valid move.')
             fight_archer()
     if player.hp > 0:
-        time.sleep(2)
+        wait(duration)
         print(f"You defeated the {enemy.name}!")
         if enemy.name == 'Skeleton':
             os.system('cls')
