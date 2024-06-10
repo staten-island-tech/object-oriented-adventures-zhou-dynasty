@@ -4,6 +4,7 @@ from classes import entity
 def wait(duration):
     time.sleep(duration)
 
+
 def beginning():
     print("Your adventure begins now.")
     print('You look around, confused, you decide to wander around.')
@@ -28,6 +29,7 @@ def mage():
     fight_mage(skeleton)
     fight_mage(wither_skeleton)
     fight_mage(wither)
+
 
 player = entity("Player", 20)
 skeleton = entity("Skeleton", 30)
@@ -86,8 +88,8 @@ def fight_archer(enemy):
             wait(duration)
             print("Nice!")
             player.has_artisinal_bow = True
-            print("Gary is dum...")
             time.sleep(5)
+            print('jefferson sucks....')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a wither bow.")
             wait(duration)
