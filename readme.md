@@ -11,12 +11,12 @@ Run - Run from the enemies
 ### Classes
 ```
 Archer      ❤ HP: 20 | ❁ Dmg: 20
-Mage        ❤ HP: 15 | ❁ Dmg: 30  
+Mage        ❤ HP: 20 | ❁ Dmg: 20  
 ```
 ## Mobs
 ```
 Skeleton          ❤ HP: 30 | ❁ Dmg: 2
-Wither Skeleton   ❤ HP: 50 | ❁ Dmg: 3
+Wither Skeleton   ❤ HP: 50 | ❁ Dmg: 2
 Wither            ❤ HP: ???| ❁ Dmg: ???
 ```
 
@@ -34,7 +34,3 @@ _Currently obtainable:_
 - Starlight Wand
 - Hyperion
 ```
-<<<<<<< HEAD
-
-=======
->>>>>>> gary
