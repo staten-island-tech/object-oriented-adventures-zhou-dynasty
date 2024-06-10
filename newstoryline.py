@@ -73,6 +73,11 @@ def fight_archer(enemy):
             os.system('cls')
             print('good job, you beat the first mob')
             print('onwards.')
+            wait(duration)
+            print('You decide to adventure because you have no choice because i said so.')
+            wait(duration)
+            print('you discovered a black coal mob.')
+
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
