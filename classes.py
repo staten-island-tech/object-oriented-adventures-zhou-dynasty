@@ -62,7 +62,7 @@ class Menu:
                 y = input("Mobs | Roles | Quit: ").upper()
                 if y == "MOBS":
                     os.system('cls')
-                    print("Skeleton - HP: 20 | Weapon: Wooden Sword")
+                    print("Skeleton - HP: 30 | Weapon: Wooden Sword")
                     print("Wither Skeleton - HP: 50 | Weapon: Stone Sword")
                     print("Wither - HP: ??? | Weapon: ???")
                     x = input("Type to continue ")
