@@ -62,7 +62,7 @@ class Menu:
                 y = input("Mobs | Roles | Quit: ").upper()
                 if y == "MOBS":
                     os.system('cls')
-                    print("Skeleton - HP: 20 | Weapon: Wooden Sword")
+                    print("Skeleton - HP: 30 | Weapon: Wooden Sword")
                     print("Wither Skeleton - HP: 50 | Weapon: Stone Sword")
                     print("Wither - HP: ??? | Weapon: ???")
                     x = input("Type to continue ")
@@ -93,7 +93,7 @@ class Menu:
                 elif y.upper() == "ROLES":
                     os.system('cls')
                     print("Archer - HP: 20 | DAMAGE: 20 | Weapon: Short Bow")
-                    print("Mage - HP: 15 | DAMAGE: 30 | Weapon: Magic Wand")
+                    print("Mage - HP: 20 | DAMAGE: 30 | Weapon: Magic Wand")
                     x = input("Type to continue ")
             elif x == "N":
                 break
