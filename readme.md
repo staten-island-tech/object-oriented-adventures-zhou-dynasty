@@ -1,9 +1,5 @@
 # Zhou Dynasty
-<<<<<<< HEAD
-An adventure game created after Gary Zhou, a great idea from Chuayuan Zhang, his partner. The Zhou Dynasty entails a great adventure of many mobs and weapons. 
-=======
 An adventure game created after Gary Zhou, a great game that you should try out and of course, play again.
->>>>>>> main
 
 ### Controls
 ```

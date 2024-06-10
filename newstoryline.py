@@ -18,6 +18,7 @@ def beginning():
     print('It charges at you.')
     print('A battle of the ages begin.')
     wait(duration)
+    print('do not cringe, thanks')
     os.system("cls")
 
 def archer():
@@ -35,6 +36,7 @@ player = entity("Player", 20)
 skeleton = entity("Skeleton", 30)
 wither_skeleton = entity("Wither Skeleton", 50)
 wither = entity("Wither", 200)
+
 
 def fight_archer(enemy):
     while player.hp > 0 and enemy.hp > 0:
