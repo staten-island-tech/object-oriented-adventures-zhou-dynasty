@@ -112,8 +112,7 @@ def fight_archer(enemy):
             print('damn you must suck at this horribly made game')
             print('trash')
             sys.exit()
-    else:
-        print("You died L")
+
 
 
 def fight_mage(enemy):
@@ -185,6 +184,8 @@ def fight_mage(enemy):
             print('trash')
             sys.exit()
       
+        if enemy.hp <= 0:
+            enemy.hp = 0
 os.system('cls')
 try:
 
