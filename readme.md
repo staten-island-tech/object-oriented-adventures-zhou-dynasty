@@ -1,5 +1,5 @@
 # Zhou Dynasty
-An adventure game created by Gary Zhou and Chuyuan Zhang, a great game that you should try out and of course, play again.
+An adventure game created after Gary Zhou, a great game that you should try out and of course, play again.
 
 ### Controls
 ```
