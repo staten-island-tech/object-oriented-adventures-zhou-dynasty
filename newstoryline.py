@@ -69,17 +69,30 @@ def fight_archer(enemy):
     if player.hp > 0:
         wait(duration)
         print(f"You defeated the {enemy.name}!")
+        
+        if random.randint(1,2) == 1 and enemy.name == "Skeleton":
+            print("You got an artisinal shortbow.")
+            wait(duration)
+            print("Nice!")
+            player.has_artisinal_bow = True
+            time.sleep(3)
+            print('jefferson sucks....')
+        elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
+            print("You got a wither bow.")
+            wait(duration)
+            print("Nice!")
+            player.has_wither_bow = True
+        else:
+            print("No drop! Too bad, too sad.")
+
         if enemy.name == 'Skeleton':
             os.system('cls')
-            wait(duration)
             print('good job, you beat the first mob')
             print('onwards.')
             wait(duration)
             print('You decide to adventure because you have no choice because i said so.')
             wait(duration)
             print('you discovered a black coal mob.')
-            print("guess you're going into another battle.")
-            wait(duration)
         elif enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
@@ -93,20 +106,7 @@ def fight_archer(enemy):
             print('But good job anyways.')
             print('bye')
             sys.exit()
-        if random.randint(1,2) == 1 and enemy.name == "Skeleton":
-            print("You got an artisinal shortbow.")
-            wait(duration)
-            print("Nice!")
-            player.has_artisinal_bow = True
-            time.sleep(5)
-            print('jefferson sucks....')
-        elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
-            print("You got a wither bow.")
-            wait(duration)
-            print("Nice!")
-            player.has_wither_bow = True
-        else:
-            print("No drop! Too bad, too sad.")
+
         if player.hp <= 0:
             os.system('cls')
             print('damn you must suck at this horribly made game')
@@ -147,6 +147,21 @@ def fight_mage(enemy):
             print('Please pick a valid move.')
     if player.hp > 0:
         print(f"You defeated the {enemy.name}!")
+        
+        if random.randint(1,2) == 1 and enemy.name == "Skeleton":
+            print("You got a starlight wand.")
+            wait(duration)
+            print("Nice!")
+            player.has_starlight_wand = True
+        elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
+            print("You got a hyperion.")
+            wait(duration)
+            print("Nice!")
+            player.has_hyperion = True
+        else:
+            print("No drop! Too bad, too sad.")
+            print("You can't win, AHAHAHAHAHA.")
+
         if enemy.name == 'Skeleton':
             os.system('cls')
             print('good job, you beat the first mob')
@@ -161,6 +176,7 @@ def fight_mage(enemy):
             wait(duration)
             print('But good job anyways.')
             print('bye')
+<<<<<<< HEAD
             wait(duration)
             print('im putting you against the last mob.')
         if random.randint(1,2) == 1 and enemy.name == "Skeleton":
@@ -176,6 +192,10 @@ def fight_mage(enemy):
         else:
             print("No drop! Too bad, too sad.")
             print("You can't win, AHAHAHAHAHA.")
+=======
+            sys.exit()
+        
+>>>>>>> eaba67dd1b67fd834dfcd36c21823066a9dbc954
         if player.hp <= 0:
             os.system('cls')
             print('damn you must suck at this horribly made game')
