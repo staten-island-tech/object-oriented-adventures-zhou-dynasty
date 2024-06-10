@@ -45,7 +45,7 @@ class ClassSelection:
         if UserClassChoice == "ARCHER":
             self.Player.append(User(self.username, 20, 20, UserClassChoice, "Short Bow").__dict__)
         elif UserClassChoice == "MAGE":
-            self.Player.append(User(self.username, 15, 30, UserClassChoice, "Magic Wand").__dict__)
+            self.Player.append(User(self.username, 20, 20, UserClassChoice, "Magic Wand").__dict__)
 
 #menu
 class Menu:
