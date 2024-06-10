@@ -84,6 +84,8 @@ def fight_archer(enemy):
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
+            wait(duration)
+            print('bc you are gonna very much need it')
         if enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
@@ -149,6 +151,8 @@ def fight_mage(enemy):
             wait(duration)
             print('you still cooked anyways bruh')
             print('well gl')
+            wait(duration)
+            print('bc you are gonna very much need it')            
         if enemy.name == "Wither":
             print('Wow, you won, you probably got lucky ngl.')
             wait(duration)
