@@ -141,6 +141,7 @@ def fight_mage(enemy):
         if enemy.name == 'Skeleton':
             os.system('cls')
             print('good job, you beat the first mob')
+            print('onwards.')
         if enemy.name == 'Wither Skeleton':
             print('Good job, you have done well ngl')
             wait(duration)
