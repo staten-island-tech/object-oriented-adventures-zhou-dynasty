@@ -154,7 +154,7 @@ def fight_mage(enemy):
             wait(duration)
             print(f'{enemy.name} found you and threw you into the backrooms.')
             player.hp -= 4
-            print(f"You have {player.hp} left!")
+            print(f"You have {player.hp} hp left!")
         else:
             print('Please pick a valid move.')
             fight_mage(enemy)
@@ -169,7 +169,7 @@ def fight_mage(enemy):
             print("Nice!")
             player.has_starlight_wand = True
             wait(duration)
-            print("gary is dum..")
+            print("jefferson is dum..")
             os.system('cls')
         elif random.randint(1, 10) == 1 and enemy.name == "Wither Skeleton":
             print("You got a hyperion.")
